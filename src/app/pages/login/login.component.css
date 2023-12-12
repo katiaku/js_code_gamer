@@ -1,0 +1,77 @@
+section {
+  background-image: url("../../../assets/images/login_gradient.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: calc(100vh - 6.5rem);
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+}
+
+span {
+  font-family: 'Monoton', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: .3ch;
+}
+
+form {
+  width: 440px;
+  height: 272px;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  background-color: #2b144aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+input {
+  width: 369px;
+  height: 56px;
+  border: 2px solid #FFFFFF;
+  border-radius: 15px;
+  background-color: #2B144A;
+  padding-inline: 1rem;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+}
+
+div {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 110px;
+  height: 45px;
+  border: 2px solid #7451FF;
+  border-radius: 15px;
+  box-shadow: 0 2px 0#7451FF;
+}

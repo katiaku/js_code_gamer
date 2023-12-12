@@ -1,0 +1,30 @@
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  background-color: black;
+  z-index: 9;
+}
+
+span {
+  font-size: .8rem;
+  color: white;
+}
+
+ul {
+  font-size: .9rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+li {
+  cursor: pointer;
+  color: white;
+}
