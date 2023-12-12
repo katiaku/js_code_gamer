@@ -1,0 +1,42 @@
+header {
+  width: 100vw;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 9;
+}
+
+span {
+  font-size: 1.3rem;
+  color: white;
+  font-family: 'Monoton', sans-serif;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  font-size: .9rem;
+  padding-left: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active-link {
+  color: #FFFF00;
+}
