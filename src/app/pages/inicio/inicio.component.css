@@ -3,7 +3,7 @@
 
 
 main{
-    background-image: url("../../images/pag_Inicial.png");
+    background-image: url("../../../assets/images/pag_Inicial.png");
     background-attachment: unset;
     background-repeat: no-repeat;
     background-size: cover;
