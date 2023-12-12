@@ -1,14 +1,12 @@
 
-@font-face {
-    font-family: Monoton;
-    src: url(../../images/Monoton-Regular.ttf);
-}
+
 
 
 main{
     background-image: url("../../images/pag_Inicial.png");
     background-attachment: unset;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     
@@ -19,7 +17,14 @@ main{
 }
 
 h1{
-    font-family: Monoton;
+    font-family: 'Monoton', sans-serif;
+    font-weight: 200;
+}
+
+b{
+    font-family: 'Monoton', sans-serif;
+    font-weight: 200;
+    color: #FFFF00;
 }
 
 .inicio{
@@ -31,14 +36,17 @@ h1{
 }
 
 button{
-    width: 120px;
-    height: 40px;
-    align-self: flex-end;
-    border-radius: 10px;
-    border-bottom: solid rgb(173, 1, 173);
-    border-right: solid rgb(173, 1, 173);
-    font-size: medium;
-    font-weight: 600;
+    background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 110px;
+  height: 45px;
+  border: 2px solid #7451FF;
+  border-radius: 15px;
+  box-shadow: 0 2px 0#7451FF;
+  align-self: flex-end;
 
 
 }
