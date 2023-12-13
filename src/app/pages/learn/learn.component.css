@@ -1,0 +1,88 @@
+section {
+  width: 100vw;
+  height: calc(100vh - 6.5rem);
+  margin-top: 3.5rem;
+  display: flex;
+  position: relative;
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #FFFF00;
+  background-image: url("../../../assets/img/fondo_learn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.700);
+  color: white;
+  padding: 3rem;
+}
+
+h1, h2 {
+  margin-bottom: .8rem;
+  text-align: center;
+  color: #FFFF00;
+}
+
+h2 {
+  font-size: 1.2rem;;
+}
+
+.text {
+  font-size: .9rem;
+  line-height: 1.4rem;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.astronauta {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 160px;
+}
+
+.arrows {
+  width: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  position: absolute;
+  bottom: 20px;
+}
+
+.arrow {
+  width: .8rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.right {
+  width: 50%;
+  height: 100;
+  background-color: #343434;
+  border-left: 1px solid #FFFF00;
+  padding: 3rem;
+}
+
+pre {
+  overflow-y: auto;
+}
+
+button[disabled] {
+  display: none;
+}
+

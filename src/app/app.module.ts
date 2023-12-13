@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { LearnComponent } from './pages/learn/learn.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
+    LearnComponent,
     InicioComponent,
     RegisterComponent,
     LandingComponent,
