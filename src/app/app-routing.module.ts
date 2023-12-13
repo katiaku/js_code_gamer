@@ -4,6 +4,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { LoginComponent } from './pages/login/login.component';
+import { LearnComponent } from './pages/learn/learn.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,9 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  { 
+    path: "aprender", component: LearnComponent 
   }
 ];
 
@@ -29,4 +33,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

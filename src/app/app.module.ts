@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { LearnComponent } from './pages/learn/learn.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LandingComponent } from './pages/landing/landing.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
+    LearnComponent,
     InicioComponent,
     RegisterComponent,
     LandingComponent
