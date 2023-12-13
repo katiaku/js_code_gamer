@@ -33,6 +33,10 @@ display: flex;
 justify-content: center;
 align-items: flex-end;   
 }
+span{
+    font-family: 'Monoton', sans-serif;
+    font-weight: 200;
+}
 .subtitulo{
 /* border: 3px solid red; */
 color: white;
@@ -45,16 +49,18 @@ color:yellow;
 .texto{
 /* border: 3px solid red; */
 color: white;
-height: 40vh;
+height: 30vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
+width: 120vh;
+margin-left: 5%;
 }
 h1{
-font-size: 70px;
+font-size: 50px;
 }
 p{
-font-size: 40px;
+font-size: 20px;
 }
 .landing2{
 /* border: 3px solid red; */
@@ -150,3 +156,4 @@ text-align: center;
 color: white;
 line-height: 55px;
 }
+
