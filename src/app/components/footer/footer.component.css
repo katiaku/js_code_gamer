@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   bottom: 0;
   height: 3rem;
   display: flex;
