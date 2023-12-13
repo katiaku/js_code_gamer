@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'js_code_gamer';
+  mostrarHeader:boolean = false;
 }

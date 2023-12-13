@@ -9,9 +9,7 @@ main{
     background-size: cover;
     height: 100vh;
     width: 100%;
-    
     display: flex;
-
     justify-content: center;
 
 }
@@ -21,7 +19,7 @@ h1{
     font-weight: 200;
 }
 
-b{
+span{
     font-family: 'Monoton', sans-serif;
     font-weight: 200;
     color: #FFFF00;
