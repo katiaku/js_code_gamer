@@ -74,4 +74,9 @@ button {
   border: 2px solid #7451FF;
   border-radius: 15px;
   box-shadow: 0 2px 0#7451FF;
+  transition: 1s linear;
+}
+
+button:hover {
+  background-color: #FFFF00;
 }
