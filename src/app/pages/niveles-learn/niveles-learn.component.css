@@ -1,0 +1,224 @@
+.landing{
+/* border: 3px solid red; */
+height: 100vh;
+background-image: url("../../../assets/images/prueba.const.2.png");
+background-size: cover;
+background-repeat: no-repeat;
+
+display: flex;
+flex-wrap: wrap;
+
+}
+.caja1{
+    /* border: 1px solid yellowgreen; */
+    height: 46vh;
+    width: 40vw;
+    color:white;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 30px;
+    padding-left: 30px;
+    text-align: justify;
+}
+.caja2{
+    /* border: 1px solid yellowgreen; */
+    height: 46vh;
+    width: 59vw;
+}
+.tema1{
+/* border: 3px solid red; */
+height: 16vh;
+
+display:flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items:flex-end;
+padding-right: 337px;
+}
+button {
+margin: 0;
+padding: 0;
+border: none;
+font: inherit;
+color: inherit;
+background-color: rgb(0, 0, 0);
+cursor: pointer;
+outline: none; 
+}
+.btn{
+border: 3px solid yellow;
+border-radius: 50px;
+color: white;
+font-size: 1vw;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw;
+max-width: 150px;
+width: 100%; 
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+background-color: yellow; 
+color:black;
+transform: scale(1.5);
+}
+.tema3{
+/* border: 3px solid red; */
+height: 21vh;
+
+display:flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items:center;
+padding-right:480px;
+}
+.btn3{
+border: 3px solid rgb(173, 15, 94);
+border-radius: 50px;
+color: white;
+font-size: 1rw;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw; 
+max-width: 150px;
+width: 100%; 
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn3:hover {
+background-color: rgb(173, 15, 94);
+transform: scale(1.5);
+
+}
+.caja3{
+    /* border: 2px solid yellowgreen; */
+    height: 46vh;
+    width: 60vw;
+}
+.tema2y7{
+/* border: 3px solid red; */
+height: 8vh;
+width: 100vw;
+display:flex;
+justify-content:space-evenly;
+align-items:flex-end;
+
+}
+.btn7{
+border: 3px solid rgb(80, 3, 116);
+border-radius: 50px;
+color: white;
+font-size: 1vw;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw;
+max-width: 150px;
+width: 100%; 
+margin-right: 280px;
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn7:hover {
+background-color: rgb(80, 3, 116); 
+color:white;
+transform: scale(1.5);
+}
+.btn2 {
+border: 3px solid rgb(73, 225, 248);
+border-radius: 50px;
+color: white;
+font-size: 1vw; 
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw; 
+max-width: 150px;
+width: 100%; 
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn2:hover {
+background-color: rgb(73, 225, 248); 
+color:black;
+transform: scale(1.5);
+}
+.tema6{
+/* border: 3px solid red; */
+height: 11vh;
+
+display:flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-left: 255px;
+}
+.btn6{
+border: 3px solid rgb(134, 252, 142);
+border-radius: 50px;
+color: white;
+font-size: 1rw;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw; 
+max-width: 150px;
+width: 100%; 
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn6:hover {
+background-color: rgb(134, 252, 142);
+color: black;
+transform: scale(1.5);
+}
+.tema4{
+/* border: 3px solid red; */
+height: 5vh;
+
+display:flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding-left: 500px;
+}
+.btn4{
+border: 3px solid rgb(209, 142, 17);
+border-radius: 50px;
+color: white;
+font-size: 1rw;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw; 
+max-width: 150px;
+width: 100%; 
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn4:hover {
+background-color: rgb(209, 142, 17);
+color: black;
+transform: scale(1.5);
+}
+.tema5{
+/* border: 3px solid red; */
+height: 14vh;
+
+display:flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding-left: 10px;
+}
+.btn5{
+border: 3px solid rgb(209, 17, 17);
+border-radius: 50px;
+color: white;
+font-size: 1rw;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding: 0.5vw; 
+max-width: 150px;
+width: 100%; 
+transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn5:hover {
+background-color:rgb(209, 17, 17);
+transform: scale(1.5);
+}
+.caja4{
+    /* border: 2px solid yellowgreen; */
+    height: 40vh;
+    width: 40vw;
+    background-image: url("../../../assets/images/niño.libro.png");
+    background-size: 100% 100%;
+
+
+}
