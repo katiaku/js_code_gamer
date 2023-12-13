@@ -1,6 +1,8 @@
-<app-header></app-header>
+<app-header *ngIf="mostrarHeader"></app-header>
 <!-- <app-login></app-login> -->
-<app-niveles-learn></app-niveles-learn>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- <app-inicio></app-inicio> -->
 <!-- <app-landing></app-landing> -->
+<!-- <app-register></app-register> -->
+<router-outlet></router-outlet>
+<!-- <app-profile></app-profile> -->
+<app-footer *ngIf="mostrarHeader"></app-footer>

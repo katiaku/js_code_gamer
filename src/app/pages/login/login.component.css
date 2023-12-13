@@ -1,5 +1,5 @@
 section {
-  background-image: url("../../../assets/images/login_gradient.png");
+  background-image: url("../../../assets/img/login_gradient.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -74,4 +74,9 @@ button {
   border: 2px solid #7451FF;
   border-radius: 15px;
   box-shadow: 0 2px 0#7451FF;
+  transition: 1s linear;
+}
+
+button:hover {
+  background-color: #FFFF00;
 }

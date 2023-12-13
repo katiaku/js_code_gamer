@@ -1,0 +1,23 @@
+<section>
+  <div class="left">
+    <div class="layer">
+      <h1>{{ unitsData[currentUnitIndex].title }}</h1>
+      <h2>{{ unitsData[currentUnitIndex].content[currentPartIndex].title }}</h2>
+      <div class="text">{{ unitsData[currentUnitIndex].content[currentPartIndex].content }}</div>
+      <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
+      <div class="arrows">
+        <button (click)="prevPart()" [disabled]="currentPartIndex === 0 && currentUnitIndex === 0">
+          <img class="arrow" src="../../../assets/img/Polygon_1.png" alt="flecha derecha">
+        </button>
+        <button (click)="nextPart()" [disabled]="currentPartIndex == 2 && currentUnitIndex == 8">
+          <img class="arrow" src="../../../assets/img/Polygon_2.png" alt="flecha izquierda">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <pre class="line-numbers">
+      <code class="language-javascript">{{ unitsData[currentUnitIndex].content[currentPartIndex].code }}</code>
+    </pre>
+  </div>
+</section>

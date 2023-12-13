@@ -6,8 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
+import { LearnComponent } from './pages/learn/learn.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +19,12 @@ import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.compo
     HeaderComponent,
     FooterComponent,
     LoginComponent,
+    NivelesLearnComponent,
+    LearnComponent,
+    InicioComponent,
+    RegisterComponent,
     LandingComponent,
-    NivelesLearnComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
