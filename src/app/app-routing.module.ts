@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './pages/landing/landing.component';
 import { LoginComponent } from './pages/login/login.component';
+import { LearnComponent } from './pages/learn/learn.component';
 
 const routes: Routes = [
   { path: "", component: LandingComponent },
-  { path: "login", component: LoginComponent }
+  { path: "login", component: LoginComponent },
+  { path: "aprender", component: LearnComponent }
 ];
 
 @NgModule({
