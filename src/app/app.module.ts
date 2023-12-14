@@ -10,6 +10,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { LearnComponent } from './pages/learn/learn.component';
+import { HighlightPipe } from './pipes/highlight.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LearnComponent } from './pages/learn/learn.component';
     LearnComponent,
     InicioComponent,
     RegisterComponent,
-    LandingComponent
+    LandingComponent,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,
