@@ -13,6 +13,7 @@ import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.compo
 import { LearnComponent } from './pages/learn/learn.component';
 import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
 
 @NgModule({
@@ -26,13 +27,15 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
     InicioComponent,
     RegisterComponent,
     LandingComponent,
+    ProfileComponent,
+    ModProfileComponent,
     HighlightPipe,
     ProfileComponent,
     IntroNivelComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,7 +24,7 @@ let unitsData1: Unit[] = [
           agregar interactividad a las páginas web llevó al desarrollo de JavaScript. Nacimiento en Netscape:
           JavaScript se diseñó originalmente para ser utilizado en el navegador Netscape Navigator. Su objetivo
           era proporcionar a los desarrolladores la capacidad de manipular elementos de una página web y realizar
-          acciones del lado del cliente de manera dinámica.
+          acciones del lado del cliente de manera dinámica.\n\n\n
 
           Influencias y Evolución:
           JavaScript tomó prestadas muchas características de otros lenguajes de programación,
