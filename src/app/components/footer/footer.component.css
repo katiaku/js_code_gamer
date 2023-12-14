@@ -28,3 +28,7 @@ li {
   cursor: pointer;
   color: white;
 }
+
+li:hover {
+  color: #FFFF00;
+}

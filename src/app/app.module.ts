@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { LearnComponent } from './pages/learn/learn.component';
+import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     InicioComponent,
     RegisterComponent,
     LandingComponent,
+    HighlightPipe,
     ProfileComponent
   ],
   imports: [
