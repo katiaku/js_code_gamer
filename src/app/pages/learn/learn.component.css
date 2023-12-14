@@ -38,9 +38,11 @@ h2 {
 
 .text {
   font-size: .9rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
   overflow-y: auto;
   max-height: 350px;
+  margin-top: 1rem;
+  padding-inline: 2rem;
 }
 
 .astronauta {
@@ -75,14 +77,15 @@ button {
   height: 100;
   background-color: #343434;
   border-left: 1px solid #FFFF00;
-  padding: 3rem;
+  padding: 1rem;
+  overflow: auto;
 }
 
 pre {
-  overflow-y: auto;
+  overflow: auto;
+  font-size: .9rem;
 }
 
 button[disabled] {
   display: none;
 }
-

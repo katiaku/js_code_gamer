@@ -11,8 +11,10 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { LearnComponent } from './pages/learn/learn.component';
+import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
+import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
     RegisterComponent,
     LandingComponent,
     ProfileComponent,
-    ModProfileComponent
+    ModProfileComponent,
+    HighlightPipe,
+    ProfileComponent,
+    IntroNivelComponent
   ],
   imports: [
     BrowserModule,
