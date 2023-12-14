@@ -11,7 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { LearnComponent } from './pages/learn/learn.component';
-import { HighlightPipe } from './pipes/highlight.pipe';
+import { TextFormatterPipe } from './pipes/text-formatter.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
@@ -29,7 +29,7 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
     LandingComponent,
     ProfileComponent,
     ModProfileComponent,
-    HighlightPipe,
+    TextFormatterPipe,
     ProfileComponent,
     IntroNivelComponent
   ],
