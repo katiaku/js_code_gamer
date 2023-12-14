@@ -12,6 +12,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { LearnComponent } from './pages/learn/learn.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
     InicioComponent,
     RegisterComponent,
     LandingComponent,
-    ProfileComponent
+    ProfileComponent,
+    ModProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

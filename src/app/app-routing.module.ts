@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { LearnComponent } from './pages/learn/learn.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
+import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 
 const routes: Routes = [
 
@@ -26,9 +27,8 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-  { 
-    path: "aprender", 
-    component: LearnComponent 
+  { path: 'aprender',
+  component: LearnComponent 
   },
   {
     path: 'profile',
@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'niveles-aprender',
     component: NivelesLearnComponent
+  },
+  {
+    path: 'mod-profile',
+    component: ModProfileComponent
   }
 ];
 
