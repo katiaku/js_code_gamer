@@ -13,6 +13,7 @@ import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.compo
 import { LearnComponent } from './pages/learn/learn.component';
 import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     RegisterComponent,
     LandingComponent,
     HighlightPipe,
-    ProfileComponent
+    ProfileComponent,
+    IntroNivelComponent
   ],
   imports: [
     BrowserModule,
