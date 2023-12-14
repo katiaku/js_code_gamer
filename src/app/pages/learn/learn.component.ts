@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as Prism from 'prismjs';
 import 'prismjs/components/prism-javascript';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-learn',
@@ -203,7 +204,10 @@ export class LearnComponent implements OnInit {
     }
   ];
 
+  constructor(public componenteApp:AppComponent){}
+
   ngOnInit(): void {
+    this.componenteApp.mostrarHeader = true;
     this.loadContent();
   }
 

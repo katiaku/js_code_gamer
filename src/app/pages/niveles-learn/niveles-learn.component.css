@@ -5,14 +5,21 @@ background-image: url("../../../assets/images/prueba.const.2.png");
 background-size: cover;
 background-repeat: no-repeat;
 
+
+
 display: flex;
-flex-wrap: wrap;
+flex-direction: column;
+overflow: hidden;
 
 }
+.caja1_2{
+    display: flex;
+}
+
 .caja1{
     /* border: 1px solid yellowgreen; */
-    height: 46vh;
-    width: 40vw;
+    height: 40vh;
+    width: 45vw;
     color:white;
     font-size: 1rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -22,11 +29,18 @@ flex-wrap: wrap;
     line-height: 30px;
     padding-left: 30px;
     text-align: justify;
+    background-color: rgba(255, 255, 255, 0.255);
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 3%;
+
 }
+
 .caja2{
     /* border: 1px solid yellowgreen; */
     height: 46vh;
-    width: 59vw;
+    width: 50vw;
 }
 .tema1{
 /* border: 3px solid red; */
@@ -36,7 +50,7 @@ display:flex;
 flex-direction: column;
 justify-content: flex-end;
 align-items:flex-end;
-padding-right: 337px;
+padding-right: 240px;
 }
 button {
 margin: 0;
@@ -90,53 +104,59 @@ background-color: rgb(173, 15, 94);
 transform: scale(1.5);
 
 }
+.tema2y7{
+    /* border: 3px solid red; */
+    height: 8vh;
+    width: 100vw;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:flex-end;
+    
+}
+.btn7{
+    border: 3px solid rgb(80, 3, 116);
+    border-radius: 50px;
+    color: white;
+    font-size: 1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.5vw;
+    max-width: 150px;
+    width: 100%; 
+    margin-right: 280px;
+    transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn7:hover {
+    background-color: rgb(80, 3, 116); 
+    color:white;
+    transform: scale(1.5);
+}
+.btn2 {
+    border: 3px solid rgb(73, 225, 248);
+    border-radius: 50px;
+    color: white;
+    font-size: 1vw; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.5vw; 
+    max-width: 150px;
+    width: 100%; 
+    transition:background-color 0.3s ease, transform 0.3s ease;
+}
+.btn2:hover {
+    background-color: rgb(73, 225, 248); 
+    color:black;
+    transform: scale(1.5);
+}
+
+.caja3_4{
+    display: flex;
+}
+
 .caja3{
     /* border: 2px solid yellowgreen; */
     height: 46vh;
     width: 60vw;
 }
-.tema2y7{
-/* border: 3px solid red; */
-height: 8vh;
-width: 100vw;
-display:flex;
-justify-content:space-evenly;
-align-items:flex-end;
 
-}
-.btn7{
-border: 3px solid rgb(80, 3, 116);
-border-radius: 50px;
-color: white;
-font-size: 1vw;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-padding: 0.5vw;
-max-width: 150px;
-width: 100%; 
-margin-right: 280px;
-transition:background-color 0.3s ease, transform 0.3s ease;
-}
-.btn7:hover {
-background-color: rgb(80, 3, 116); 
-color:white;
-transform: scale(1.5);
-}
-.btn2 {
-border: 3px solid rgb(73, 225, 248);
-border-radius: 50px;
-color: white;
-font-size: 1vw; 
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-padding: 0.5vw; 
-max-width: 150px;
-width: 100%; 
-transition:background-color 0.3s ease, transform 0.3s ease;
-}
-.btn2:hover {
-background-color: rgb(73, 225, 248); 
-color:black;
-transform: scale(1.5);
-}
 .tema6{
 /* border: 3px solid red; */
 height: 11vh;
@@ -216,9 +236,10 @@ transform: scale(1.5);
 .caja4{
     /* border: 2px solid yellowgreen; */
     height: 40vh;
-    width: 40vw;
+    width: 35vw;
     background-image: url("../../../assets/images/niño.libro.png");
     background-size: 100% 100%;
+    bottom: 0;
 
 
 }

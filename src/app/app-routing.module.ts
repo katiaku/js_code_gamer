@@ -5,6 +5,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { LoginComponent } from './pages/login/login.component';
 import { LearnComponent } from './pages/learn/learn.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 
 const routes: Routes = [
 
@@ -30,7 +32,11 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: LoginComponent
+    component: ProfileComponent
+  },
+  {
+    path: 'niveles-aprender',
+    component: NivelesLearnComponent
   }
 ];
 
