@@ -23,6 +23,8 @@ export class LearnComponent implements AfterViewInit, OnInit {
   text = this.unitsData[this.currentUnitIndex].content[this.currentPartIndex].content;
   keywords = learnKeywords;
 
+  constructor(public componenteApp:AppComponent){}
+
   ngOnInit(): void {
     this.componentApp.mostrarHeader = true;
     this.loadContent();

@@ -9,8 +9,10 @@ import { LoginComponent } from './pages/login/login.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { LearnComponent } from './pages/learn/learn.component';
 import { HighlightPipe } from './pipes/highlight.pipe';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { HighlightPipe } from './pipes/highlight.pipe';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
+    NivelesLearnComponent,
     LearnComponent,
     InicioComponent,
     RegisterComponent,
     LandingComponent,
-    HighlightPipe
+    HighlightPipe,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
