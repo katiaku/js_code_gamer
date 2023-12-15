@@ -2,15 +2,15 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as Prism from 'prismjs';
 import 'prismjs/components/prism-javascript';
 import { AppComponent } from 'src/app/app.component';
-import unitsData1, { Unit } from 'src/app/models/unit';
-import { HighlightPipe } from '../../pipes/highlight.pipe';
+import { Unit, unitsDataLearn } from 'src/app/models/unit';
+import { TextFormatterPipe } from '../../pipes/text-formatter.pipe';
 import learnKeywords from '../../../assets/content/keywords.js';
 
 @Component({
   selector: 'app-learn',
   templateUrl: './learn.component.html',
   styleUrls: ['./learn.component.css'],
-  providers: [HighlightPipe]
+  providers: [TextFormatterPipe]
 })
 export class LearnComponent implements AfterViewInit, OnInit {
 
@@ -18,7 +18,7 @@ export class LearnComponent implements AfterViewInit, OnInit {
 
   currentUnitIndex = 0;
   currentPartIndex = 0;
-  unitsData: Unit[] = unitsData1;
+  unitsData: Unit[] = unitsDataLearn;
 
   text = this.unitsData[this.currentUnitIndex].content[this.currentPartIndex].content;
   keywords = learnKeywords;

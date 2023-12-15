@@ -1,0 +1,106 @@
+.landing{
+/* border: 1px solid red; */
+height: 100vh;
+background-image: url("../../../assets/images/fondo.Quienes.Somos.png");
+background-size: cover;
+background-repeat: no-repeat;
+}
+.titulo{
+    /* border: 1px solid red; */
+    height: 20vh;
+    letter-spacing: 20px;
+    font-size: 48px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+  }
+p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+.equipos{
+    /* border: 1px solid yellowgreen; */
+    height: 80vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.equipo{
+    /* border: 1px solid red; */
+    height: 70vh;
+    width: 20vw;
+    border-radius: 200px;
+    background-image: url("../../../assets/images/fondo_estrellas.jpg");
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    align-content: center;
+}
+.imagen1{
+    /* border: 1px solid red; */
+    height: 39vh;
+    width: 95%;
+    border-radius: 300px;
+    background-image: url("../../../assets/images/niño.libro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imagen2{
+    /* border: 1px solid red; */
+    height: 39vh;
+    width: 95%;
+    border-radius: 300px;
+    background-image: url("../../../assets/images/niño.libro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imagen3{
+    /* border: 1px solid red; */
+    height: 39vh;
+    width: 95%;
+    border-radius: 300px;
+    background-image: url("../../../assets/images/niño.libro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info{
+    /* border: 1px solid red; */
+    height: 25vh;
+    width: 95%;
+    text-align: center;
+    padding: 20px;
+}
+.rrss{
+    /* border: 1px solid red; */
+    height: 5vh;
+    width: 95%;
+}
+ul {
+    font-size: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  li {
+    cursor: pointer;
+    color: white;
+  }
+  
+  li:hover {
+    color: #FFFF00;
+  }
+

@@ -3,7 +3,7 @@
     <div class="layer">
       <h1>{{ currentUnitIndex + 1 }}. {{ unitsData[currentUnitIndex].title }}</h1>
       <h2>{{ currentUnitIndex + 1 }}.{{ currentPartIndex + 1 }}. {{ unitsData[currentUnitIndex].content[currentPartIndex].title }}</h2>
-      <div class="text" [innerHTML]="unitsData[currentUnitIndex].content[currentPartIndex].content | highlight:keywords:'#FFFF00'">{{ unitsData[currentUnitIndex].content[currentPartIndex].content }}</div>
+      <div class="text" [innerHTML]="unitsData[currentUnitIndex].content[currentPartIndex].content | textFormatter:keywords:'#FFFF00'">{{ unitsData[currentUnitIndex].content[currentPartIndex].content }}</div>
       <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
       <div class="arrows">
         <button (click)="prevPart()" [disabled]="currentPartIndex === 0 && currentUnitIndex === 0">
