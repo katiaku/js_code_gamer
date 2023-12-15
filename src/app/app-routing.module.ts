@@ -10,6 +10,7 @@ import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.compo
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
+import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component'
 
 const routes: Routes = [
 
@@ -51,7 +52,12 @@ const routes: Routes = [
   {
     path: 'jugar',
     component: JugarComponent
+  },
+  {
+    path: 'intro-nivel',
+    component: IntroNivelComponent
   }
+  
 ];
 
 @NgModule({
