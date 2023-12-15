@@ -15,6 +15,7 @@ import { TextFormatterPipe } from './pipes/text-formatter.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
+import { RetosComponent } from './pages/retos/retos.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
 
@@ -34,12 +35,13 @@ import { JugarComponent } from './pages/jugar/jugar.component';
     TextFormatterPipe,
     ProfileComponent,
     IntroNivelComponent,
+    RetosComponent,
     QuienesSomosComponent,
     JugarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

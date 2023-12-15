@@ -1,24 +1,26 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import * as Prism from 'prismjs';
-import 'prismjs/components/prism-javascript';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { Unit, unitsDataLearn } from 'src/app/models/unit';
+import  { Unit, unitsDataRetos } from 'src/app/models/unit';
 import { TextFormatterPipe } from '../../pipes/text-formatter.pipe';
 import learnKeywords from '../../../assets/content/keywords.js';
+import * as Prism from 'prismjs';
+import * as ace from "ace-builds";
+
 
 @Component({
-  selector: 'app-learn',
-  templateUrl: './learn.component.html',
-  styleUrls: ['./learn.component.css'],
+  selector: 'app-retos',
+  templateUrl: './retos.component.html',
+  styleUrls: ['./retos.component.css'],
   providers: [TextFormatterPipe]
 })
-export class LearnComponent implements AfterViewInit, OnInit {
+export class RetosComponent implements AfterViewInit, OnInit {
 
+  @ViewChild("editor") private editor: ElementRef<HTMLElement>;
   constructor(public componentApp: AppComponent) {}
 
   currentUnitIndex = 0;
   currentPartIndex = 0;
-  unitsData: Unit[] = unitsDataLearn;
+  unitsData: Unit[] = unitsDataRetos;
 
   text = this.unitsData[this.currentUnitIndex].content[this.currentPartIndex].content;
   keywords = learnKeywords;
@@ -30,6 +32,14 @@ export class LearnComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit(): void {
     Prism.highlightAll();
+    ace.config.set("basePath", "https://unpkg.com/ace-builds@1.4.12/src-noconflict");
+    const aceEditor = ace.edit(this.editor.nativeElement);
+    aceEditor.session.setValue(this.unitsData[this.currentUnitIndex].content[this.currentPartIndex].code);
+
+    aceEditor.setTheme("ace/theme/twilight");
+    aceEditor.session.setMode("ace/mode/javascript");
+    aceEditor.session.setUseSoftTabs(true);
+    aceEditor.session.setUseWrapMode(true);
   }
 
   loadContent(): void {
@@ -40,11 +50,7 @@ export class LearnComponent implements AfterViewInit, OnInit {
     const currentUnit = this.unitsData[this.currentUnitIndex];
     const currentPart = currentUnit.content[this.currentPartIndex];
     this.text = currentPart.content;
-    const codeExample = document.querySelector('.language-javascript');
-    if (codeExample) {
-      codeExample.textContent = currentPart.code;
-      Prism.highlightElement(codeExample);
-    }
+    ace.edit(this.editor.nativeElement).session.setValue(this.unitsData[this.currentUnitIndex].content[this.currentPartIndex].code);
   }
 
   nextPart(): void {
@@ -67,5 +73,4 @@ export class LearnComponent implements AfterViewInit, OnInit {
 
     this.updateContent();
   }
-
 }
