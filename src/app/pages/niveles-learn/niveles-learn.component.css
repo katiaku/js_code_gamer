@@ -10,6 +10,8 @@ background-repeat: no-repeat;
 display: flex;
 flex-direction: column;
 overflow: hidden;
+font-family: 'Roboto', sans-serif;
+
 
 }
 .caja1_2{

@@ -15,6 +15,7 @@ import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
+import { RetosComponent } from './pages/retos/retos.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,12 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
     ModProfileComponent,
     HighlightPipe,
     ProfileComponent,
-    IntroNivelComponent
+    IntroNivelComponent,
+    RetosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

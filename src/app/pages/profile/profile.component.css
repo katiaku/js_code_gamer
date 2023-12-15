@@ -1,6 +1,8 @@
 .main{
     display: flex;
     height: calc(100vh - 3rem);
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .profileData{

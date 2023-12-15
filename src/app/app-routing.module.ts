@@ -8,6 +8,7 @@ import { LearnComponent } from './pages/learn/learn.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
+import { RetosComponent } from './pages/retos/retos.component';
 
 const routes: Routes = [
 
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'mod-profile',
     component: ModProfileComponent
+  },
+  {
+    path: 'retos',
+    component: RetosComponent
   }
 ];
 

@@ -12,6 +12,8 @@ section {
     justify-content: center;
     gap: 1rem;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+
   }
   
   h1 {
