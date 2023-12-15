@@ -8,6 +8,8 @@ import { LearnComponent } from './pages/learn/learn.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NivelesLearnComponent } from './pages/niveles-learn/niveles-learn.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
+import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { JugarComponent } from './pages/jugar/jugar.component';
 
 const routes: Routes = [
 
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'mod-profile',
     component: ModProfileComponent
+  },
+  {
+    path: 'quienes-somos',
+    component: QuienesSomosComponent
+  },
+  {
+    path: 'jugar',
+    component: JugarComponent
   }
 ];
 

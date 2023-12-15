@@ -15,6 +15,8 @@ import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ModProfileComponent } from './pages/mod-profile/mod-profile.component';
 import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
+import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { JugarComponent } from './pages/jugar/jugar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
     ModProfileComponent,
     HighlightPipe,
     ProfileComponent,
-    IntroNivelComponent
+    IntroNivelComponent,
+    QuienesSomosComponent,
+    JugarComponent
   ],
   imports: [
     BrowserModule,
