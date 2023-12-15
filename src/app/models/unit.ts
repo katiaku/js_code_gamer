@@ -1074,8 +1074,7 @@ let unitsDataRetos: Unit[] = [
           Nacimiento en Netscape: JavaScript se diseñó originalmente para ser utilizado en el navegador Netscape Navigator. Su objetivo era proporcionar a los desarrolladores la capacidad de manipular elementos de una página web y realizar acciones del lado del cliente de manera dinámica.
           Influencias y Evolución: JavaScript tomó prestadas muchas características de otros lenguajes de programación, como Java y C. Aunque su nombre sugiere una relación con Java, ambos lenguajes son distintos y se utilizan para diferentes propósitos.
           Estándares y Comités: A medida que JavaScript ganó popularidad, se formaron estándares para garantizar su interoperabilidad entre diferentes navegadores. Actualmente, la especificación ECMAScript define el estándar de JavaScript, y el desarrollo y la evolución de JavaScript son gestionados por el Comité Técnico ECMA/TC39.`,
-        "code": `
-          // Escribe el código necesario para que, al ejecutar el programa, se imprima "Hola, mundo!" en la consola.
+        "code": `// Escribe el código necesario para que, al ejecutar el programa, se imprima "Hola, mundo!" en la consola.
         `
       },
       {
@@ -1086,8 +1085,7 @@ let unitsDataRetos: Unit[] = [
           Dinámico y Débilmente Tipado: JavaScript es dinámico, lo que significa que las variables no están vinculadas a un tipo específico y pueden cambiar durante la ejecución del programa. Además, es débilmente tipado, lo que permite realizar operaciones sin la necesidad de declarar explícitamente el tipo de datos.
           Interactividad en el Navegador: La principal aplicación de JavaScript es la mejora de la interactividad en las páginas web. Puede manipular el DOM para cambiar el contenido de la página, gestionar eventos del usuario y realizar solicitudes asíncronas al servidor.
           Compatibilidad con Múltiples Plataformas: JavaScript se ejecuta en todos los navegadores modernos, lo que garantiza la portabilidad y la compatibilidad con diversas plataformas.`,
-        "code": `
-          // Declara una variable llamada edad con el valor inicial de 30 y otra variable llamada incremento con el valor de 5. Luego, incrementa la variable edad por el valor de incremento y muestra la nueva edad usando console.log.
+        "code": `// Declara una variable llamada edad con el valor inicial de 30 y otra variable llamada incremento con el valor de 5. Luego, incrementa la variable edad por el valor de incremento y muestra la nueva edad usando console.log.
         `
       },
       {
@@ -1098,20 +1096,19 @@ let unitsDataRetos: Unit[] = [
           Node.js y npm: Node.js es un entorno de ejecución de JavaScript del lado del servidor. Además, npm (Node Package Manager) te permitirá gestionar las dependencias y paquetes de JavaScript en tu proyecto.
           Sistema de Control de Versiones: Utilizar un sistema de control de versiones como Git es esencial para realizar un seguimiento de los cambios en tu código y colaborar con otros desarrolladores. Plataformas como GitHub, GitLab o Bitbucket pueden alojar tus repositorios Git de forma remota.
           Consola del Navegador: Las consolas de desarrollo de los navegadores son herramientas valiosas para la depuración y visualización de mensajes de registro. Aprender a utilizar la consola te permitirá identificar errores y realizar pruebas rápidas.`,
-        "code": `
-          // Importa el archivo JavaScript en el archivo HTML.
-          <!DOCTYPE html>
-          <html lang="es">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Mi Primer Proyecto JavaScript</title>
-          </head>
-          <body>
-            <h1>Hola, Mundo!</h1>
-            // Tu código aquí
-          </body>
-          </html>
+        "code": `// Importa el archivo JavaScript en el archivo HTML.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Primer Proyecto JavaScript</title>
+</head>
+<body>
+  <h1>Hola, Mundo!</h1>
+  // Tu código aquí
+</body>
+</html>
         `
       }
     ]
@@ -1125,8 +1122,7 @@ let unitsDataRetos: Unit[] = [
           Palabras Clave: En JavaScript, utilizamos las palabras clave var, let y const para declarar variables. La elección de la palabra clave depende de la naturaleza de la variable y el ámbito en el que se utilizará.
           var: Antes de la introducción de let y const, var era la única forma de declarar variables en JavaScript. Sin embargo, tiene un comportamiento peculiar relacionado con el ámbito, por lo que se prefiere el uso de let y const en la mayoría de los casos.
           let y const: Estas son las formas modernas de declarar variables. let se utiliza para variables que pueden cambiar su valor, mientras que const se usa para variables constantes cuyo valor no cambia una vez asignado.`,
-        "code": `
-          // Proporciona ejemplos de declaración de variables utilizando var, let y const, declara una variable sin asignar un valor inicial. Imprimelas en la consola.
+        "code": `// Proporciona ejemplos de declaración de variables utilizando var, let y const, declara una variable sin asignar un valor inicial. Imprimelas en la consola.
         `
       },
       {
@@ -1137,8 +1133,7 @@ let unitsDataRetos: Unit[] = [
           Booleanos (Booleans): Representan valores de verdad o falsedad (true o false).
           Objetos (Objects): Representan colecciones de propiedades y métodos. Se crean utilizando llaves {}.
           Arreglos (Arrays): Representan listas ordenadas de valores. Se crean utilizando corchetes [].`,
-        "code": `
-          // Crea una variable de tipo número, una de tipo string, una de tipo boolean y muéstralas por consola.
+        "code": `// Crea una variable de tipo número, una de tipo string, una de tipo boolean y muéstralas por consola.
         `
       },
       {
@@ -1146,26 +1141,25 @@ let unitsDataRetos: Unit[] = [
         "content": `En JavaScript, la conversión entre diferentes tipos de datos es una tarea común y puede ser necesaria en diversas situaciones. A continuación, se presentan algunas formas de realizar conversiones entre tipos de datos:
           Coerción Implícita: JavaScript realiza automáticamente conversiones implícitas cuando se mezclan diferentes tipos de datos en una operación. Por ejemplo, concatenar una cadena con un número.
           Métodos de Conversión: JavaScript proporciona métodos específicos para convertir valores de un tipo a otro. Algunos de estos métodos son String(), Number(), y Boolean().`,
-        "code": `
-          // Completa el código
+        "code": `// Completa el código
 
-          // Coerción Implícita
-          let numero = 5;
-          // Tu código aquí
+// Coerción Implícita
+let numero = 5;
+// Tu código aquí
 
-          // Métodos de Conversión
-          let cadenaNumero = "123";
-          // Tu código aquí
+// Métodos de Conversión
+let cadenaNumero = "123";
+// Tu código aquí
 
-          console.log(typeof cadenaNumero);
-          console.log(typeof numeroConvertido);
+console.log(typeof cadenaNumero);
+console.log(typeof numeroConvertido);
 
-          // Conversión a Cadenas
-          let num = 42;
-          // Tu código aquí
+// Conversión a Cadenas
+let num = 42;
+// Tu código aquí
 
-          console.log(typeof num);
-          console.log(typeof cadenaNum);
+console.log(typeof num);
+console.log(typeof cadenaNum);
         `
       }
     ]
@@ -1193,10 +1187,9 @@ let unitsDataRetos: Unit[] = [
           AND lógico (&&): Devuelve true si ambos operandos son true.
           OR lógico (||): Devuelve true si al menos uno de los operandos es true.
           NOT lógico (!): Niega el valor de su operando.`,
-        "code": `
-          // Proporciona ejemplos de operadores de suma, resta, multiplicación, división y modulo en JavaScript
+        "code": `// Proporciona ejemplos de operadores de suma, resta, multiplicación, división y modulo en JavaScript
 
-          // Proporciona dos ejemplos de operadores lógicos.
+// Proporciona dos ejemplos de operadores lógicos.
 
         `
       },
@@ -1211,8 +1204,7 @@ let unitsDataRetos: Unit[] = [
           Menor que (<): Comprueba si el valor de la izquierda es menor que el valor de la derecha. (Ejemplo: a < b)
           Mayor o Igual que (>=): Comprueba si el valor de la izquierda es mayor o igual que el valor de la derecha. (Ejemplo: a >= b)
           Menor o Igual que (<=): Comprueba si el valor de la izquierda es menor o igual que el valor de la derecha. (Ejemplo: a <= b)`,
-        "code": `
-          // Proporciona 5 ejemplos de operadores de comparación diferentes.
+        "code": `// Proporciona 5 ejemplos de operadores de comparación diferentes.
 
         `
       },
@@ -1225,20 +1217,19 @@ let unitsDataRetos: Unit[] = [
           Expresiones de Comparación: Utilizan operadores de comparación para evaluar condiciones y producir un valor booleano. Ejemplo: let esMayor = 20 > 10;
           Expresiones Lógicas: Combinan valores booleanos utilizando operadores lógicos como AND (&&) y OR (||). Ejemplo: let resultadoLogico = true && false;
           Evaluación de Expresiones: La evaluación de una expresión implica calcular su valor resultante. Esto se realiza siguiendo las reglas de precedencia de operadores y asegurándose de que las operaciones se realicen en el orden correcto.`,
-        "code": `
-          // Proporciona ejemplos de expresiones y evaluación en JavaScript
+        "code": `// Proporciona ejemplos de expresiones y evaluación en JavaScript
 
-          // Expresiones aritméticas
-          // Tu código aquí
+// Expresiones aritméticas
+// Tu código aquí
 
-          // Expresiones de cadena
-          // Tu código aquí
+// Expresiones de cadena
+// Tu código aquí
 
-          // Expresiones de comparación
-          // Tu código aquí
+// Expresiones de comparación
+// Tu código aquí
 
-          // Expresiones lógicas
-          // Tu código aquí
+// Expresiones lógicas
+// Tu código aquí
         `
       }
     ]
@@ -1280,22 +1271,21 @@ let unitsDataRetos: Unit[] = [
             default:
               // Código a ejecutar si la expresión no coincide con ningún caso
           }`,
-        "code": `
-          // Completa if Statement
-          let edad = 18;
-          // Tu código aquí
+        "code": `// Completa if Statement
+let edad = 18;
+// Tu código aquí
 
-          // Completa else if Statement
-          let hora = 14;
-          // Tu código aquí
+// Completa else if Statement
+let hora = 14;
+// Tu código aquí
 
-          // Completa else Statement
-          let numero = 0;
-          // Tu código aquí
+// Completa else Statement
+let numero = 0;
+// Tu código aquí
 
-          // Completa switch Statement
-          let dia = "Lunes";
-          // Tu código aquí
+// Completa switch Statement
+let dia = "Lunes";
+// Tu código aquí
         `
       },
       {
@@ -1316,19 +1306,18 @@ let unitsDataRetos: Unit[] = [
           do {
             // Código a ejecutar al menos una vez
           } while (condición);`,
-        "code": `
-          // Proporciona un ejemplo de for Loop
-          // Tu código aquí
+        "code": `// Proporciona un ejemplo de for Loop
+// Tu código aquí
 
-          // Completa el while Loop
-          let contador = 0;
-          // Tu código aquí
+// Completa el while Loop
+let contador = 0;
+// Tu código aquí
 
-          // Completa el do-while Loop
-          let num = 1;
-          do {
-            // Tu código aquí
-          } while (num <= 3);
+// Completa el do-while Loop
+let num = 1;
+do {
+  // Tu código aquí
+} while (num <= 3);
         `
       },
       {
@@ -1336,22 +1325,21 @@ let unitsDataRetos: Unit[] = [
         "content": `El control de flujo en JavaScript se refiere a la gestión y dirección del flujo de ejecución de un programa. Dos sentencias clave para controlar este flujo son break y continue.
           break: La sentencia break se utiliza para salir de un bucle o de una estructura de control de flujo. Puede usarse en bucles for, while, y do-while, así como en estructuras condicionales como switch.
           continue: La sentencia continue se utiliza para omitir la parte restante de un bucle y pasar a la siguiente iteración. Similar a break, puede usarse en bucles for, while, y do-while.`,
-        "code": `
-          // Completa el código
+        "code": `// Completa el código
 
-          for (let i = 0; i < 5; i++) {
-            if (i === 3) {
-              // Tu código aquí
-            }
-            console.log("Iteración " + (i + 1));
-          }
+for (let i = 0; i < 5; i++) {
+  if (i === 3) {
+    // Tu código aquí
+  }
+  console.log("Iteración " + (i + 1));
+}
 
-          for (let i = 0; i < 5; i++) {
-            if (i === 2) {
-              // Tu código aquí
-            }
-            console.log("Iteración " + (i + 1));
-          }
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    // Tu código aquí
+  }
+  console.log("Iteración " + (i + 1));
+}
         `
       }
     ]
@@ -1365,12 +1353,11 @@ let unitsDataRetos: Unit[] = [
           JavaScript admite varios tipos de funciones, desde las declarativas más tradicionales hasta las modernas funciones de flecha introducidas en ECMAScript 6 (ES6). Las funciones también pueden ser anónimas o nombradas, proporcionando flexibilidad en la forma en que se definen y utilizan.
           Además, JavaScript permite el concepto de funciones como ciudadanos de primera clase, lo que significa que las funciones pueden asignarse a variables, pasarse como argumentos a otras funciones y devolverse como valores desde otras funciones. Un aspecto destacado es el alcance de las variables dentro de las funciones, conocido como ámbito.
           JavaScript implementa el ámbito léxico, lo que implica que una función puede acceder a las variables definidas en su entorno de declaración y también a las variables de funciones externas. Este comportamiento influye en cómo se diseñan las funciones y cómo se gestionan las variables a lo largo del código.`,
-        "code": `
-          // Declara una función llamada greet y llámala con el argumento "John".
+        "code": `// Declara una función llamada greet y llámala con el argumento "John".
 
-          // Declara una función anónima asignada a una variable, llámala con el argumento "Alice".
+// Declara una función anónima asignada a una variable, llámala con el argumento "Alice".
 
-          // Declara una función de flecha, llámala con el argumento "Bob".
+// Declara una función de flecha, llámala con el argumento "Bob".
 
         `
       },
@@ -1379,8 +1366,7 @@ let unitsDataRetos: Unit[] = [
         "content": `Los parámetros en JavaScript son variables que se definen en la declaración de una función y actúan como marcadores de posición para los valores que la función espera recibir durante su invocación. Estos parámetros permiten que las funciones sean más flexibles y reutilizables, ya que pueden adaptarse a diferentes situaciones según los valores que se les proporcionen al llamarlas. Cuando declaramos una función con parámetros, estamos estableciendo la estructura que la función espera.
           Los argumentos, por otro lado, son los valores reales que se pasan a una función cuando esta se invoca. Estos valores pueden ser constantes, variables o expresiones. Las funciones pueden tener múltiples parámetros, y los argumentos deben coincidir en cantidad y orden con los parámetros esperados.
           JavaScript también admite la asignación de valores predeterminados a los parámetros, lo que permite que una función sea llamada incluso si no se proporcionan todos los argumentos. Además, la sintaxis de "rest" (...) permite manejar un número variable de argumentos como un arreglo.`,
-        "code": `
-          // Escríbe 2 funciones: una sin parámetros y la otra con 2 parámetros.
+        "code": `// Escríbe 2 funciones: una sin parámetros y la otra con 2 parámetros.
         `
       },
       {
@@ -1389,30 +1375,29 @@ let unitsDataRetos: Unit[] = [
           Ámbito Global: Una variable declarada fuera de cualquier función o bloque de código tiene un ámbito global. Esto significa que puede ser accedida desde cualquier parte del código, ya sea dentro de funciones, bucles u otros bloques. Sin embargo, es importante tener precaución con las variables globales, ya que pueden ser modificadas accidentalmente desde cualquier lugar, lo que podría conducir a comportamientos inesperados.
           Ámbito Local: Una variable declarada dentro de una función o bloque de código tiene un ámbito local. Esto significa que solo puede ser accedida y modificada dentro de ese contexto específico. Las variables locales tienen la ventaja de no interferir con otras partes del programa y ayudan a mantener la encapsulación.
           Ámbito de Bloque (a partir de ECMAScript 6): Con la introducción de let y const en ECMAScript 6, se introdujo el ámbito de bloque. Las variables declaradas con let y const tienen un ámbito limitado al bloque en el que están definidas. Esto es útil para evitar la contaminación del ámbito global y garantizar la privacidad de las variables.`,
-        "code": `
-          // Completa el código
+        "code": `// Completa el código
 
-          let variableGlobal = 'Soy global';
+let variableGlobal = 'Soy global';
 
-          function mostrarVariableGlobal() {
-            console.log(variableGlobal);
-          }
+function mostrarVariableGlobal() {
+  console.log(variableGlobal);
+}
 
-          // Tu código aquí
+// Tu código aquí
 
-          function ejemploAmbitoLocal() {
-            // Tu código aquí
-          }
+function ejemploAmbitoLocal() {
+  // Tu código aquí
+}
 
-          ejemploAmbitoLocal();
-          // console.log(variableLocal); // Error: variableLocal no está definida fuera de la función
+ejemploAmbitoLocal();
+// console.log(variableLocal); // Error: variableLocal no está definida fuera de la función
 
-          if (true) {
-            // Tu código aquí
-            console.log(variableBloque);
-          }
+if (true) {
+  // Tu código aquí
+  console.log(variableBloque);
+}
 
-          // console.log(variableBloque); // Error: variableBloque no está definida fuera del bloque
+// console.log(variableBloque); // Error: variableBloque no está definida fuera del bloque
         `
       },
       {
@@ -1422,12 +1407,11 @@ let unitsDataRetos: Unit[] = [
           Funciones de Flecha: Las funciones de flecha son una sintaxis más concisa y moderna introducida en ECMAScript 6. Tienen una sintaxis más breve y no cambian el valor de this, lo que las hace convenientes en ciertos contextos. Las funciones de flecha son especialmente útiles cuando se trabaja con funciones de orden superior o cuando se necesita una función en un solo lugar sin afectar el ámbito de this.
           Diferencias Clave: Las funciones anónimas pueden tener un nombre asignado, pero su uso principal es en situaciones sin nombre explícito. Las funciones de flecha tienen una sintaxis más breve y no modifican el valor de this.
           Ambas son útiles en diferentes contextos, y la elección entre ellas depende del escenario específico en el que se utilicen. Elegir entre funciones anónimas y funciones de flecha dependerá de los requisitos y preferencias del desarrollo en un proyecto particular.`,
-        "code": `
-          // Crea un función anónima asignada a una variable
+        "code": `// Crea un función anónima asignada a una variable
 
-          // Completa la función de flecha para multiplicar dos números
-          // Tu código aquí
-          console.log(multiplicar(4, 5));
+// Completa la función de flecha para multiplicar dos números
+// Tu código aquí
+console.log(multiplicar(4, 5));
         `
       }
     ]
@@ -1440,18 +1424,17 @@ let unitsDataRetos: Unit[] = [
         "content": `En JavaScript, los arreglos son estructuras de datos que permiten almacenar y acceder a múltiples valores bajo un solo nombre. Estos son fundamentales para trabajar con conjuntos de datos y proporcionan una variedad de métodos para manipular su contenido.
           Existen varias formas de crear arreglos en JavaScript. La forma más común es utilizando la notación de corchetes []. También es posible utilizar el constructor Array(). Para acceder a elementos específicos de un arreglo, se utiliza la notación de corchetes junto con el índice del elemento.
           JavaScript proporciona una variedad de métodos para manipular arreglos, como push(), pop(), shift(), unshift(), splice(), entre otros. Es común utilizar bucles como for o métodos como forEach() para recorrer los elementos de un arreglo.`,
-        "code": `
-          // Crea un arreglo de números
+        "code": `// Crea un arreglo de números
 
-          // Crea un arreglo de cadenas
+// Crea un arreglo de cadenas
 
-          // Agrega un elemento al final del arreglo
+// Agrega un elemento al final del arreglo
 
-          // Elimina el último elemento del arreglo
+// Elimina el último elemento del arreglo
 
-          // Agrega un elemento al inicio del arreglo
+// Agrega un elemento al inicio del arreglo
 
-          // Elimina el primer elemento del arreglo
+// Elimina el primer elemento del arreglo
 
         `
       },
@@ -1461,21 +1444,20 @@ let unitsDataRetos: Unit[] = [
           1. Método map(): El método map() permite crear un nuevo arreglo aplicando una función a cada elemento del arreglo original. Este método es útil para transformar cada elemento de un arreglo según una lógica específica.
           2. Método filter(): El método filter() crea un nuevo arreglo con elementos que cumplen una condición dada. Es útil para seleccionar elementos que satisfacen ciertos criterios.
           3. Método reduce(): El método reduce() aplica una función acumuladora a cada elemento del arreglo, reduciéndolos a un único valor. Se utiliza para operaciones que combinan todos los elementos en un resultado final.`,
-        "code": `
-          // Ejemplo de map: Duplíca cada número en el arreglo
-          let numeros = [1, 2, 3, 4, 5];
-          // Tu código aquí
-          console.log(duplicados);
+        "code": `// Ejemplo de map: Duplíca cada número en el arreglo
+let numeros = [1, 2, 3, 4, 5];
+// Tu código aquí
+console.log(duplicados);
 
-          // Ejemplo de filter: Fíltra números pares
-          let numeros = [1, 2, 3, 4, 5];
-          // Tu código aquí
-          console.log(pares);
+// Ejemplo de filter: Fíltra números pares
+let numeros = [1, 2, 3, 4, 5];
+// Tu código aquí
+console.log(pares);
 
-          // Ejemplo de reduce: Suma todos los elementos del arreglo
-          let numeros = [1, 2, 3, 4, 5];
-          // Tu código aquí
-          console.log(sumaTotal);
+// Ejemplo de reduce: Suma todos los elementos del arreglo
+let numeros = [1, 2, 3, 4, 5];
+// Tu código aquí
+console.log(sumaTotal);
         `
       },
       {
@@ -1484,10 +1466,9 @@ let unitsDataRetos: Unit[] = [
           Creación de Objetos: Puedes crear un objeto en JavaScript utilizando la notación de llaves ({}) o mediante el uso del constructor Object().
           Acceso y Modificación de Propiedades: Para acceder a las propiedades de un objeto, utilizamos la notación de punto (objeto.propiedad) o la notación de corchetes (objeto['propiedad']).
           Métodos de Objeto: Los objetos en JavaScript también pueden contener funciones, conocidas como métodos. Estos métodos pueden realizar operaciones específicas asociadas al objeto.`,
-        "code": `
-          // Crea un objeto persona con notación de llaves
+        "code": `// Crea un objeto persona con notación de llaves
 
-          // Crea un objeto coche con el constructor Object()
+// Crea un objeto coche con el constructor Object()
 
         `
       },
@@ -1497,20 +1478,19 @@ let unitsDataRetos: Unit[] = [
           Propiedades: Las propiedades son valores asociados a un objeto. Pueden representar datos diversos y se accede a ellas mediante la notación de punto o la notación de corchetes.
           Métodos: Los métodos son funciones asociadas a un objeto y pueden realizar acciones específicas relacionadas con ese objeto. Se definen de la misma manera que una función, pero se asocian a un objeto.
           Diferencia entre Propiedades y Métodos: La principal distinción radica en que las propiedades almacenan datos, mientras que los métodos realizan acciones. Ambos son esenciales para modelar la lógica y el comportamiento de los objetos en JavaScript.`,
-        "code": `
-          // Completa propiedades del objeto
-          let libro = {
-            // Tu código aquí
-          };
+        "code": `// Completa propiedades del objeto
+let libro = {
+  // Tu código aquí
+};
 
-          // Completa el ejemplo de método en un objeto
-          let coche = {
-            marca: 'Toyota',
-            modelo: 'Corolla',
-            // Tu código aquí
-          };
+// Completa el ejemplo de método en un objeto
+let coche = {
+  marca: 'Toyota',
+  modelo: 'Corolla',
+  // Tu código aquí
+};
 
-          coche.encender();
+coche.encender();
         `
       }
     ]
@@ -1525,16 +1505,15 @@ let unitsDataRetos: Unit[] = [
           Acceso y Manipulación con JavaScript: JavaScript interactúa con el DOM para realizar acciones como cambiar el contenido de un elemento, modificar atributos, agregar o eliminar elementos, y responder a eventos del usuario.
           Importancia en Desarrollo Web Dinámico: El DOM es fundamental para crear páginas web dinámicas e interactivas. Permite a los desarrolladores actualizar el contenido de una página en respuesta a acciones del usuario, como clics o envíos de formularios, sin necesidad de recargar la página completa.
           Eventos y Manejo de Eventos: El DOM facilita el manejo de eventos, como clics de ratón o pulsaciones de teclas. Los desarrolladores pueden asignar funciones (manejadores de eventos) a elementos específicos para responder a estas interacciones.`,
-        "code": `
-          // Accede al elemento "titulo"
-          // Tu código aquí
-          titulo.innerHTML = 'Nuevo Título';
+        "code": `// Accede al elemento "titulo"
+// Tu código aquí
+titulo.innerHTML = 'Nuevo Título';
 
-          // Completa el ejemplo de manejo de eventos en el DOM
-          let boton = document.getElementById('miBoton');
-          boton.addEventListener('click', function() {
-            // Tu código aquí
-          });
+// Completa el ejemplo de manejo de eventos en el DOM
+let boton = document.getElementById('miBoton');
+boton.addEventListener('click', function() {
+  // Tu código aquí
+});
         `
       },
       {
@@ -1544,26 +1523,25 @@ let unitsDataRetos: Unit[] = [
           Manipulación de la Estructura: Además de cambiar el contenido, JavaScript facilita la manipulación de la estructura del DOM. Puedes agregar, eliminar o reorganizar elementos según las necesidades de la aplicación.
           Ajuste de Estilos y Clases: JavaScript también permite ajustar estilos y clases para cambiar la apariencia de los elementos. Esto es útil para aplicar estilos personalizados o responder a eventos específicos.
           Creación de Elementos Dinámicamente: JavaScript posibilita la creación de nuevos elementos y su inserción en el DOM. Esto es esencial para construir interfaces de usuario dinámicas.`,
-        "code": `
-          // Completa el ejemplo de modificación del contenido del DOM
-          // Tu código aquí
-          parrafo.innerHTML = 'Nuevo contenido del párrafo';
+        "code": `// Completa el ejemplo de modificación del contenido del DOM
+// Tu código aquí
+parrafo.innerHTML = 'Nuevo contenido del párrafo';
 
-          // Completa el ejemplo de manipulación de la estructura del DOM
-          let contenedor = document.getElementById('miContenedor');
-          // Tu código aquí
-          nuevoElemento.textContent = 'Nuevo elemento';
-          // Tu código aquí
+// Completa el ejemplo de manipulación de la estructura del DOM
+let contenedor = document.getElementById('miContenedor');
+// Tu código aquí
+nuevoElemento.textContent = 'Nuevo elemento';
+// Tu código aquí
 
-          // Completa el ejemplo de ajuste de estilos y clases en el DOM
-          let miElemento = document.getElementById('miElemento');
-          miElemento.style.color = 'blue';
-          // Tu código aquí
+// Completa el ejemplo de ajuste de estilos y clases en el DOM
+let miElemento = document.getElementById('miElemento');
+miElemento.style.color = 'blue';
+// Tu código aquí
 
-          // Completa el ejemplo de creación de elementos dinámicamente
-          let nuevoDiv = document.createElement('div');
-          nuevoDiv.textContent = '¡Nuevo elemento creado!';
-          // Tu código aquí
+// Completa el ejemplo de creación de elementos dinámicamente
+let nuevoDiv = document.createElement('div');
+nuevoDiv.textContent = '¡Nuevo elemento creado!';
+// Tu código aquí
         `
       },
       {
