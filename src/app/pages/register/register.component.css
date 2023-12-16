@@ -19,19 +19,19 @@ section {
   h1 {
     color: white;
     font-weight: 400;
-    font-size: xx-large;
+    font-size: 1.5rem;
   }
 
   span {
     font-family: 'Monoton', sans-serif;
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-weight: 200;
-    margin-left: .3ch;
+    margin-right: .3ch;
   }
 
   form {
     width: 440px;
-    height: 572px;
+    height: auto;
     border: 2px solid #FFFFFF;
     border-radius: 20px;
     background-color: #2b144aaa;
@@ -40,6 +40,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    padding-block: 2rem;
   }
 
   input {
@@ -58,11 +59,12 @@ section {
 
   input::placeholder {
     color: white;
+    font-size: 1rem;
   }
 
   div {
     position: absolute;
-    left: 20%;
+    left:18%;
     top: 20%;
   }
 
