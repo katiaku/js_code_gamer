@@ -10,13 +10,16 @@ header {
   background-color: black;
   z-index: 9;
   font-family: 'Roboto', sans-serif;
-
 }
 
-span {
+div {
   font-size: 1.3rem;
   color: white;
   font-family: 'Monoton', sans-serif;
+}
+
+span {
+  color: #FFFF00;
 }
 
 .header-nav {
