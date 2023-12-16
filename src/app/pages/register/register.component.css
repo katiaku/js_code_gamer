@@ -15,20 +15,20 @@ section {
     font-family: 'Roboto', sans-serif;
 
   }
-  
+
   h1 {
     color: white;
     font-weight: 400;
     font-size: xx-large;
   }
-  
+
   span {
     font-family: 'Monoton', sans-serif;
     font-size: 3rem;
     font-weight: 200;
     margin-left: .3ch;
   }
-  
+
   form {
     width: 440px;
     height: 572px;
@@ -41,7 +41,7 @@ section {
     justify-content: center;
     gap: 1.5rem;
   }
-  
+
   input {
     width: 369px;
     height: 56px;
@@ -51,15 +51,15 @@ section {
     padding-inline: 1rem;
     color: white;
   }
-  
+
   input:focus {
     outline: none;
   }
-  
+
   input::placeholder {
     color: white;
   }
-  
+
   div {
     position: absolute;
     left: 20%;
@@ -70,7 +70,7 @@ section {
     height: 300px;
     /* transform: rotateY(3.142rad); */
   }
-  
+
   button {
     background-color: white;
     color: black;
@@ -82,4 +82,9 @@ section {
     border: 2px solid #7451FF;
     border-radius: 15px;
     box-shadow: 0 2px 0#7451FF;
+    transition: 1s linear;
+  }
+
+  button:hover {
+    background-color: #FFFF00;
   }

@@ -34,7 +34,7 @@ span{
 }
 
 button{
-    background-color: white;
+  background-color: white;
   color: black;
   font-weight: bold;
   font-size: 1.1rem;
@@ -46,11 +46,10 @@ button{
   box-shadow: 0 2px 0#7451FF;
   align-self: flex-end;
   font-family: 'Roboto', sans-serif;
-
-
-
+  transition: 1s linear;
 }
 
 button:hover{
-    cursor: pointer;
+  cursor: pointer;
+  background-color: #FFFF00;
 }

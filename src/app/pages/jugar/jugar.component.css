@@ -44,56 +44,56 @@ transform: scale(2) rotate(-360deg);
 
 .btn1{
 position: fixed;
-top: 76%; 
-right: 83%; 
+top: 76%;
+right: 83%;
 }
 .btn2{
 position: fixed;
 top: 71%;
-right: 74%; 
+right: 74%;
 }
 .btn3{
 position: fixed;
 top: 66%;
-right: 65%; 
+right: 65%;
 }
 .btn4{
 position: fixed;
 top: 60%;
-right: 55%; 
+right: 55%;
 }
 .btn5{
 position: fixed;
 top: 55%;
-right: 45%; 
+right: 45%;
 }
 .btn6{
 position: fixed;
 top: 43%;
-right: 30%; 
+right: 30%;
 }
 .btn7{
 position: fixed;
 top: 30%;
-right: 18%; 
+right: 18%;
 }
 .btn8{
 position: fixed;
 top: 22%;
-right: 10%; 
+right: 10%;
 }
 .btn9{
 position: fixed;
 top: 13%;
-right: 2%; 
+right: 2%;
 }
 .planeta1{
 position: fixed;
-top: 72%; 
-right: 82.5%; 
-width: 3%; 
-height: 5%; 
-border-radius: 50%; 
+top: 72%;
+right: 82.5%;
+width: 3%;
+height: 5%;
+border-radius: 50%;
 transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -104,10 +104,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 10); /* Agrega un resplandor alrededor 
 .planeta2{
 position: fixed;
 top: 65%;
-right: 73%; 
-width: 5%; 
-height: 8%; 
-border-radius: 50%; 
+right: 73%;
+width: 5%;
+height: 8%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -121,10 +121,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 .planeta3{
 position: fixed;
 top: 60%;
-right: 64%; 
-width: 5%; 
-height: 7%; 
-border-radius: 50%; 
+right: 64%;
+width: 5%;
+height: 7%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -138,10 +138,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 .planeta4{
 position: fixed;
 top: 55%;
-right: 54.5%; 
-width: 4%; 
-height: 6%; 
-border-radius: 50%; 
+right: 54.5%;
+width: 4%;
+height: 6%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -155,10 +155,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 .planeta5{
 position: fixed;
 top: 41%;
-right: 42%; 
-width: 10%; 
-height: 15%; 
-border-radius: 50%; 
+right: 42%;
+width: 10%;
+height: 15%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -172,10 +172,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 .planeta6{
 position: fixed;
 top: 29%;
-right: 28%;  
-width: 10%; 
-height: 14%; 
-border-radius: 50%; 
+right: 28%;
+width: 10%;
+height: 14%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -190,9 +190,9 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 position: fixed;
 top: 25%;
 right: 17.5%;
-width: 4%; 
-height: 7%; 
-border-radius: 50%; 
+width: 4%;
+height: 7%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -206,10 +206,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 .planeta8{
 position: fixed;
 top: 17%;
-right: 9.5%; 
-width: 4%; 
-height: 7%; 
-border-radius: 50%; 
+right: 9.5%;
+width: 4%;
+height: 7%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -223,10 +223,10 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 .planeta9{
 position: fixed;
 top: 9.5%;
-right: 2.5%; 
-width: 3%; 
-height: 6%; 
-border-radius: 50%; 
+right: 2.5%;
+width: 3%;
+height: 6%;
+border-radius: 50%;
 color:white;
 display: flex;
 justify-content: center;
@@ -240,8 +240,8 @@ box-shadow: 0 0 40px rgba(255, 255, 255, 5); /* Agrega un resplandor alrededor d
 
 .astronauta {
 /* border: 1px solid red; */
-height: 170px; 
-width: 380px; 
+height: 170px;
+width: 380px;
 background-image: url("../../../assets/images/astro.retos.jugar.png");
 background-size: contain;
 background-repeat: no-repeat;
@@ -253,8 +253,8 @@ transform: translate(50%, -50%);
 }
 
 .etiqueta{
-height: 150px; 
-width: 400px; 
+height: 150px;
+width: 400px;
 background-image: url("../../../assets/images/etiqueta.jugar.png");
 background-size: contain;
 background-repeat: no-repeat;
@@ -268,8 +268,8 @@ transform: translate(50%, -50%);
 }
 
 .puntero{
-height: 100px; 
-width: 250px; 
+height: 100px;
+width: 250px;
 background-image: url("../../../assets/images/puntero.jugar.png");
 background-size: contain;
 background-repeat: no-repeat;
@@ -284,8 +284,8 @@ transform: translate(50%, -50%);
 
 .texto{
 /* border: 1px solid red; */
-height: 150px; 
-width: 210px; 
+height: 150px;
+width: 210px;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
@@ -310,5 +310,9 @@ padding: 10px;
     align-items: center;
     align-self: flex-end;
     text-decoration: none;
-    
+    transition: 1s linear;
+}
+
+.start:hover {
+  background-color: #FFFF00;
 }
