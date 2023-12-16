@@ -51,7 +51,12 @@ button {
     border-radius: 15px;
     box-shadow: 0 2px 0#7451FF;
     align-self: center;
+    transition: 1s linear;
   }
+
+button:hover {
+  background-color: #FFFF00;
+}
 
 .logros{
     background-image: url(../../../assets/images/fondo_estrellas.jpg);
@@ -63,7 +68,7 @@ button {
     flex-direction: column;
     align-items: center;
     margin-left: 20%;
-    
+
 }
 
 h1{
