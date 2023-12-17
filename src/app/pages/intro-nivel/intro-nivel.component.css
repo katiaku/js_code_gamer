@@ -4,15 +4,12 @@ height: 100vh;
 background-image: url("../../../assets/images/fondo_estrellas.jpg");
 background-size: cover;
 background-repeat: no-repeat;
-overflow: hidden; 
-
+overflow: hidden;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items:center;
 font-family: 'Roboto', sans-serif;
-
-
 }
 .animacion {
 overflow: hidden; /* Oculta el texto que está fuera del contenedor */
@@ -51,7 +48,6 @@ background-color: rgba(0, 0, 0, 0.6);
 color: white;
 font-size: 20px;
 text-align: center;
-
 display: flex;
 justify-content: center;
 align-items: flex-start;
@@ -69,9 +65,8 @@ border: 2px solid #7451FF;
 border-radius: 15px;
 box-shadow: 0 2px 0#7451FF;
 align-self: flex-end;
-animation: grow .4s ease-in-out;
-animation-delay: .6s;
 }
+
 .btn{
     /* border: 2px solid rgb(0, 255, 94); */
     height: 45px;
