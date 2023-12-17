@@ -12,7 +12,7 @@ export class NivelesLearnComponent implements OnInit{
   constructor(public componenteApp:AppComponent){}
   
   ngOnInit(): void {
-    this.componenteApp.mostrarHeader = true;
+    this.componenteApp.mostrarHeader = false;
   }
 
 }
