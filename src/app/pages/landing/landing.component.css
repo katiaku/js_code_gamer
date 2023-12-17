@@ -1,5 +1,5 @@
 .landing{
-border: 1px solid red;
+/* border: 1px solid red; */
 height: 308vh;
 font-family: 'Roboto', sans-serif;
 
@@ -8,7 +8,7 @@ font-family: 'Roboto', sans-serif;
 /* border: 3px solid red; */
 height: 100vh;
 background-image: url("../../../assets/images/inicio.landing.png");
-background-repeat: no-repeat; 
+background-repeat: no-repeat;
 background-size: 100% 100%;
 
 display: flex;
@@ -19,7 +19,7 @@ justify-content: center;
 /* border: 3px solid rgb(0, 255, 13); */
 color: white;
 height: 97vh;
-width: 83vw; 
+width: 83vw;
 
 display: flex;
 flex-direction: column;
@@ -33,7 +33,7 @@ height: 35vh;
 width: 100%;
 display: flex;
 justify-content: center;
-align-items: flex-end;   
+align-items: flex-end;
 }
 span{
 font-family: 'Monoton', sans-serif;
@@ -46,19 +46,19 @@ height: 20vh;
 width: 100%;
 display: flex;
 justify-content: center;
-align-items: flex-end;  
+align-items: flex-end;
 color:yellow;
 }
 .end{
 /* border: 3px solid red; */
 height: 43vh;
-width: 100%; 
+width: 100%;
 display: flex;
 }
 .astronauta{
 /* border: 3px solid rgb(221, 255, 0); */
 height: 43vh;
-width: 35%; 
+width: 35%;
 background-image: url("../../../assets/images/astronauta_sinfondo.png");
 background-size: 80% 70%;
 background-repeat: no-repeat;
@@ -81,7 +81,7 @@ line-height: 40px;
 /* border: 1px solid red; */
 /* height: 100vh; */
 background-image: url("../../../assets/images/fin.landing.png");
-background-repeat: no-repeat; 
+background-repeat: no-repeat;
 background-size: 100% 100%;
 
 display: flex;
@@ -140,7 +140,7 @@ align-items: center;
 }
 .boton{
 /* border: 3px solid rgb(0, 221, 255); */
-height: 11vh; 
+height: 11vh;
 width: 100%;
 
 display: flex;
@@ -151,7 +151,7 @@ align-items: center;
 button {
 background-color: rgb(0, 0, 0);
 cursor: pointer;
-outline: none; 
+outline: none;
 border-radius: 50px;
 }
 .btn{
@@ -161,7 +161,7 @@ color: white;
 font-size: 1vw;
 padding: 0.5vw;
 max-width: 150px;
-width: 100%; 
+width: 100%;
 
 }
 .info1{
@@ -204,7 +204,7 @@ align-items: center;
 }
 .boton2{
 /* border: 3px solid rgb(0, 221, 255); */
-height: 11vh; 
+height: 11vh;
 width: 100%;
 
 display: flex;
@@ -218,7 +218,7 @@ color: white;
 font-size: 1vw;
 padding: 0.5vw;
 max-width: 150px;
-width: 100%; 
+width: 100%;
 
 }
 .info2{
