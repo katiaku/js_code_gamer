@@ -47,6 +47,7 @@ section {
 
   input::placeholder {
     color: white;
+    font-size: 1rem;
   }
 
   div {
