@@ -18,24 +18,9 @@ let unitsDataLearn: Unit[] = [
     "content": [
       {
         "title": "Historia y origen de JavaScript",
-        "content": `JavaScript, a menudo abreviado como JS, es un lenguaje de programación de alto nivel,
-          interpretado y orientado a objetos. Fue creado por Brendan Eich mientras trabajaba en Netscape
-          Communications Corporation en 1995. La necesidad de un lenguaje que permitiera a los desarrolladores
-          agregar interactividad a las páginas web llevó al desarrollo de JavaScript. Nacimiento en Netscape:
-          JavaScript se diseñó originalmente para ser utilizado en el navegador Netscape Navigator. Su objetivo
-          era proporcionar a los desarrolladores la capacidad de manipular elementos de una página web y realizar
-          acciones del lado del cliente de manera dinámica.
-
-          Influencias y Evolución:
-          JavaScript tomó prestadas muchas características de otros lenguajes de programación,
-          como Java y C. Aunque su nombre sugiere una relación con Java, ambos lenguajes son
-          distintos y se utilizan para diferentes propósitos.
-
-          Estándares y Comités:
-          A medida que JavaScript ganó popularidad, se formaron estándares para garantizar su
-          interoperabilidad entre diferentes navegadores. Actualmente, la especificación
-          ECMAScript define el estándar de JavaScript, y el desarrollo y la evolución de
-          JavaScript son gestionados por el Comité Técnico ECMA/TC39.`,
+        "content": `JavaScript, a menudo abreviado como JS, es un lenguaje de programación de alto nivel, interpretado y orientado a objetos. Fue creado por Brendan Eich mientras trabajaba en Netscape Communications Corporation en 1995. La necesidad de un lenguaje que permitiera a los desarrolladores agregar interactividad a las páginas web llevó al desarrollo de JavaScript. Nacimiento en Netscape: JavaScript se diseñó originalmente para ser utilizado en el navegador Netscape Navigator. Su objetivo era proporcionar a los desarrolladores la capacidad de manipular elementos de una página web y realizar acciones del lado del cliente de manera dinámica.
+          Influencias y Evolución: JavaScript tomó prestadas muchas características de otros lenguajes de programación, como Java y C. Aunque su nombre sugiere una relación con Java, ambos lenguajes son distintos y se utilizan para diferentes propósitos.
+          Estándares y Comités: A medida que JavaScript ganó popularidad, se formaron estándares para garantizar su interoperabilidad entre diferentes navegadores. Actualmente, la especificación ECMAScript define el estándar de JavaScript, y el desarrollo y la evolución de JavaScript son gestionados por el Comité Técnico ECMA/TC39.`,
         "code": `
           // Ejemplo de uso de JavaScript
           console.log("Hola, mundo!");
