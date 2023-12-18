@@ -41,12 +41,11 @@ p {
     width: 400px;
     border-radius: 200px;
     background-image: url("../../../assets/images/fondo_estrellas.jpg");
- 
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-evenly; */
-    /* margin: 10px; */
+    justify-content: space-between;
     margin-bottom: 100px;
 }
 .imagen1{
@@ -76,27 +75,29 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.caja{
+    /* border:2px solid red; */
+    height: 35vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.758);
+    border-bottom-left-radius: 190px;
+    border-bottom-right-radius: 190px;
+}
 .info{
     /* border: 1px solid red; */
-    height: 20vh;
-    width: 95%;
+    height: 25vh;
+    padding: 15px;
     text-align: center;
-    padding: 0.5vw;
-    background-color: rgba(0, 0, 0, 0.758);
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
     line-height: 20px;
-    margin: 15px;
+
 }
 .rrss{
     /* border: 1px solid red; */
     height: 5vh;
-    width: 80%;
-    gap: 20px;
-    /* background-color: rgba(0, 0, 0, 0.758); */
-
+    gap: 30px;
 }
 ul {
+
     font-size: 2vw;
     list-style: none;
     display: flex;
