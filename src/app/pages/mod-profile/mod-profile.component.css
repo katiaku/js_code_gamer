@@ -15,9 +15,9 @@ section {
     font-family: 'Roboto', sans-serif;
 
   }
-  
-  
-  
+
+
+
   form {
     width: 440px;
     height: 572px;
@@ -29,8 +29,9 @@ section {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    padding-block: 2rem;
   }
-  
+
   input {
     width: 369px;
     height: 56px;
@@ -40,15 +41,16 @@ section {
     padding-inline: 1rem;
     color: white;
   }
-  
+
   input:focus {
     outline: none;
   }
-  
+
   input::placeholder {
     color: white;
+    font-size: 1rem;
   }
-  
+
   div {
     position: absolute;
     left: 65%;
@@ -59,7 +61,7 @@ section {
     height: 300px;
     transform: rotateY(3.142rad);
   }
-  
+
   button {
     background-color: white;
     color: black;
@@ -71,4 +73,9 @@ section {
     border: 2px solid #7451FF;
     border-radius: 15px;
     box-shadow: 0 2px 0#7451FF;
+    transition: 1s linear;
+  }
+
+  button:hover {
+    background-color: #FFFF00;
   }

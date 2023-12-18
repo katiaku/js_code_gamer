@@ -1,14 +1,14 @@
 .landing{
 /* border: 1px solid red; */
 /* height: 800px; */
-background-image: url("../../../assets/images/fondo.Quienes.Somos.png");
+background-image: url("../../../assets/images/pag_Quienes.Somos.2.png");
 background-size: cover;
 background-repeat: no-repeat;
 }
 .titulo{
     /* border: 1px solid red; */
-    height: 20vh;
-    letter-spacing: 1vw;
+    height: 15vh;
+    letter-spacing: 0.7vw;
     font-size: 3vw;
     
 
@@ -17,7 +17,7 @@ background-repeat: no-repeat;
     align-items: flex-end;
 }
 img {
-    width: 5vw;
+    width: 4vw;
     height: auto;
     margin-right: 2vw;
   }
@@ -27,6 +27,7 @@ p {
   }
 .equipos{
     /* border: 1px solid yellowgreen; */
+    margin-top: 20px;
     /* height: 80vh; */
 
     display: flex;
@@ -36,7 +37,7 @@ p {
 }
 .equipo{
     /* border: 1px solid red; */
-    height: 700px;
+    height: 670px;
     width: 400px;
     border-radius: 200px;
     background-image: url("../../../assets/images/fondo_estrellas.jpg");
@@ -45,7 +46,8 @@ p {
     flex-direction: column;
     align-items: center;
     /* justify-content: space-evenly; */
-    margin: 10px;
+    /* margin: 10px; */
+    margin-bottom: 100px;
 }
 .imagen1{
     /* border: 1px solid red; */
@@ -76,15 +78,23 @@ p {
 }
 .info{
     /* border: 1px solid red; */
-    height: 25vh;
+    height: 20vh;
     width: 95%;
     text-align: center;
-    padding: 1vw;
+    padding: 0.5vw;
+    background-color: rgba(0, 0, 0, 0.758);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    line-height: 20px;
+    margin: 15px;
 }
 .rrss{
     /* border: 1px solid red; */
     height: 5vh;
-    width: 95%;
+    width: 80%;
+    gap: 20px;
+    /* background-color: rgba(0, 0, 0, 0.758); */
+
 }
 ul {
     font-size: 2vw;

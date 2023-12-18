@@ -5,14 +5,17 @@
       <h2>{{ currentUnitIndex + 1 }}.{{ currentPartIndex + 1 }}. {{ unitsData[currentUnitIndex].content[currentPartIndex].title }}</h2>
       <div class="text" [innerHTML]="unitsData[currentUnitIndex].content[currentPartIndex].content | textFormatter:keywords:'#FFFF00'">{{ unitsData[currentUnitIndex].content[currentPartIndex].content }}</div>
       <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
-      <div class="arrows">
-        <button (click)="prevPart()" [disabled]="currentPartIndex === 0 && currentUnitIndex === 0">
-          <img class="arrow" src="../../../assets/img/Polygon_1.png" alt="flecha derecha">
-        </button>
-        <button (click)="nextPart()" [disabled]="currentPartIndex == 2 && currentUnitIndex == 8">
-          <img class="arrow" src="../../../assets/img/Polygon_2.png" alt="flecha izquierda">
-        </button>
-      </div>
+      <button *ngIf="currentPartIndex == unitsData[currentUnitIndex].content.length - 1; else arrows" class="submit" type="submit">RETOS</button>
+      <ng-template #arrows>
+        <div class="arrows">
+          <button class="arrow" (click)="prevPart()" [disabled]="currentPartIndex === 0 && currentUnitIndex === 0">
+            <img class="arrow" src="../../../assets/img/Polygon_1.png" alt="flecha derecha">
+          </button>
+          <button class="arrow" (click)="nextPart()" [disabled]="currentPartIndex == 2 && currentUnitIndex == 8">
+            <img class="arrow" src="../../../assets/img/Polygon_2.png" alt="flecha izquierda">
+          </button>
+        </div>
+      </ng-template>
     </div>
   </div>
   <div class="right">
