@@ -109,8 +109,19 @@ h2{
 
 .perc{
     font-family: 'Monoton', sans-serif;
-    color: #FFFF00;
     font-weight: 100;
+}
+
+.perc_1 {
+  color: #FFFF00;
+}
+
+.perc_2 {
+  color: #7451FF;
+}
+
+.perc_3 {
+  color: #82FEE7;
 }
 
 .titulo{
