@@ -28,6 +28,6 @@ ngOnInit(): void {
 }
 
 iniciarJuego() {
-  this.router.navigate(['/']);
+  this.router.navigate(['/retos']);
 }
 }
