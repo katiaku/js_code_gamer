@@ -316,3 +316,47 @@ padding: 10px;
 .start:hover {
   background-color: #FFFF00;
 }
+
+.etiqueta2{
+height: 150px;
+width: 400px;
+background-image: url("../../../assets/images/etiqueta.jugar.png");
+background-size: contain;
+background-repeat: no-repeat;
+color: white;
+position: fixed;
+top: 49vh;
+right: 70vw;
+transform: translate(50%, -50%);
+
+
+}
+
+.puntero2{
+height: 100px;
+width: 250px;
+background-image: url("../../../assets/images/puntero.jugar.png");
+background-size: contain;
+background-repeat: no-repeat;
+
+
+position: fixed;
+top: 61vh;
+right: 69.5vw;
+transform: translate(50%, -50%);
+
+}
+
+.texto2{
+/* border: 1px solid red; */
+height: 150px;
+width: 210px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+padding: 10px;
+
+
+}
+
