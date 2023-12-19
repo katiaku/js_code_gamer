@@ -41,11 +41,12 @@ section {
     justify-content: center;
     gap: 1.5rem;
     padding-block: 2rem;
+    z-index: 99;
   }
 
   input {
     width: 369px;
-    height: 56px;
+    height: 46px;
     border: 2px solid #FFFFFF;
     border-radius: 15px;
     background-color: #2B144A;
@@ -70,6 +71,7 @@ section {
 
   img{
     height: 300px;
+    z-index: 9;
     /* transform: rotateY(3.142rad); */
   }
 
