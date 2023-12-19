@@ -1,19 +1,17 @@
-import { Level } from "./level";
-
 export class User {
 
-  username: string;
-  profilePic: string;
+  name_surname: string;
   email: string;
+  username: string;
+  photo: string;
   password: string;
-  levels: Level[];
 
-  constructor(username: string, profilePic: string, email: string, password: string, levels: Level[]) {
-    this.username = username;
-    this.profilePic = profilePic;
+  constructor(name_surname: string, email: string, username: string, photo: string, password: string) {
+    this.name_surname = name_surname;
     this.email = email;
+    this.username = username;
+    this.photo = photo;
     this.password = password;
-    this.levels = levels;
   }
 
 }
