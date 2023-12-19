@@ -152,7 +152,7 @@ align-items: center;
 }
 button {
 background-color: rgb(0, 0, 0);
-cursor: pointer;
+cursor:default;
 outline: none;
 border-radius: 50px;
 }
