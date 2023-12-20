@@ -1,45 +1,109 @@
 <section>
     <h1><span>Únete </span>A NOSOTROS</h1>
-    <form>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Nombre"
-      >
-      <input
-        type="text"
-        name="surname"
-        id="surname"
-        placeholder="Apellido"
-      >
-      <input
-        type="text"
-        name="photo"
-        id="photo"
-        placeholder="Foto de perfil"
-      >
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
-      >
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Contarseña"
-      >
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Confirmar Contarseña"
-      >
-      <button type="submit" (click)="onSubmit()">REGISTRARSE</button>
+    <form [formGroup]="registerForm">
+      <div>
+        <input
+          type="text"
+          name="name_surname"
+          id="name_surname"
+          placeholder="Nombre y apellido"
+          formControlName="name_surname"
+          [ngClass]="{'is-invalid': (registerForm.get('name_surname').dirty || registerForm.get('name_surname').touched) && !registerForm.get('name_surname').valid}"
+        >
+        <div *ngIf="registerForm.get('name_surname').touched && !registerForm.get('name_surname').valid; else substitute" class="invalid-feedback">El nombre y el apellido son obligatorios</div>
+        <ng-template #substitute>
+          <div class="substitute"></div>
+        </ng-template>
+      </div>
+
+      <div>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          formControlName="email"
+          [ngClass]="{'is-invalid': (registerForm.get('email').dirty || registerForm.get('email').touched) && !registerForm.get('email').valid}"
+        >
+        <div *ngIf="registerForm.get('name_surname').touched && !registerForm.get('email').valid; else substitute" class="invalid-feedback">
+          <div *ngIf="registerForm.get('email').errors.required">La dirección de email es obligatoria</div>
+          <div *ngIf="registerForm.get('email').errors.email">Dirección email incorrecta</div>
+        </div>
+        <ng-template #substitute>
+          <div class="substitute"></div>
+        </ng-template>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          formControlName="username"
+          [ngClass]="{'is-invalid': (registerForm.get('username').dirty || registerForm.get('username').touched) && !registerForm.get('username').valid}"
+        >
+        <div *ngIf="registerForm.get('name_surname').touched && !registerForm.get('username').valid; else substitute" class="invalid-feedback">El nombre de usuario es obligatorio</div>
+        <ng-template #substitute>
+          <div class="substitute"></div>
+        </ng-template>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          name="photo"
+          id="photo"
+          placeholder="Photo URL"
+          formControlName="photo"
+          [ngClass]="{'is-invalid': (registerForm.get('photo').dirty || registerForm.get('photo').touched) && !registerForm.get('photo').valid}"
+        >
+        <div *ngIf="registerForm.get('name_surname').touched && !registerForm.get('photo').valid; else substitute" class="invalid-feedback">El photo es obligatorio</div>
+        <ng-template #substitute>
+          <div class="substitute"></div>
+        </ng-template>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Contarseña"
+          formControlName="password"
+          [ngClass]="{'is-invalid': (registerForm.get('password').dirty || registerForm.get('password').touched) && !registerForm.get('password').valid}"
+        >
+        <div *ngIf="registerForm.get('name_surname').touched && !registerForm.get('password').valid; else substitute" class="invalid-feedback">
+          <div *ngIf="registerForm.get('password').errors.required">La clave es obligatoria</div>
+          <div *ngIf="registerForm.get('password').errors.minlength">La clave debe tener al menos 8 caracteres</div>
+        </div>
+        <ng-template #substitute>
+          <div class="substitute"></div>
+        </ng-template>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirmar Contarseña"
+          formControlName="confirmPassword"
+          [ngClass]="{'is-invalid': (registerForm.get('confirmPassword').dirty || registerForm.get('confirmPassword').touched) && !registerForm.get('confirmPassword').valid}"
+        >
+        <div *ngIf="registerForm.get('name_surname').touched && !registerForm.get('confirmPassword').valid; else substitute" class="invalid-feedback">
+          <div *ngIf="registerForm.get('confirmPassword').errors.required">La clave es obligatoria</div>
+          <div *ngIf="registerForm.get('confirmPassword').errors.minlength">La clave debe tener al menos 8 caracteres</div>
+          <div *ngIf="registerForm.get('confirmPassword').errors.matchPassword">Las claves no coinciden</div>
+        </div>
+        <ng-template #substitute>
+          <div class="substitute"></div>
+        </ng-template>
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="REGISTRARSE" (click)="register()" [disabled]="registerForm.invalid">
     </form>
-    <div>
+    <div class="image">
         <img src="../../../assets/images/astronauta_sinfondo.png" alt="astronauta">
     </div>
-  </section>
+</section>
