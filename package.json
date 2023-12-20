@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^16.2.0",
+    "@angular/animations": "^16.2.12",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
@@ -22,6 +22,7 @@
     "angular2-highlight-js": "^9.0.0",
     "highlight.js": "^11.9.0",
     "ngx-monaco-editor": "^8.1.1",
+    "ngx-toastr": "^18.0.0",
     "prismjs": "^1.29.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.2",

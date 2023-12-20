@@ -19,6 +19,10 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
 import { RetosComponent } from './pages/retos/retos.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,15 @@ import { JugarComponent } from './pages/jugar/jugar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
