@@ -39,7 +39,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
     padding-block: 2rem;
     z-index: 99;
   }
@@ -52,6 +51,7 @@ section {
     background-color: #2B144A;
     padding-inline: 1rem;
     color: white;
+    font-size: 1rem;
   }
 
   input:focus {
@@ -63,7 +63,7 @@ section {
     font-size: 1rem;
   }
 
-  div {
+  .image {
     position: absolute;
     left:18%;
     top: 20%;
@@ -75,7 +75,7 @@ section {
     /* transform: rotateY(3.142rad); */
   }
 
-  button {
+  input[type="submit"] {
     background-color: white;
     color: black;
     font-weight: bold;
@@ -89,6 +89,23 @@ section {
     transition: 1s linear;
   }
 
-  button:hover {
+  input[type="submit"]:hover {
     background-color: #FFFF00;
+  }
+
+  input[type="submit"]:disabled {
+    background-color: #aeae36;
+    cursor: inherit;
+  }
+
+  .invalid-feedback {
+    color: #FFFF00;
+    font-size: .7rem;
+    height: 1.5rem;
+    text-align: center;
+    padding: .2rem;
+  }
+
+  .substitute {
+    height: 1.5rem;
   }
