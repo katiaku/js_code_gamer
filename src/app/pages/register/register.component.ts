@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { AppComponent } from 'src/app/app.component';
 import { UsersService } from 'src/app/shared/users.service';
 import { Response } from 'src/app/models/response';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,8 @@ export class RegisterComponent implements OnInit{
 
   constructor(public componentApp:AppComponent,
     private formBuilder: FormBuilder,
-    private apiService: UsersService){
+    private apiService: UsersService,
+    private toast: ToastrService){
       this.buildForm();
   }
 
@@ -30,10 +32,10 @@ export class RegisterComponent implements OnInit{
     this.apiService.register(user).subscribe((resp: Response) => {
       console.log(resp);
         if (!resp.error) {
-          alert('Usuario creado satisfactoriamente');
+          this.toast.success('Usuario creado satisfactoriamente', '', { positionClass: 'toastPosition' });
           this.registerForm.reset();
         } else {
-          alert('Hubo un problema al registrar al usuario.');
+          this.toast.error('Hubo un problema al registrar al usuario', '', { positionClass: 'toastPosition' });
         }
     });
   }
