@@ -417,24 +417,24 @@ switch (dia) {
             // Código a ejecutar al menos una vez
           } while (condición);`,
         "code": `
-          // for Loop
-          for (let i = 0; i < 5; i++) {
-            console.log("Iteración " + (i + 1));
-          }
+// for Loop
+for (let i = 0; i < 5; i++) {
+  console.log("Iteración " + (i + 1));
+}
 
-          // while Loop
-          let contador = 0;
-          while (contador < 3) {
-            console.log("Contador: " + contador);
-            contador++;
-          }
+// while Loop
+let contador = 0;
+while (contador < 3) {
+  console.log("Contador: " + contador);
+  contador++;
+}
 
-          // do-while Loop
-          let num = 1;
-          do {
-            console.log("Número: " + num);
-            num++;
-          } while (num <= 3);
+// do-while Loop
+let num = 1;
+do {
+  console.log("Número: " + num);
+  num++;
+} while (num <= 3);
         `
       },
       {
@@ -443,19 +443,19 @@ switch (dia) {
           break: La sentencia break se utiliza para salir de un bucle o de una estructura de control de flujo. Puede usarse en bucles for, while, y do-while, así como en estructuras condicionales como switch.
           continue: La sentencia continue se utiliza para omitir la parte restante de un bucle y pasar a la siguiente iteración. Similar a break, puede usarse en bucles for, while, y do-while.`,
         "code": `
-          for (let i = 0; i < 5; i++) {
-            if (i === 3) {
-              break; // Sale del bucle cuando i es igual a 3
-            }
-            console.log("Iteración " + (i + 1));
-          }
+for (let i = 0; i < 5; i++) {
+  if (i === 3) {
+    break; // Sale del bucle cuando i es igual a 3
+  }
+  console.log("Iteración " + (i + 1));
+}
 
-          for (let i = 0; i < 5; i++) {
-            if (i === 2) {
-              continue; // Salta la iteración cuando i es igual a 2
-            }
-            console.log("Iteración " + (i + 1));
-          }
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    continue; // Salta la iteración cuando i es igual a 2
+  }
+  console.log("Iteración " + (i + 1));
+}
         `
       }
     ]
@@ -470,29 +470,29 @@ switch (dia) {
           Además, JavaScript permite el concepto de funciones como ciudadanos de primera clase, lo que significa que las funciones pueden asignarse a variables, pasarse como argumentos a otras funciones y devolverse como valores desde otras funciones. Un aspecto destacado es el alcance de las variables dentro de las funciones, conocido como ámbito.
           JavaScript implementa el ámbito léxico, lo que implica que una función puede acceder a las variables definidas en su entorno de declaración y también a las variables de funciones externas. Este comportamiento influye en cómo se diseñan las funciones y cómo se gestionan las variables a lo largo del código.`,
         "code": `
-          // Declaración de una función llamada greet
-          function greet(name) {
-            console.log('Hello, ' + name + '!');
-          }
+// Declaración de una función llamada greet
+function greet(name) {
+  console.log('Hello, ' + name + '!');
+}
 
-          // Llamada a la función greet con el argumento "John"
-          greet('John');
+// Llamada a la función greet con el argumento "John"
+greet('John');
 
-          // Declaración de una función anónima asignada a una variable
-          const greet = function(name) {
-            console.log('Hello, ' + name + '!');
-          };
+// Declaración de una función anónima asignada a una variable
+const greet = function(name) {
+  console.log('Hello, ' + name + '!');
+};
 
-          // Llamada a la función greet con el argumento "Alice"
-          greet('Alice');
+// Llamada a la función greet con el argumento "Alice"
+greet('Alice');
 
-          // Declaración de una función de flecha
-          const greet = (name) => {
-            console.log('Hello, ' + name + '!');
-          };
+// Declaración de una función de flecha
+const greet = (name) => {
+  console.log('Hello, ' + name + '!');
+};
 
-          // Llamada a la función greet con el argumento "Bob"
-          greet('Bob');
+// Llamada a la función greet con el argumento "Bob"
+greet('Bob');
         `
       },
       {
@@ -501,27 +501,27 @@ switch (dia) {
           Los argumentos, por otro lado, son los valores reales que se pasan a una función cuando esta se invoca. Estos valores pueden ser constantes, variables o expresiones. Las funciones pueden tener múltiples parámetros, y los argumentos deben coincidir en cantidad y orden con los parámetros esperados.
           JavaScript también admite la asignación de valores predeterminados a los parámetros, lo que permite que una función sea llamada incluso si no se proporcionan todos los argumentos. Además, la sintaxis de "rest" (...) permite manejar un número variable de argumentos como un arreglo.`,
         "code": `
-          function saludar(nombre) {
-            console.log('Hola, ' + nombre + '!');
-          }
+function saludar(nombre) {
+  console.log('Hola, ' + nombre + '!');
+}
 
-          saludar('Juan'); // Salida: Hola, Juan!
+saludar('Juan'); // Salida: Hola, Juan!
 
-          function sumar(a, b) {
-            return a + b;
-          }
+function sumar(a, b) {
+  return a + b;
+}
 
-          let resultado = sumar(5, 3); // Aquí, 5 y 3 son argumentos que se asignan a los parámetros a y b
-          console.log(resultado); // Salida: 8
+let resultado = sumar(5, 3); // Aquí, 5 y 3 son argumentos que se asignan a los parámetros a y b
+console.log(resultado); // Salida: 8
 
-          function mostrarColores(color1, color2 = 'rojo', ...coloresRestantes) {
-            console.log('Color principal:', color1);
-            console.log('Color secundario:', color2);
-            console.log('Colores adicionales:', coloresRestantes);
-          }
+function mostrarColores(color1, color2 = 'rojo', ...coloresRestantes) {
+  console.log('Color principal:', color1);
+  console.log('Color secundario:', color2);
+  console.log('Colores adicionales:', coloresRestantes);
+}
 
-          mostrarColores('azul'); // Salida: azul, rojo, []
-          mostrarColores('verde', 'amarillo', 'naranja', 'violeta'); // Salida: verde, amarillo, ['naranja', 'violeta']
+mostrarColores('azul'); // Salida: azul, rojo, []
+mostrarColores('verde', 'amarillo', 'naranja', 'violeta'); // Salida: verde, amarillo, ['naranja', 'violeta']
         `
       },
       {
@@ -531,28 +531,28 @@ switch (dia) {
           Ámbito Local: Una variable declarada dentro de una función o bloque de código tiene un ámbito local. Esto significa que solo puede ser accedida y modificada dentro de ese contexto específico. Las variables locales tienen la ventaja de no interferir con otras partes del programa y ayudan a mantener la encapsulación.
           Ámbito de Bloque (a partir de ECMAScript 6): Con la introducción de let y const en ECMAScript 6, se introdujo el ámbito de bloque. Las variables declaradas con let y const tienen un ámbito limitado al bloque en el que están definidas. Esto es útil para evitar la contaminación del ámbito global y garantizar la privacidad de las variables.`,
         "code": `
-          let variableGlobal = 'Soy global';
+let variableGlobal = 'Soy global';
 
-          function mostrarVariableGlobal() {
-            console.log(variableGlobal);
-          }
+function mostrarVariableGlobal() {
+  console.log(variableGlobal);
+}
 
-          mostrarVariableGlobal(); // Salida: Soy global
+mostrarVariableGlobal(); // Salida: Soy global
 
-          function ejemploAmbitoLocal() {
-            let variableLocal = 'Soy local';
-            console.log(variableLocal);
-          }
+function ejemploAmbitoLocal() {
+  let variableLocal = 'Soy local';
+  console.log(variableLocal);
+}
 
-          ejemploAmbitoLocal(); // Salida: Soy local
-          // console.log(variableLocal); // Error: variableLocal no está definida fuera de la función
+ejemploAmbitoLocal(); // Salida: Soy local
+// console.log(variableLocal); // Error: variableLocal no está definida fuera de la función
 
-          if (true) {
-            let variableBloque = 'Soy de un bloque';
-            console.log(variableBloque);
-          }
+if (true) {
+  let variableBloque = 'Soy de un bloque';
+  console.log(variableBloque);
+}
 
-          // console.log(variableBloque); // Error: variableBloque no está definida fuera del bloque
+// console.log(variableBloque); // Error: variableBloque no está definida fuera del bloque
         `
       },
       {
@@ -563,17 +563,17 @@ switch (dia) {
           Diferencias Clave: Las funciones anónimas pueden tener un nombre asignado, pero su uso principal es en situaciones sin nombre explícito. Las funciones de flecha tienen una sintaxis más breve y no modifican el valor de this.
           Ambas son útiles en diferentes contextos, y la elección entre ellas depende del escenario específico en el que se utilicen. Elegir entre funciones anónimas y funciones de flecha dependerá de los requisitos y preferencias del desarrollo en un proyecto particular.`,
         "code": `
-          // Función anónima asignada a una variable
-          let suma = function (a, b) {
-            return a + b;
-          };
+// Función anónima asignada a una variable
+let suma = function (a, b) {
+  return a + b;
+};
 
-          console.log(suma(2, 3)); // Salida: 5
+console.log(suma(2, 3)); // Salida: 5
 
-          // Función de flecha para multiplicar dos números
-          let multiplicar = (a, b) => a * b;
+// Función de flecha para multiplicar dos números
+let multiplicar = (a, b) => a * b;
 
-          console.log(multiplicar(4, 5)); // Salida: 20
+console.log(multiplicar(4, 5)); // Salida: 20
         `
       }
     ]
@@ -587,37 +587,37 @@ switch (dia) {
           Existen varias formas de crear arreglos en JavaScript. La forma más común es utilizando la notación de corchetes []. También es posible utilizar el constructor Array(). Para acceder a elementos específicos de un arreglo, se utiliza la notación de corchetes junto con el índice del elemento.
           JavaScript proporciona una variedad de métodos para manipular arreglos, como push(), pop(), shift(), unshift(), splice(), entre otros. Es común utilizar bucles como for o métodos como forEach() para recorrer los elementos de un arreglo.`,
         "code": `
-          // Creación de un arreglo de números
-          let numeros = [1, 2, 3, 4, 5];
+// Creación de un arreglo de números
+let numeros = [1, 2, 3, 4, 5];
 
-          // Creación de un arreglo de cadenas
-          let frutas = ['manzana', 'banana', 'uva'];
+// Creación de un arreglo de cadenas
+let frutas = ['manzana', 'banana', 'uva'];
 
-          let miArreglo = new Array(1, 2, 3, 4, 5);
+let miArreglo = new Array(1, 2, 3, 4, 5);
 
-          console.log(numeros[2]); // Accede al tercer elemento (índice 2) del arreglo 'numeros'
+console.log(numeros[2]); // Accede al tercer elemento (índice 2) del arreglo 'numeros'
 
-          // Agregar un elemento al final del arreglo
-          numeros.push(6);
+// Agregar un elemento al final del arreglo
+numeros.push(6);
 
-          // Eliminar el último elemento del arreglo
-          frutas.pop();
+// Eliminar el último elemento del arreglo
+frutas.pop();
 
-          // Agregar un elemento al inicio del arreglo
-          frutas.unshift('kiwi');
+// Agregar un elemento al inicio del arreglo
+frutas.unshift('kiwi');
 
-          // Eliminar el primer elemento del arreglo
-          numeros.shift();
+// Eliminar el primer elemento del arreglo
+numeros.shift();
 
-          // Iteración con un bucle for
-          for (let i = 0; i < numeros.length; i++) {
-            console.log(numeros[i]);
-          }
+// Iteración con un bucle for
+for (let i = 0; i < numeros.length; i++) {
+  console.log(numeros[i]);
+}
 
-          // Iteración con forEach()
-          frutas.forEach(fruta => {
-            console.log(fruta);
-          });
+// Iteración con forEach()
+frutas.forEach(fruta => {
+  console.log(fruta);
+});
         `
       },
       {
@@ -627,23 +627,23 @@ switch (dia) {
           2. Método filter(): El método filter() crea un nuevo arreglo con elementos que cumplen una condición dada. Es útil para seleccionar elementos que satisfacen ciertos criterios.
           3. Método reduce(): El método reduce() aplica una función acumuladora a cada elemento del arreglo, reduciéndolos a un único valor. Se utiliza para operaciones que combinan todos los elementos en un resultado final.`,
         "code": `
-          // Ejemplo de map: Duplicar cada número en el arreglo
-          let numeros = [1, 2, 3, 4, 5];
-          let duplicados = numeros.map(numero => numero * 2);
+// Ejemplo de map: Duplicar cada número en el arreglo
+let numeros = [1, 2, 3, 4, 5];
+let duplicados = numeros.map(numero => numero * 2);
 
-          console.log(duplicados); // Resultado: [2, 4, 6, 8, 10]
+console.log(duplicados); // Resultado: [2, 4, 6, 8, 10]
 
-          // Ejemplo de filter: Filtrar números pares
-          let numeros = [1, 2, 3, 4, 5];
-          let pares = numeros.filter(numero => numero % 2 === 0);
+// Ejemplo de filter: Filtrar números pares
+let numeros = [1, 2, 3, 4, 5];
+let pares = numeros.filter(numero => numero % 2 === 0);
 
-          console.log(pares); // Resultado: [2, 4]
+console.log(pares); // Resultado: [2, 4]
 
-          // Ejemplo de reduce: Sumar todos los elementos del arreglo
-          let numeros = [1, 2, 3, 4, 5];
-          let sumaTotal = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+// Ejemplo de reduce: Sumar todos los elementos del arreglo
+let numeros = [1, 2, 3, 4, 5];
+let sumaTotal = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
 
-          console.log(sumaTotal); // Resultado: 15
+console.log(sumaTotal); // Resultado: 15
         `
       },
       {
@@ -653,32 +653,32 @@ switch (dia) {
           Acceso y Modificación de Propiedades: Para acceder a las propiedades de un objeto, utilizamos la notación de punto (objeto.propiedad) o la notación de corchetes (objeto['propiedad']).
           Métodos de Objeto: Los objetos en JavaScript también pueden contener funciones, conocidas como métodos. Estos métodos pueden realizar operaciones específicas asociadas al objeto.`,
         "code": `
-          // Creación de un objeto con notación de llaves
-          let persona = {
-            nombre: 'Juan',
-            edad: 25,
-            ciudad: 'Ejemploville'
-          };
+// Creación de un objeto con notación de llaves
+let persona = {
+  nombre: 'Juan',
+  edad: 25,
+  ciudad: 'Ejemploville'
+};
 
-          // Creación de un objeto con el constructor Object()
-          let coche = new Object();
-          coche.marca = 'Toyota';
-          coche.modelo = 'Corolla';
-          coche.año = 2022;
+// Creación de un objeto con el constructor Object()
+let coche = new Object();
+coche.marca = 'Toyota';
+coche.modelo = 'Corolla';
+coche.año = 2022;
 
-          // Acceso y modificación de propiedades
-          console.log(persona.nombre); // Resultado: Juan
+// Acceso y modificación de propiedades
+console.log(persona.nombre); // Resultado: Juan
 
-          coche['modelo'] = 'Camry';
-          console.log(coche.modelo); // Resultado: Camry
+coche['modelo'] = 'Camry';
+console.log(coche.modelo); // Resultado: Camry
 
-          // Añadiendo un método al objeto persona
-          persona.saludar = function() {
-            console.log(\`Hola, soy \${this.nombre} y tengo \${this.edad} años.\`);
-          };
+// Añadiendo un método al objeto persona
+persona.saludar = function() {
+  console.log(\`Hola, soy \${this.nombre} y tengo \${this.edad} años.\`);
+};
 
-          // Llamando al método
-          persona.saludar(); // Resultado: Hola, soy Juan y tengo 25 años.
+// Llamando al método
+persona.saludar(); // Resultado: Hola, soy Juan y tengo 25 años.
         `
       },
       {
@@ -688,26 +688,26 @@ switch (dia) {
           Métodos: Los métodos son funciones asociadas a un objeto y pueden realizar acciones específicas relacionadas con ese objeto. Se definen de la misma manera que una función, pero se asocian a un objeto.
           Diferencia entre Propiedades y Métodos: La principal distinción radica en que las propiedades almacenan datos, mientras que los métodos realizan acciones. Ambos son esenciales para modelar la lógica y el comportamiento de los objetos en JavaScript.`,
         "code": `
-          // Ejemplo de propiedades en un objeto
-          let libro = {
-            titulo: 'JavaScript 101',
-            autor: 'Ejemplo Autor',
-            añoPublicacion: 2022
-          };
+// Ejemplo de propiedades en un objeto
+let libro = {
+  titulo: 'JavaScript 101',
+  autor: 'Ejemplo Autor',
+  añoPublicacion: 2022
+};
 
-          console.log(libro.titulo); // Resultado: JavaScript 101
-          console.log(libro['autor']); // Resultado: Ejemplo Autor
+console.log(libro.titulo); // Resultado: JavaScript 101
+console.log(libro['autor']); // Resultado: Ejemplo Autor
 
-          // Ejemplo de método en un objeto
-          let coche = {
-            marca: 'Toyota',
-            modelo: 'Corolla',
-            encender: function() {
-              console.log('El coche está encendido.');
-            }
-          };
+// Ejemplo de método en un objeto
+let coche = {
+  marca: 'Toyota',
+  modelo: 'Corolla',
+  encender: function() {
+    console.log('El coche está encendido.');
+  }
+};
 
-          coche.encender(); // Resultado: El coche está encendido.
+coche.encender(); // Resultado: El coche está encendido.
         `
       }
     ]

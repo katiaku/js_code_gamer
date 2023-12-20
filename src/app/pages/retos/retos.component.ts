@@ -22,7 +22,8 @@ export class RetosComponent implements AfterViewInit, OnInit {
   @ViewChild("editor") private editor: ElementRef<HTMLElement>;
   
   constructor(public componentApp: AppComponent, public contentService:ContentService) {
-    this.contentService.nivel = 2;
+    this.contentService.nivel = 5;
+
   }
 
   currentUnitIndex = 0;
@@ -35,7 +36,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.componentApp.mostrarHeader = true;
     // this.loadContent();
-    this.contentService.getContentPlay(2).subscribe((respuesta: Respuesta) => {
+    this.contentService.getContentPlay(5).subscribe((respuesta: Respuesta) => {
       // console.log(this.contentService.nivel);
       if (respuesta.error) {
         console.log(respuesta.message);
@@ -68,7 +69,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
   }
 
   updateContent(): void {
-    console.log(this.unitsData[1]);
+    console.log(this.unitsData.length);
     this.unitsData = this.contentService.content;
         const currentUnit = this.unitsData[this.currentUnitIndex];
         this.text = currentUnit.content;
