@@ -48,33 +48,32 @@ let unitsDataLearn: Unit[] = [
           Dinámico y Débilmente Tipado: JavaScript es dinámico, lo que significa que las variables no están vinculadas a un tipo específico y pueden cambiar durante la ejecución del programa. Además, es débilmente tipado, lo que permite realizar operaciones sin la necesidad de declarar explícitamente el tipo de datos.
           Interactividad en el Navegador: La principal aplicación de JavaScript es la mejora de la interactividad en las páginas web. Puede manipular el DOM para cambiar el contenido de la página, gestionar eventos del usuario y realizar solicitudes asíncronas al servidor.
           Compatibilidad con Múltiples Plataformas: JavaScript se ejecuta en todos los navegadores modernos, lo que garantiza la portabilidad y la compatibilidad con diversas plataformas.`,
-        "code": `
-          // Uso de variables y operaciones
-          let edad = 30;
-          let incremento = 5;
-          edad = edad + incremento;
+        "code": `// Uso de variables y operaciones
+let edad = 30;
+let incremento = 5;
+edad = edad + incremento;
 
-          // Manipulación del DOM para mostrar un mensaje
-          document.getElementById("mensaje").innerHTML = \`La edad actual es: \${edad}\`;
+// Manipulación del DOM para mostrar un mensaje
+document.getElementById("mensaje").innerHTML = \`La edad actual es: \${edad}\`;
 
-          // Funciones para mejorar la reutilización del código
-          function duplicarNumero(numero) {
-            return numero * 2;
-          }
+// Funciones para mejorar la reutilización del código
+function duplicarNumero(numero) {
+  return numero * 2;
+}
 
-          let resultado = duplicarNumero(10);
-          console.log(resultado); // Resultado: 20
+let resultado = duplicarNumero(10);
+console.log(resultado); // Resultado: 20
 
-          // Gestión de eventos del usuario
-          document.getElementById("miBoton").addEventListener("click", function() {
-            alert("¡Botón clickeado!");
-          });
+// Gestión de eventos del usuario
+document.getElementById("miBoton").addEventListener("click", function() {
+  alert("¡Botón clickeado!");
+});
 
-          // Realización de una solicitud asíncrona
-          fetch("https://api.example.com/data")
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error("Error en la solicitud:", error));
+// Realización de una solicitud asíncrona
+fetch("https://api.example.com/data")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error en la solicitud:", error));
         `
       },
       {
@@ -85,19 +84,18 @@ let unitsDataLearn: Unit[] = [
           Node.js y npm: Node.js es un entorno de ejecución de JavaScript del lado del servidor. Además, npm (Node Package Manager) te permitirá gestionar las dependencias y paquetes de JavaScript en tu proyecto.
           Sistema de Control de Versiones: Utilizar un sistema de control de versiones como Git es esencial para realizar un seguimiento de los cambios en tu código y colaborar con otros desarrolladores. Plataformas como GitHub, GitLab o Bitbucket pueden alojar tus repositorios Git de forma remota.
           Consola del Navegador: Las consolas de desarrollo de los navegadores son herramientas valiosas para la depuración y visualización de mensajes de registro. Aprender a utilizar la consola te permitirá identificar errores y realizar pruebas rápidas.`,
-        "code": `
-          <!DOCTYPE html>
-          <html lang="es">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Mi Primer Proyecto JavaScript</title>
-          </head>
-          <body>
-            <h1>Hola, Mundo!</h1>
-            <script src="app.js"></script>
-          </body>
-          </html>
+        "code": `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Primer Proyecto JavaScript</title>
+</head>
+<body>
+  <h1>Hola, Mundo!</h1>
+  <script src="app.js"></script>
+</body>
+</html>
         `
       }
     ]
@@ -111,27 +109,26 @@ let unitsDataLearn: Unit[] = [
           Palabras Clave: En JavaScript, utilizamos las palabras clave var, let y const para declarar variables. La elección de la palabra clave depende de la naturaleza de la variable y el ámbito en el que se utilizará.
           var: Antes de la introducción de let y const, var era la única forma de declarar variables en JavaScript. Sin embargo, tiene un comportamiento peculiar relacionado con el ámbito, por lo que se prefiere el uso de let y const en la mayoría de los casos.
           let y const: Estas son las formas modernas de declarar variables. let se utiliza para variables que pueden cambiar su valor, mientras que const se usa para variables constantes cuyo valor no cambia una vez asignado.`,
-        "code": `
-          // Ejemplos de declaración de variables en JavaScript
+        "code": `// Ejemplos de declaración de variables en JavaScript
 
-          // Utilizando var (evitar su uso en situaciones modernas)
-          var edad = 25;
-          var nombre = "Juan";
+// Utilizando var (evitar su uso en situaciones modernas)
+var edad = 25;
+var nombre = "Juan";
 
-          // Utilizando let (preferido para variables que pueden cambiar)
-          let cantidadProductos = 10;
-          let usuarioActivo = true;
+// Utilizando let (preferido para variables que pueden cambiar)
+let cantidadProductos = 10;
+let usuarioActivo = true;
 
-          // Utilizando const (preferido para variables constantes)
-          const PI = 3.1416;
-          const nombreApp = "MiApp";
+// Utilizando const (preferido para variables constantes)
+const PI = 3.1416;
+const nombreApp = "MiApp";
 
-          // Intentar cambiar el valor de una constante generará un error
-          // PI = 3.14; // Esto generará un error
+// Intentar cambiar el valor de una constante generará un error
+// PI = 3.14; // Esto generará un error
 
-          // Variables sin valor inicial
-          let precioProducto;
-          console.log(precioProducto); // Salida: undefined
+// Variables sin valor inicial
+let precioProducto;
+console.log(precioProducto); // Salida: undefined
         `
       },
       {
@@ -142,44 +139,43 @@ let unitsDataLearn: Unit[] = [
           Booleanos (Booleans): Representan valores de verdad o falsedad (true o false).
           Objetos (Objects): Representan colecciones de propiedades y métodos. Se crean utilizando llaves {}.
           Arreglos (Arrays): Representan listas ordenadas de valores. Se crean utilizando corchetes [].`,
-        "code": `
-          // Ejemplos de tipos de datos en JavaScript
+        "code": `// Ejemplos de tipos de datos en JavaScript
 
-          // Números
-          let edad = 30;
-          let precio = 45.99;
+// Números
+let edad = 30;
+let precio = 45.99;
 
-          // Cadenas de Texto
-          let nombre = "Juan";
-          let mensaje = '¡Hola, mundo!';
+// Cadenas de Texto
+let nombre = "Juan";
+let mensaje = '¡Hola, mundo!';
 
-          // Booleanos
-          let esMayorDeEdad = true;
-          let activado = false;
+// Booleanos
+let esMayorDeEdad = true;
+let activado = false;
 
-          // Objetos
-          let persona = {
-            nombre: "Ana",
-            edad: 25,
-            ciudad: "Madrid"
-          };
+// Objetos
+let persona = {
+  nombre: "Ana",
+  edad: 25,
+  ciudad: "Madrid"
+};
 
-          // Arreglos
-          let numeros = [1, 2, 3, 4, 5];
-          let colores = ['rojo', 'verde', 'azul'];
+// Arreglos
+let numeros = [1, 2, 3, 4, 5];
+let colores = ['rojo', 'verde', 'azul'];
 
-          // Tipos especiales
-          let nulo = null; // Representa la ausencia intencional de cualquier objeto o valor
-          let indefinido = undefined; // Representa un valor no asignado
+// Tipos especiales
+let nulo = null; // Representa la ausencia intencional de cualquier objeto o valor
+let indefinido = undefined; // Representa un valor no asignado
 
-          // Mostrar tipos de datos en la consola
-          console.log(typeof edad); // Salida: number
-          console.log(typeof nombre); // Salida: string
-          console.log(typeof esMayorDeEdad); // Salida: boolean
-          console.log(typeof persona); // Salida: object
-          console.log(typeof numeros); // Salida: object (los arreglos son objetos en JavaScript)
-          console.log(typeof nulo); // Salida: object (esto es un fallo conocido en JavaScript)
-          console.log(typeof indefinido); // Salida: undefined
+// Mostrar tipos de datos en la consola
+console.log(typeof edad); // Salida: number
+console.log(typeof nombre); // Salida: string
+console.log(typeof esMayorDeEdad); // Salida: boolean
+console.log(typeof persona); // Salida: object
+console.log(typeof numeros); // Salida: object (los arreglos son objetos en JavaScript)
+console.log(typeof nulo); // Salida: object (esto es un fallo conocido en JavaScript)
+console.log(typeof indefinido); // Salida: undefined
         `
       },
       {
@@ -187,31 +183,30 @@ let unitsDataLearn: Unit[] = [
         "content": `En JavaScript, la conversión entre diferentes tipos de datos es una tarea común y puede ser necesaria en diversas situaciones. A continuación, se presentan algunas formas de realizar conversiones entre tipos de datos:
           Coerción Implícita: JavaScript realiza automáticamente conversiones implícitas cuando se mezclan diferentes tipos de datos en una operación. Por ejemplo, concatenar una cadena con un número.
           Métodos de Conversión: JavaScript proporciona métodos específicos para convertir valores de un tipo a otro. Algunos de estos métodos son String(), Number(), y Boolean().`,
-        "code": `
-          // Ejemplos de conversión entre tipos de datos en JavaScript
+        "code": `// Ejemplos de conversión entre tipos de datos en JavaScript
 
-          // Coerción Implícita
-          let numero = 5;
-          let texto = "El resultado es: " + numero; // Coerción implícita a cadena
+// Coerción Implícita
+let numero = 5;
+let texto = "El resultado es: " + numero; // Coerción implícita a cadena
 
-          console.log(texto); // Salida: El resultado es: 5
+console.log(texto); // Salida: El resultado es: 5
 
-          // Métodos de Conversión
-          let cadenaNumero = "123";
-          let numeroConvertido = Number(cadenaNumero);
+// Métodos de Conversión
+let cadenaNumero = "123";
+let numeroConvertido = Number(cadenaNumero);
 
-          console.log(typeof cadenaNumero); // Salida: string
-          console.log(typeof numeroConvertido); // Salida: number
+console.log(typeof cadenaNumero); // Salida: string
+console.log(typeof numeroConvertido); // Salida: number
 
-          let valorVerdad = Boolean("Hola");
-          console.log(valorVerdad); // Salida: true
+let valorVerdad = Boolean("Hola");
+console.log(valorVerdad); // Salida: true
 
-          // Conversión a Cadenas
-          let num = 42;
-          let cadenaNum = String(num);
+// Conversión a Cadenas
+let num = 42;
+let cadenaNum = String(num);
 
-          console.log(typeof num); // Salida: number
-          console.log(typeof cadenaNum); // Salida: string
+console.log(typeof num); // Salida: number
+console.log(typeof cadenaNum); // Salida: string
         `
       }
     ]
@@ -239,30 +234,29 @@ let unitsDataLearn: Unit[] = [
           AND lógico (&&): Devuelve true si ambos operandos son true.
           OR lógico (||): Devuelve true si al menos uno de los operandos es true.
           NOT lógico (!): Niega el valor de su operando.`,
-        "code": `
-          // Ejemplos de operadores en JavaScript
+        "code": `// Ejemplos de operadores en JavaScript
 
-          // Operadores Aritméticos
-          let suma = 5 + 3; // 8
-          let resta = 10 - 4; // 6
-          let multiplicacion = 2 * 6; // 12
-          let division = 20 / 5; // 4
-          let modulo = 15 % 4; // 3
+// Operadores Aritméticos
+let suma = 5 + 3; // 8
+let resta = 10 - 4; // 6
+let multiplicacion = 2 * 6; // 12
+let division = 20 / 5; // 4
+let modulo = 15 % 4; // 3
 
-          // Operadores de Asignación
-          let a = 5;
-          a += 3; // equivalente a: a = a + 3;
+// Operadores de Asignación
+let a = 5;
+a += 3; // equivalente a: a = a + 3;
 
-          let b = 10;
-          b -= 4; // equivalente a: b = b - 4;
+let b = 10;
+b -= 4; // equivalente a: b = b - 4;
 
-          // Operadores Lógicos
-          let esMayorDeEdad = true;
-          let tieneLicencia = false;
+// Operadores Lógicos
+let esMayorDeEdad = true;
+let tieneLicencia = false;
 
-          let puedeConducir = esMayorDeEdad && tieneLicencia; // AND lógico
-          let puedeVotar = esMayorDeEdad || tieneLicencia; // OR lógico
-          let noPuedeConducir = !puedeConducir; // NOT lógico
+let puedeConducir = esMayorDeEdad && tieneLicencia; // AND lógico
+let puedeVotar = esMayorDeEdad || tieneLicencia; // OR lógico
+let noPuedeConducir = !puedeConducir; // NOT lógico
         `
       },
       {
@@ -277,28 +271,28 @@ let unitsDataLearn: Unit[] = [
           Mayor o Igual que (>=): Comprueba si el valor de la izquierda es mayor o igual que el valor de la derecha. (Ejemplo: a >= b)
           Menor o Igual que (<=): Comprueba si el valor de la izquierda es menor o igual que el valor de la derecha. (Ejemplo: a <= b)`,
         "code": `
-          // Ejemplos de operadores de comparación en JavaScript
+// Ejemplos de operadores de comparación en JavaScript
 
-          let edadUsuario = 25;
-          let edadLimite = 18;
+let edadUsuario = 25;
+let edadLimite = 18;
 
-          // Igualdad
-          let esMayorDeEdad = edadUsuario >= edadLimite; // true
+// Igualdad
+let esMayorDeEdad = edadUsuario >= edadLimite; // true
 
-          // Desigualdad
-          let esMenorDeEdad = edadUsuario < edadLimite; // false
+// Desigualdad
+let esMenorDeEdad = edadUsuario < edadLimite; // false
 
-          // Comparación de igualdad sin tener en cuenta el tipo de dato
-          let numeroString = "25";
-          let esIgualSinTipo = edadUsuario == numeroString; // true
+// Comparación de igualdad sin tener en cuenta el tipo de dato
+let numeroString = "25";
+let esIgualSinTipo = edadUsuario == numeroString; // true
 
-          // Comparación de igualdad teniendo en cuenta el tipo de dato
-          let esIgualConTipo = edadUsuario === numeroString; // false
+// Comparación de igualdad teniendo en cuenta el tipo de dato
+let esIgualConTipo = edadUsuario === numeroString; // false
 
-          // Mayor que y menor que
-          let precioProducto = 50;
-          let presupuestoUsuario = 30;
-          let puedeComprar = presupuestoUsuario >= precioProducto; // false
+// Mayor que y menor que
+let precioProducto = 50;
+let presupuestoUsuario = 30;
+let puedeComprar = presupuestoUsuario >= precioProducto; // false
         `
       },
       {
@@ -311,19 +305,19 @@ let unitsDataLearn: Unit[] = [
           Expresiones Lógicas: Combinan valores booleanos utilizando operadores lógicos como AND (&&) y OR (||). Ejemplo: let resultadoLogico = true && false;
           Evaluación de Expresiones: La evaluación de una expresión implica calcular su valor resultante. Esto se realiza siguiendo las reglas de precedencia de operadores y asegurándose de que las operaciones se realicen en el orden correcto.`,
         "code": `
-          // Ejemplos de expresiones y evaluación en JavaScript
+// Ejemplos de expresiones y evaluación en JavaScript
 
-          // Expresiones aritméticas
-          let resultadoAritmetico = 10 + 5 * 2; // 20
+// Expresiones aritméticas
+let resultadoAritmetico = 10 + 5 * 2; // 20
 
-          // Expresiones de cadena
-          let saludo = "Hola, " + "Mundo"; // "Hola, Mundo"
+// Expresiones de cadena
+let saludo = "Hola, " + "Mundo"; // "Hola, Mundo"
 
-          // Expresiones de comparación
-          let esMayor = 20 > 10; // true
+// Expresiones de comparación
+let esMayor = 20 > 10; // true
 
-          // Expresiones lógicas
-          let resultadoLogico = true && false; // false
+// Expresiones lógicas
+let resultadoLogico = true && false; // false
         `
       }
     ]
@@ -366,42 +360,42 @@ let unitsDataLearn: Unit[] = [
               // Código a ejecutar si la expresión no coincide con ningún caso
           }`,
         "code": `
-          // if Statement
-          let edad = 18;
-          if (edad >= 18) {
-            console.log("Eres mayor de edad");
-          }
+// if Statement
+let edad = 18;
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+}
 
-          // else if Statement
-          let hora = 14;
-          if (hora < 12) {
-            console.log("Buenos días");
-          } else if (hora < 18) {
-            console.log("Buenas tardes");
-          }
+// else if Statement
+let hora = 14;
+if (hora < 12) {
+  console.log("Buenos días");
+} else if (hora < 18) {
+  console.log("Buenas tardes");
+}
 
-          // else Statement
-          let numero = 0;
-          if (numero > 0) {
-            console.log("El número es positivo");
-          } else if (numero < 0) {
-            console.log("El número es negativo");
-          } else {
-            console.log("El número es cero");
-          }
+// else Statement
+let numero = 0;
+if (numero > 0) {
+  console.log("El número es positivo");
+} else if (numero < 0) {
+  console.log("El número es negativo");
+} else {
+  console.log("El número es cero");
+}
 
-          // switch Statement
-          let dia = "Lunes";
-          switch (dia) {
-            case "Lunes":
-              console.log("Comienzo de semana");
-              break;
-            case "Viernes":
-              console.log("¡Viernes al fin!");
-              break;
-            default:
-              console.log("Otro día de la semana");
-          }
+// switch Statement
+let dia = "Lunes";
+switch (dia) {
+  case "Lunes":
+    console.log("Comienzo de semana");
+    break;
+  case "Viernes":
+    console.log("¡Viernes al fin!");
+    break;
+  default:
+    console.log("Otro día de la semana");
+}
         `
       },
       {

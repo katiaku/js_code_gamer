@@ -18,6 +18,8 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
 import { RetosComponent } from './pages/retos/retos.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContentService } from './shared/content.service';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,12 @@ import { JugarComponent } from './pages/jugar/jugar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ContentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
