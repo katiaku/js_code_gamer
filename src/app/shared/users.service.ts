@@ -12,10 +12,16 @@ export class UsersService {
 
   public user: User;
 
+  // public logueado: boolean = false;
+
   constructor(private http: HttpClient) {}
 
   public register(user: User): Observable<Object> {
     return this.http.post(`${this.url}/register`, user);
+  }
+
+  public login(user: User): Observable<object> {
+    return this.http.post(`${this.url}/login`, user);
   }
 
 }
