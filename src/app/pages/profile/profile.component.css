@@ -185,6 +185,8 @@ h2{
 .barra_dentro_1 {
   border-color: #FFFF00;
   background-color: #FFFF00;
+  width: 50%;
+  overflow: hidden;
 }
 
 .barra_dentro_2 {

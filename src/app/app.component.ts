@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'js_code_gamer';
   mostrarHeader:boolean = false;
+
+  ngAfterViewChecked() {
+    this.mostrarHeader = true;
+  }
 }

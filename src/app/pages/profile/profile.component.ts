@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
+import { User } from 'src/app/models/user';
+import { UsersService } from 'src/app/shared/users.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,8 +11,13 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class ProfileComponent implements OnInit{
 
-
-  constructor(public componentApp: AppComponent, public router:Router){}
+  public user:User;
+  constructor(public componentApp: AppComponent, 
+              public router:Router,
+              public usersService: UsersService)
+              {
+                this.user=this.usersService.user;
+              }
 
   ngOnInit(): void {
     this.componentApp.mostrarHeader = true;

@@ -63,7 +63,7 @@ input::placeholder {
   font-size: 1rem;
 }
 
-div {
+.astronauta {
   position: absolute;
   left: 70%;
   top: 50%;
@@ -85,4 +85,13 @@ button {
 
 button:hover {
   background-color: #FFFF00;
+}
+
+
+.invalid-feedback {
+  color: #FFFF00;
+  font-size: .7rem;
+  height: 1rem;
+  text-align: center;
+  padding: .2rem;
 }

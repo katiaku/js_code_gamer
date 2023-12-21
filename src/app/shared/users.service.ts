@@ -12,7 +12,7 @@ export class UsersService {
 
   public user: User;
 
-  // public logueado: boolean = false;
+  public logueado: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class UsersService {
     return this.http.post(`${this.url}/register`, user);
   }
 
-  public login(user: User): Observable<object> {
+  public login(user: User): Observable<any> {
     return this.http.post(`${this.url}/login`, user);
   }
 
