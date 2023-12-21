@@ -31,8 +31,8 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-  { path: 'aprender',
-  component: LearnComponent 
+  { path: 'aprender/:id_level',
+  component: LearnComponent
   },
   {
     path: 'profile',
@@ -62,7 +62,7 @@ const routes: Routes = [
     path: 'intro-nivel',
     component: IntroNivelComponent
   }
-  
+
 ];
 
 @NgModule({
