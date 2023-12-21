@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit{
   constructor(public componenteApp:AppComponent,
     private usersService: UsersService,
     private router: Router){
-      this.user = new User ("","","","","");
+      this.user = new User (0,"","","","","");
     }
   
 onSubmit(form:NgForm){
