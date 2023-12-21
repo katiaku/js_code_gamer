@@ -10,16 +10,14 @@ export class LearnService {
 
   themes: Themes[];
 
+  id_level: number;
+
   private url = "http://localhost:3000/themes";
 
   constructor(private http: HttpClient) { }
 
-  // public getAll(iduser: number): Observable<Object> {
-  //   return this.http.get(`${this.url}?iduser=${iduser}`);
-  // }
-
-  public getAll(): Observable<Object> {
-    return this.http.get(`${this.url}`);
+  public getAll(iduser: number, id_level: number): Observable<Object> {
+    return this.http.get(`${this.url}?iduser=${iduser}&id_level=${id_level}`);
   }
 
 }

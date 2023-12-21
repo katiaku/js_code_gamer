@@ -14,18 +14,19 @@ import { Response } from 'src/app/models/response';
 export class LoginComponent implements OnInit{
 
   public user: User
-  
+
   constructor(public componenteApp:AppComponent,
     private usersService: UsersService,
     private router: Router){
       this.user = new User (0,"","","","","");
     }
-  
+
 onSubmit(form:NgForm){
 
   this.usersService.login(this.user).subscribe(
-    (resp: User) => {
-    this.usersService.logueado = true;
+    (resp: any) => {
+    // this.usersService.logueado = true;
+    this.usersService.setLoggedIn(true);
     this.usersService.user = resp;
     console.log(resp);
     console.log(this.usersService.user);
@@ -41,7 +42,7 @@ onSubmit(form:NgForm){
 
 
   ngOnInit(): void {
-    
+
     this.componenteApp.mostrarHeader = true;
   }
 
