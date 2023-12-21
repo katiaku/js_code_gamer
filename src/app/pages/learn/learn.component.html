@@ -1,26 +1,28 @@
 <section>
   <div class="left">
     <div class="layer">
-      <h1>{{ currentUnitIndex + 1 }}. {{ unitsData[currentUnitIndex].title }}</h1>
-      <h2>{{ currentUnitIndex + 1 }}.{{ currentPartIndex + 1 }}. {{ unitsData[currentUnitIndex].content[currentPartIndex].title }}</h2>
-      <div class="text" [innerHTML]="unitsData[currentUnitIndex].content[currentPartIndex].content | textFormatter:keywords:'#FFFF00'">{{ unitsData[currentUnitIndex].content[currentPartIndex].content }}</div>
-      <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
-      <button *ngIf="currentPartIndex == unitsData[currentUnitIndex].content.length - 1; else arrows" class="submit" type="submit">RETOS</button>
-      <ng-template #arrows>
-        <div class="arrows">
-          <button class="arrow" (click)="prevPart()" [disabled]="currentPartIndex === 0 && currentUnitIndex === 0">
-            <img class="arrow" src="../../../assets/img/Polygon_1.png" alt="flecha derecha">
-          </button>
-          <button class="arrow" (click)="nextPart()" [disabled]="currentPartIndex == 2 && currentUnitIndex == 8">
-            <img class="arrow" src="../../../assets/img/Polygon_2.png" alt="flecha izquierda">
-          </button>
-        </div>
-      </ng-template>
+      <div class="container" *ngIf="apiService.themes && apiService.themes.length > 0">
+        <h1>{{ apiService.themes[currentThemeIndex].id_level }}. {{ apiService.themes[currentThemeIndex].title_level }}</h1>
+        <h2>{{ apiService.themes[currentThemeIndex].id_level }}.{{ currentThemeIndex + 1 }}. {{ apiService.themes[currentThemeIndex].theme_title }}</h2>
+        <div class="text" [innerHTML]="apiService.themes[currentThemeIndex].content| textFormatter:keywords:'#FFFF00'">{{ apiService.themes[currentThemeIndex].content }}</div>
+        <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
+        <button *ngIf="currentThemeIndex == apiService.themes.length - 1; else arrows" class="submit" type="submit"><a routerLink="/jugar">RETOS</a></button>
+          <ng-template #arrows>
+          <div class="arrows">
+            <button class="arrow" (click)="prevTheme()" [disabled]="currentThemeIndex == 0">
+              <img class="arrow" src="../../../assets/img/Polygon_1.png" alt="flecha derecha">
+            </button>
+            <button class="arrow" (click)="nextTheme()" [disabled]="currentThemeIndex == apiService.themes.length">
+              <img class="arrow" src="../../../assets/img/Polygon_2.png" alt="flecha izquierda">
+            </button>
+          </div>
+        </ng-template>
+    </div>
     </div>
   </div>
   <div class="right">
     <pre>
-      <code class="language-javascript">{{ unitsData[currentUnitIndex].content[currentPartIndex].code }}</code>
+      <code class="language-javascript">{{ apiService.themes[0].code }}</code>
     </pre>
   </div>
 </section>

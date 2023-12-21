@@ -28,6 +28,11 @@ section {
   padding: 3rem;
 }
 
+.container {
+  height: 100%;
+  width: 100%;
+}
+
 h1, h2 {
   margin-bottom: .8rem;
   text-align: center;
@@ -97,9 +102,6 @@ pre {
 
 .submit {
   background-color: white;
-  color: black;
-  font-weight: bold;
-  font-size: 1.1rem;
   cursor: pointer;
   width: 110px;
   height: 45px;
@@ -114,4 +116,11 @@ pre {
 
 .submit:hover {
   background-color: #FFFF00;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
