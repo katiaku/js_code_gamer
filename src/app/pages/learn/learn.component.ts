@@ -2,9 +2,11 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as Prism from 'prismjs';
 import 'prismjs/components/prism-javascript';
 import { AppComponent } from 'src/app/app.component';
-import { Unit, unitsDataLearn } from 'src/app/models/unit';
 import { TextFormatterPipe } from '../../pipes/text-formatter.pipe';
 import learnKeywords from '../../../assets/content/keywords.js';
+import { LearnService } from 'src/app/shared/learn.service';
+import { UsersService } from 'src/app/shared/users.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-learn',
@@ -14,13 +16,16 @@ import learnKeywords from '../../../assets/content/keywords.js';
 })
 export class LearnComponent implements AfterViewInit, OnInit {
 
-  constructor(public componentApp: AppComponent) {}
+  constructor(public componentApp: AppComponent,
+    public apiService: LearnService,
+    public apiServiceUsers: UsersService,
+    private toast: ToastrService) {
+      this.apiService.themes = null;
+    }
 
-  currentUnitIndex = 0;
-  currentPartIndex = 0;
-  unitsData: Unit[] = unitsDataLearn;
-
-  text = this.unitsData[this.currentUnitIndex].content[this.currentPartIndex].content;
+  // currentLevelIndex = 0;
+  currentThemeIndex = 0;
+  text = '';
   keywords = learnKeywords;
 
   ngOnInit(): void {
@@ -37,34 +42,45 @@ export class LearnComponent implements AfterViewInit, OnInit {
   }
 
   updateContent(): void {
-    const currentUnit = this.unitsData[this.currentUnitIndex];
-    const currentPart = currentUnit.content[this.currentPartIndex];
-    this.text = currentPart.content;
+    // this.showThemes(this.apiServiceUsers.user.iduser);
+    this.showThemes();
+
+    const currentTheme = this.apiService.themes[this.currentThemeIndex].content;
+    this.text = currentTheme;
     const codeExample = document.querySelector('.language-javascript');
     if (codeExample) {
-      codeExample.textContent = currentPart.code;
+      codeExample.textContent = this.apiService.themes[this.currentThemeIndex].code;
       Prism.highlightElement(codeExample);
     }
   }
 
-  nextPart(): void {
-    if (this.currentPartIndex < this.unitsData[this.currentUnitIndex].content.length - 1) {
-      this.currentPartIndex++;
-    } else if (this.currentUnitIndex < this.unitsData.length - 1) {
-      this.currentUnitIndex++;
-      this.currentPartIndex = 0;
-    }
+  // showThemes(iduser: number) {
+  //   this.apiService.getAll(iduser).subscribe((resp: any) => {
+  //     console.log(resp);
+  //     if (resp.error || resp.length <= 0)
+  //       this.toast.warning('No hay contenido', '', { positionClass: 'toastPosition' });
+  //     else
+  //       this.apiService.themes = resp;
+  //   });
+  // }
+
+  showThemes() {
+    this.apiService.getAll().subscribe((resp: any) => {
+      console.log(resp);
+      if (resp.error || resp.length <= 0)
+        this.toast.warning('No hay contenido', '', { positionClass: 'toastPosition' });
+      else
+        this.apiService.themes = resp;
+    });
+  }
+
+  nextTheme(): void {
+    this.currentThemeIndex++;
     this.updateContent();
   }
 
-  prevPart(): void {
-    if (this.currentPartIndex > 0) {
-      this.currentPartIndex--;
-    } else if (this.currentUnitIndex > 0) {
-      this.currentUnitIndex--;
-      this.currentPartIndex = this.unitsData[this.currentUnitIndex].content.length - 1;
-    }
-
+  prevTheme(): void {
+    this.currentThemeIndex--;
     this.updateContent();
   }
 
