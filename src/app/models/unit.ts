@@ -723,15 +723,15 @@ coche.encender(); // Resultado: El coche está encendido.
           Importancia en Desarrollo Web Dinámico: El DOM es fundamental para crear páginas web dinámicas e interactivas. Permite a los desarrolladores actualizar el contenido de una página en respuesta a acciones del usuario, como clics o envíos de formularios, sin necesidad de recargar la página completa.
           Eventos y Manejo de Eventos: El DOM facilita el manejo de eventos, como clics de ratón o pulsaciones de teclas. Los desarrolladores pueden asignar funciones (manejadores de eventos) a elementos específicos para responder a estas interacciones.`,
         "code": `
-          // Ejemplo de acceso y manipulación del DOM
-          let titulo = document.getElementById('miTitulo');
-          titulo.innerHTML = 'Nuevo Título';
+// Ejemplo de acceso y manipulación del DOM
+let titulo = document.getElementById('miTitulo');
+titulo.innerHTML = 'Nuevo Título';
 
-          // Ejemplo de manejo de eventos en el DOM
-          let boton = document.getElementById('miBoton');
-          boton.addEventListener('click', function() {
-            alert('¡Botón clicado!');
-          });
+// Ejemplo de manejo de eventos en el DOM
+let boton = document.getElementById('miBoton');
+boton.addEventListener('click', function() {
+  alert('¡Botón clicado!');
+});
         `
       },
       {
@@ -742,25 +742,25 @@ coche.encender(); // Resultado: El coche está encendido.
           Ajuste de Estilos y Clases: JavaScript también permite ajustar estilos y clases para cambiar la apariencia de los elementos. Esto es útil para aplicar estilos personalizados o responder a eventos específicos.
           Creación de Elementos Dinámicamente: JavaScript posibilita la creación de nuevos elementos y su inserción en el DOM. Esto es esencial para construir interfaces de usuario dinámicas.`,
         "code": `
-          // Ejemplo de modificación del contenido del DOM
-          let parrafo = document.getElementById('miParrafo');
-          parrafo.innerHTML = 'Nuevo contenido del párrafo';
+// Ejemplo de modificación del contenido del DOM
+let parrafo = document.getElementById('miParrafo');
+parrafo.innerHTML = 'Nuevo contenido del párrafo';
 
-          // Ejemplo de manipulación de la estructura del DOM
-          let contenedor = document.getElementById('miContenedor');
-          let nuevoElemento = document.createElement('div');
-          nuevoElemento.textContent = 'Nuevo elemento';
-          contenedor.appendChild(nuevoElemento);
+// Ejemplo de manipulación de la estructura del DOM
+let contenedor = document.getElementById('miContenedor');
+let nuevoElemento = document.createElement('div');
+nuevoElemento.textContent = 'Nuevo elemento';
+contenedor.appendChild(nuevoElemento);
 
-          // Ejemplo de ajuste de estilos y clases en el DOM
-          let miElemento = document.getElementById('miElemento');
-          miElemento.style.color = 'blue';
-          miElemento.classList.add('resaltado');
+// Ejemplo de ajuste de estilos y clases en el DOM
+let miElemento = document.getElementById('miElemento');
+miElemento.style.color = 'blue';
+miElemento.classList.add('resaltado');
 
-          // Ejemplo de creación de elementos dinámicamente
-          let nuevoDiv = document.createElement('div');
-          nuevoDiv.textContent = '¡Nuevo elemento creado!';
-          document.body.appendChild(nuevoDiv);
+// Ejemplo de creación de elementos dinámicamente
+let nuevoDiv = document.createElement('div');
+nuevoDiv.textContent = '¡Nuevo elemento creado!';
+document.body.appendChild(nuevoDiv);
         `
       },
       {
@@ -774,26 +774,26 @@ coche.encender(); // Resultado: El coche está encendido.
           mouseover/mouseout: Ocurre cuando el ratón entra o sale de un elemento.
           Eventos y Funciones Personalizadas: Es común asociar eventos a funciones personalizadas para mantener un código organizado y reutilizable.`,
         "code": `
-          // Ejemplo de manejo de eventos en el DOM
-          let miBoton = document.getElementById('miBoton');
+// Ejemplo de manejo de eventos en el DOM
+let miBoton = document.getElementById('miBoton');
 
-          miBoton.addEventListener('click', function() {
-            alert('¡Botón clickeado!');
-          });
+miBoton.addEventListener('click', function() {
+  alert('¡Botón clickeado!');
+});
 
-          // Ejemplo de eventos con funciones personalizadas
-          let miElemento = document.getElementById('miElemento');
+// Ejemplo de eventos con funciones personalizadas
+let miElemento = document.getElementById('miElemento');
 
-          function resaltarElemento() {
-            miElemento.style.color = 'red';
-          }
+function resaltarElemento() {
+  miElemento.style.color = 'red';
+}
 
-          function restaurarColor() {
-            miElemento.style.color = 'black';
-          }
+function restaurarColor() {
+  miElemento.style.color = 'black';
+}
 
-          miElemento.addEventListener('mouseover', resaltarElemento);
-          miElemento.addEventListener('mouseout', restaurarColor);
+miElemento.addEventListener('mouseover', resaltarElemento);
+miElemento.addEventListener('mouseout', restaurarColor);
         `
       }
     ]
@@ -810,20 +810,20 @@ coche.encender(); // Resultado: El coche está encendido.
           Manipulación del DOM: Una vez que se obtiene la respuesta del servidor, JavaScript puede manipular el DOM para actualizar el contenido de la página según sea necesario. Esta capacidad es esencial para crear aplicaciones web dinámicas.
           En el ejemplo, se utiliza XMLHttpRequest para realizar una solicitud GET asíncrona al servidor. Al recibir la respuesta, se realiza el manejo correspondiente. Hoy en día, la mayoría de las aplicaciones web modernas utilizan bibliotecas o frameworks como Axios o el objeto fetch para simplificar aún más el uso de AJAX.`,
         "code": `
-          // Ejemplo de solicitud AJAX con XMLHttpRequest
-          let xhr = new XMLHttpRequest();
+// Ejemplo de solicitud AJAX con XMLHttpRequest
+let xhr = new XMLHttpRequest();
 
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              // Manejar la respuesta del servidor
-              let respuesta = JSON.parse(xhr.responseText);
-              console.log(respuesta);
-            }
-          };
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    // Manejar la respuesta del servidor
+    let respuesta = JSON.parse(xhr.responseText);
+    console.log(respuesta);
+  }
+};
 
-          // Configurar y enviar la solicitud GET al servidor
-          xhr.open('GET', 'mi_servicio_web.json', true);
-          xhr.send();
+// Configurar y enviar la solicitud GET al servidor
+xhr.open('GET', 'mi_servicio_web.json', true);
+xhr.send();
         `
       },
       {
@@ -834,28 +834,28 @@ coche.encender(); // Resultado: El coche está encendido.
           Ambos ejemplos muestran cómo JavaScript puede realizar solicitudes HTTP para obtener datos desde un servidor. Estas solicitudes pueden ser de diferentes tipos, como GET, POST, PUT o DELETE, según la acción requerida. La asincronía de estas operaciones es fundamental para no bloquear la ejecución del código y mantener la fluidez de la interfaz de usuario.
           Importancia de las Peticiones HTTP Asincrónicas: La asincronía en las peticiones HTTP permite que la interfaz de usuario siga siendo altamente receptiva mientras se obtienen datos del servidor en segundo plano. Esto mejora la experiencia del usuario al evitar bloqueos y permitir actualizaciones dinámicas de contenido sin recargar la página completa.`,
         "code": `
-          // Ejemplo de solicitud GET con Fetch API
-          fetch('https://api.ejemplo.com/data')
-            .then(response => response.json())
-            .then(data => {
-              // Manejar los datos obtenidos
-              console.log(data);
-            })
-            .catch(error => {
-              // Manejar errores
-              console.error('Error en la solicitud:', error);
-            });
+// Ejemplo de solicitud GET con Fetch API
+fetch('https://api.ejemplo.com/data')
+  .then(response => response.json())
+  .then(data => {
+    // Manejar los datos obtenidos
+    console.log(data);
+  })
+  .catch(error => {
+    // Manejar errores
+    console.error('Error en la solicitud:', error);
+  });
 
-          // Ejemplo de solicitud GET con Axios
-          axios.get('https://api.ejemplo.com/data')
-            .then(response => {
-              // Manejar los datos obtenidos
-              console.log(response.data);
-            })
-            .catch(error => {
-              // Manejar errores
-              console.error('Error en la solicitud:', error);
-            });
+// Ejemplo de solicitud GET con Axios
+axios.get('https://api.ejemplo.com/data')
+  .then(response => {
+    // Manejar los datos obtenidos
+    console.log(response.data);
+  })
+  .catch(error => {
+    // Manejar errores
+    console.error('Error en la solicitud:', error);
+  });
         `
       },
       {
@@ -865,40 +865,40 @@ coche.encender(); // Resultado: El coche está encendido.
           Manejo de Promesas: El manejo de promesas se realiza mediante los métodos .then() para el caso de resolución y .catch() para el caso de rechazo. Estos métodos permiten encadenar operaciones asíncronas de manera más clara y estructurada.
           Async/Await: La introducción de async y await en ECMAScript 2017 simplifica aún más el manejo de operaciones asíncronas. Al marcar una función con async, permite el uso de await dentro de esa función para esperar la resolución de una promesa.`,
         "code": `
-          // Ejemplo de creación de una promesa
-          const miPromesa = new Promise((resolve, reject) => {
-            // Simulación de una operación asíncrona
-            setTimeout(() => {
-              const exito = true; // Cambiar a false para simular un fallo
-              if (exito) {
-                resolve("La operación se completó con éxito.");
-              } else {
-                reject("La operación falló.");
-              }
-            }, 2000); // Simular una espera de 2 segundos
-          });
+// Ejemplo de creación de una promesa
+const miPromesa = new Promise((resolve, reject) => {
+  // Simulación de una operación asíncrona
+  setTimeout(() => {
+    const exito = true; // Cambiar a false para simular un fallo
+    if (exito) {
+      resolve("La operación se completó con éxito.");
+    } else {
+      reject("La operación falló.");
+    }
+  }, 2000); // Simular una espera de 2 segundos
+});
 
-          // Manejo de la promesa
-          miPromesa
-            .then(resultado => {
-              console.log("Éxito:", resultado);
-            })
-            .catch(error => {
-              console.error("Error:", error);
-            });
+// Manejo de la promesa
+miPromesa
+  .then(resultado => {
+    console.log("Éxito:", resultado);
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
 
-          // Uso de async/await
-          async function operacionAsincrona() {
-            try {
-              const resultado = await miPromesa;
-              console.log("Éxito:", resultado);
-            } catch (error) {
-              console.error("Error:", error);
-            }
-          }
+// Uso de async/await
+async function operacionAsincrona() {
+  try {
+    const resultado = await miPromesa;
+    console.log("Éxito:", resultado);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 
-          // Llamada a la función
-          operacionAsincrona();
+// Llamada a la función
+operacionAsincrona();
         `
       }
     ]
@@ -916,24 +916,24 @@ coche.encender(); // Resultado: El coche está encendido.
           3. Herencia: Permite a una clase heredar propiedades y métodos de otra clase. La clase que hereda se llama subclase, y la clase de la que hereda se llama superclase.
           4. Polimorfismo: Permite a objetos de diferentes clases responder al mismo método de manera diferente. Facilita la reutilización del código y la flexibilidad en el diseño.`,
         "code": `
-          // Definición de una clase en JavaScript
-          class Animal {
-            constructor(nombre, edad) {
-              this.nombre = nombre;
-              this.edad = edad;
-            }
+// Definición de una clase en JavaScript
+class Animal {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
 
-            // Método de la clase
-            saludar() {
-              console.log(\`Hola, soy \${this.nombre} y tengo \${this.edad} años.\`);
-            }
-          }
+  // Método de la clase
+  saludar() {
+    console.log(\`Hola, soy \${this.nombre} y tengo \${this.edad} años.\`);
+  }
+}
 
-          // Creación de un objeto de la clase Animal
-          const miMascota = new Animal("Firulais", 3);
+// Creación de un objeto de la clase Animal
+const miMascota = new Animal("Firulais", 3);
 
-          // Llamada al método del objeto
-          miMascota.saludar();
+// Llamada al método del objeto
+miMascota.saludar();
         `
       },
       {
@@ -944,36 +944,36 @@ coche.encender(); // Resultado: El coche está encendido.
           3. Herencia: JavaScript admite herencia entre clases. Puedes extender una clase existente para crear una nueva clase que herede sus propiedades y métodos.
           4. Principios de OOP: La creación de clases y objetos en JavaScript permite aplicar principios como encapsulamiento, herencia y polimorfismo. Estos principios mejoran la modularidad y la reutilización del código.`,
         "code": `
-          // Definición de una clase en JavaScript
-          class Persona {
-            constructor(nombre, edad) {
-              this.nombre = nombre;
-              this.edad = edad;
-            }
+// Definición de una clase en JavaScript
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
 
-            saludar() {
-              console.log(\`Hola, soy \${this.nombre} y tengo \${this.edad} años.\`);
-            }
-          }
+  saludar() {
+    console.log(\`Hola, soy \${this.nombre} y tengo \${this.edad} años.\`);
+  }
+}
 
-          // Creación de objetos a partir de la clase Persona
-          const persona1 = new Persona("Juan", 25);
-          const persona2 = new Persona("María", 30);
+// Creación de objetos a partir de la clase Persona
+const persona1 = new Persona("Juan", 25);
+const persona2 = new Persona("María", 30);
 
-          // Clase que hereda de Persona
-          class Estudiante extends Persona {
-            constructor(nombre, edad, curso) {
-              super(nombre, edad); // Llama al constructor de la clase padre
-              this.curso = curso;
-            }
+// Clase que hereda de Persona
+class Estudiante extends Persona {
+  constructor(nombre, edad, curso) {
+    super(nombre, edad); // Llama al constructor de la clase padre
+    this.curso = curso;
+  }
 
-            estudiar() {
-              console.log(\`\${this.nombre} está estudiando en el curso \${this.curso}.\`);
-            }
-          }
+  estudiar() {
+    console.log(\`\${this.nombre} está estudiando en el curso \${this.curso}.\`);
+  }
+}
 
-          // Creación de un objeto Estudiante
-          const estudiante1 = new Estudiante("Ana", 22, "Programación");
+// Creación de un objeto Estudiante
+const estudiante1 = new Estudiante("Ana", 22, "Programación");
         `
       },
       {
@@ -982,61 +982,61 @@ coche.encender(); // Resultado: El coche está encendido.
           Herencia en JavaScript: La herencia permite que una clase (subclase) herede propiedades y métodos de otra clase (superclase). En JavaScript, esto se logra mediante la palabra clave extends.
           Encapsulamiento en JavaScript: El encapsulamiento se refiere a la capacidad de ocultar detalles internos de una clase y proporcionar una interfaz para interactuar con ella. En JavaScript, el encapsulamiento se logra mediante el uso de métodos y propiedades privadas. El encapsulamiento ayuda a controlar el acceso a los datos internos de una clase, mejorando la modularidad y la seguridad del código.`,
         "code": `
-          // Definición de una superclase (Padre)
-          class Animal {
-            constructor(nombre) {
-              this.nombre = nombre;
-            }
+// Definición de una superclase (Padre)
+class Animal {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
 
-            emitirSonido() {
-              console.log("Haciendo sonidos...");
-            }
-          }
+  emitirSonido() {
+    console.log("Haciendo sonidos...");
+  }
+}
 
-          // Definición de una subclase (Hijo) que hereda de Animal
-          class Perro extends Animal {
-            constructor(nombre, raza) {
-              super(nombre); // Llama al constructor de la superclase
-              this.raza = raza;
-            }
+// Definición de una subclase (Hijo) que hereda de Animal
+class Perro extends Animal {
+  constructor(nombre, raza) {
+    super(nombre); // Llama al constructor de la superclase
+    this.raza = raza;
+  }
 
-            ladrar() {
-              console.log("¡Guau, guau!");
-            }
-          }
+  ladrar() {
+    console.log("¡Guau, guau!");
+  }
+}
 
-          // Creación de un objeto de la subclase Perro
-          const miPerro = new Perro("Buddy", "Labrador");
-          miPerro.emitirSonido(); // Heredado de la superclase Animal
-          miPerro.ladrar();       // Propio de la subclase Perro
+// Creación de un objeto de la subclase Perro
+const miPerro = new Perro("Buddy", "Labrador");
+miPerro.emitirSonido(); // Heredado de la superclase Animal
+miPerro.ladrar();       // Propio de la subclase Perro
 
-          // Ejemplo de encapsulamiento en JavaScript
-          class CuentaBancaria {
-            #saldo = 0; // Propiedad privada
+// Ejemplo de encapsulamiento en JavaScript
+class CuentaBancaria {
+  #saldo = 0; // Propiedad privada
 
-            constructor(titular) {
-              this.titular = titular;
-            }
+  constructor(titular) {
+    this.titular = titular;
+  }
 
-            depositar(monto) {
-              this.#saldo += monto;
-              console.log(\`Depósito de \${monto} realizado. Saldo actual: \${this.#saldo}\`);
-            }
+  depositar(monto) {
+    this.#saldo += monto;
+    console.log(\`Depósito de \${monto} realizado. Saldo actual: \${this.#saldo}\`);
+  }
 
-            retirar(monto) {
-              if (monto <= this.#saldo) {
-                this.#saldo -= monto;
-                console.log(\`Retiro de \${monto} realizado. Saldo actual: \${this.#saldo}\`);
-              } else {
-                console.log("Saldo insuficiente.");
-              }
-            }
-          }
+  retirar(monto) {
+    if (monto <= this.#saldo) {
+      this.#saldo -= monto;
+      console.log(\`Retiro de \${monto} realizado. Saldo actual: \${this.#saldo}\`);
+    } else {
+      console.log("Saldo insuficiente.");
+    }
+  }
+}
 
-          // Creación de un objeto de la clase CuentaBancaria
-          const miCuenta = new CuentaBancaria("Juan");
-          miCuenta.depositar(1000);
-          miCuenta.retirar(500);
+// Creación de un objeto de la clase CuentaBancaria
+const miCuenta = new CuentaBancaria("Juan");
+miCuenta.depositar(1000);
+miCuenta.retirar(500);
         `
       }
     ]
@@ -1085,7 +1085,9 @@ let unitsDataRetos: Unit[] = [
 </head>
 <body>
   <h1>Hola, Mundo!</h1>
+  <script>
   // Tu código aquí
+  </script>
 </body>
 </html>
         `
@@ -1534,23 +1536,23 @@ nuevoDiv.textContent = '¡Nuevo elemento creado!';
           mouseover/mouseout: Ocurre cuando el ratón entra o sale de un elemento.
           Eventos y Funciones Personalizadas: Es común asociar eventos a funciones personalizadas para mantener un código organizado y reutilizable.`,
         "code": `
-          // Añade alert('¡Botón clickeado!') al botón
-          let miBoton = document.getElementById('miBoton');
-          // Tu código aquí
+// Añade alert('¡Botón clickeado!') al botón
+let miBoton = document.getElementById('miBoton');
+// Tu código aquí
 
-          // Completa el ejemplo de eventos con funciones personalizadas
-          let miElemento = document.getElementById('miElemento');
+// Completa el ejemplo de eventos con funciones personalizadas
+let miElemento = document.getElementById('miElemento');
 
-          function resaltarElemento() {
-            // Tu código aquí
-          }
+function resaltarElemento() {
+  // Tu código aquí
+}
 
-          function restaurarColor() {
-            // Tu código aquí
-          }
+function restaurarColor() {
+  // Tu código aquí
+}
 
-          miElemento.addEventListener('mouseover', resaltarElemento);
-          miElemento.addEventListener('mouseout', restaurarColor);
+miElemento.addEventListener('mouseover', resaltarElemento);
+miElemento.addEventListener('mouseout', restaurarColor);
         `
       }
     ]
@@ -1567,20 +1569,20 @@ nuevoDiv.textContent = '¡Nuevo elemento creado!';
           Manipulación del DOM: Una vez que se obtiene la respuesta del servidor, JavaScript puede manipular el DOM para actualizar el contenido de la página según sea necesario. Esta capacidad es esencial para crear aplicaciones web dinámicas.
           En el ejemplo, se utiliza XMLHttpRequest para realizar una solicitud GET asíncrona al servidor. Al recibir la respuesta, se realiza el manejo correspondiente. Hoy en día, la mayoría de las aplicaciones web modernas utilizan bibliotecas o frameworks como Axios o el objeto fetch para simplificar aún más el uso de AJAX.`,
         "code": `
-          // Completa el ejemplo de solicitud AJAX con XMLHttpRequest
-          let xhr = new XMLHttpRequest();
+// Completa el ejemplo de solicitud AJAX con XMLHttpRequest
+let xhr = new XMLHttpRequest();
 
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              // Manejar la respuesta del servidor
-              // Tu código aquí
-              console.log(respuesta);
-            }
-          };
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    // Manejar la respuesta del servidor
+    // Tu código aquí
+    console.log(respuesta);
+  }
+};
 
-          // Configurar y enviar la solicitud GET al servidor
-          // Tu código aquí
-          xhr.send();
+// Configurar y enviar la solicitud GET al servidor
+// Tu código aquí
+xhr.send();
         `
       },
       {
@@ -1591,25 +1593,25 @@ nuevoDiv.textContent = '¡Nuevo elemento creado!';
           Ambos ejemplos muestran cómo JavaScript puede realizar solicitudes HTTP para obtener datos desde un servidor. Estas solicitudes pueden ser de diferentes tipos, como GET, POST, PUT o DELETE, según la acción requerida. La asincronía de estas operaciones es fundamental para no bloquear la ejecución del código y mantener la fluidez de la interfaz de usuario.
           Importancia de las Peticiones HTTP Asincrónicas: La asincronía en las peticiones HTTP permite que la interfaz de usuario siga siendo altamente receptiva mientras se obtienen datos del servidor en segundo plano. Esto mejora la experiencia del usuario al evitar bloqueos y permitir actualizaciones dinámicas de contenido sin recargar la página completa.`,
         "code": `
-          // Completa el ejemplo de solicitud GET con Fetch API
-          fetch('https://api.ejemplo.com/data')
-            // Tu código aquí
-            .then(data => {
-              // Manejar los datos obtenidos
-              console.log(data);
-            })
-            .catch(error => {
-              // Manejar errores
-              // Tu código aquí
-            });
+// Completa el ejemplo de solicitud GET con Fetch API
+fetch('https://api.ejemplo.com/data')
+  // Tu código aquí
+  .then(data => {
+    // Manejar los datos obtenidos
+    console.log(data);
+  })
+  .catch(error => {
+    // Manejar errores
+    // Tu código aquí
+  });
 
-          // Completa el ejemplo de solicitud GET con Axios
-          axios.get('https://api.ejemplo.com/data')
-            // Tu código aquí
-            .catch(error => {
-              // Manejar errores
-              console.error('Error en la solicitud:', error);
-            });
+// Completa el ejemplo de solicitud GET con Axios
+axios.get('https://api.ejemplo.com/data')
+  // Tu código aquí
+  .catch(error => {
+    // Manejar errores
+    console.error('Error en la solicitud:', error);
+  });
         `
       },
       {
@@ -1640,14 +1642,14 @@ nuevoDiv.textContent = '¡Nuevo elemento creado!';
           3. Herencia: Permite a una clase heredar propiedades y métodos de otra clase. La clase que hereda se llama subclase, y la clase de la que hereda se llama superclase.
           4. Polimorfismo: Permite a objetos de diferentes clases responder al mismo método de manera diferente. Facilita la reutilización del código y la flexibilidad en el diseño.`,
         "code": `
-          // Completa la clase Animal
-          class Animal {
-            constructor(nombre, edad) {
-              // Tu código aquí
-            }
+// Completa la clase Animal
+class Animal {
+  constructor(nombre, edad) {
+    // Tu código aquí
+  }
 
-          // Crea un objeto de la clase Animal
-          // Tu código aquí
+// Crea un objeto de la clase Animal
+// Tu código aquí
 
         `
       },
@@ -1659,9 +1661,9 @@ nuevoDiv.textContent = '¡Nuevo elemento creado!';
           3. Herencia: JavaScript admite herencia entre clases. Puedes extender una clase existente para crear una nueva clase que herede sus propiedades y métodos.
           4. Principios de OOP: La creación de clases y objetos en JavaScript permite aplicar principios como encapsulamiento, herencia y polimorfismo. Estos principios mejoran la modularidad y la reutilización del código.`,
         "code": `
-          // Crea la clase Persona y 2 objetos a partir de ella.
+// Crea la clase Persona y 2 objetos a partir de ella.
 
-          // Crea la clase Estudiante que hereda de Persona y 1 objeto Estudiante.
+// Crea la clase Estudiante que hereda de Persona y 1 objeto Estudiante.
 
         `
       },
@@ -1671,21 +1673,21 @@ nuevoDiv.textContent = '¡Nuevo elemento creado!';
           Herencia en JavaScript: La herencia permite que una clase (subclase) herede propiedades y métodos de otra clase (superclase). En JavaScript, esto se logra mediante la palabra clave extends.
           Encapsulamiento en JavaScript: El encapsulamiento se refiere a la capacidad de ocultar detalles internos de una clase y proporcionar una interfaz para interactuar con ella. En JavaScript, el encapsulamiento se logra mediante el uso de métodos y propiedades privadas. El encapsulamiento ayuda a controlar el acceso a los datos internos de una clase, mejorando la modularidad y la seguridad del código.`,
         "code": `
-          // Completa la definición de una superclase (Padre)
-          class Animal {
-            // Tu código aquí
+// Completa la definición de una superclase (Padre)
+class Animal {
+  // Tu código aquí
 
-            emitirSonido() {
-              console.log("Haciendo sonidos...");
-            }
-          }
+  emitirSonido() {
+    console.log("Haciendo sonidos...");
+  }
+}
 
-          // Crea una subclase Perro que hereda de Animal
-          // Tu código aquí
+// Crea una subclase Perro que hereda de Animal
+// Tu código aquí
 
-          const miPerro = new Perro("Buddy", "Labrador");
-          miPerro.emitirSonido();
-          miPerro.ladrar();
+const miPerro = new Perro("Buddy", "Labrador");
+miPerro.emitirSonido();
+miPerro.ladrar();
 
         `
       }

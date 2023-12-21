@@ -19,10 +19,11 @@ import { RetosComponent } from './pages/retos/retos.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
 import { ContentService } from './shared/content.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ToastrModule } from 'ngx-toastr';
       timeOut: 2000,
       positionClass: 'toast-top-center',
       preventDuplicates: true,
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [
     ContentService,
