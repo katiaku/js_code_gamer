@@ -48,14 +48,15 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       positionClass: 'toast-top-center',
       preventDuplicates: true,
-    }),
-    ReactiveFormsModule
+    })
   ],
   providers: [
     ContentService,
