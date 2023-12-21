@@ -1,5 +1,5 @@
 export class Part {
-
+  
   title: string;
   content: string;
   code: string;

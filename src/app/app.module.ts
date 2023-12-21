@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,10 +18,12 @@ import { IntroNivelComponent } from './pages/intro-nivel/intro-nivel.component';
 import { RetosComponent } from './pages/retos/retos.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { JugarComponent } from './pages/jugar/jugar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ContentService } from './shared/content.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +58,13 @@ import { ToastrModule } from 'ngx-toastr';
       preventDuplicates: true,
     })
   ],
-  providers: [],
+  providers: [
+    ContentService,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
 import { UsersService } from 'src/app/shared/users.service';
 import { Response } from 'src/app/models/response';
