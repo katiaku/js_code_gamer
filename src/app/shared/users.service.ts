@@ -13,6 +13,8 @@ export class UsersService {
 
   public user: User;
 
+  public logueado: boolean = false;
+
   constructor(private http: HttpClient) {}
 
   public register(user: User): Observable<Object> {
@@ -26,5 +28,9 @@ export class UsersService {
   // setLoggedIn(value: boolean) {
   //   this.loggedInSubject.next(value);
   // }
+
+  public login(user: User): Observable<any> {
+    return this.http.post(`${this.url}/login`, user);
+  }
 
 }

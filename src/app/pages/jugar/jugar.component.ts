@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component({
   selector: 'app-jugar',
@@ -8,10 +9,17 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class JugarComponent implements OnInit{
 
-  constructor(public componenteApp:AppComponent){}
+  nivelActual:number;
+
+  constructor(public componenteApp:AppComponent, public contentService:ContentService){}
   
   ngOnInit(): void {
     this.componenteApp.mostrarHeader = true;
+  }
+
+
+  nivel(){
+    this.contentService.nivel = 1;
   }
 
 }

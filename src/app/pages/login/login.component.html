@@ -1,21 +1,41 @@
 <section>
   <h1>BIENVENIDO A <span class="text"><span class="js">JS</span>CODEGAMER</span></h1>
-  <form>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      placeholder="Nombre de usuario"
-    >
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="Contarseña"
-    >
-    <button type="submit">LOGIN</button>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+
+    <div class="form_group">
+      <input
+        type="text"
+        name="email"
+        #emailId="ngModel"
+        [(ngModel)]="user.email"
+        placeholder="Email"
+        [ngClass]="{'is-invalid': (emailId.dirty || emailId.touched) && emailId.invalid }" email required
+      >
+      <div *ngIf="(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
+        <div *ngIf="emailId.errors.required">La direccion de Email es obligatoria</div>
+        <div *ngIf="emailId.errors.email">Direccion Email incorrecta</div>
+      </div>
+    </div>
+    
+    <div class="form_group">
+      <input
+        type="password"
+        name="password"
+        #passwordId="ngModel"
+        [(ngModel)]="user.password"
+        placeholder="Contarseña"
+        [ngClass]="{'is-invalid': (passwordId.dirty || passwordId.touched) && passwordId.invalid }" minlength="8" required
+      >
+      <div *ngIf="(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
+        <div *ngIf="passwordId.errors.required">La clave es obligatoria</div>
+        <div *ngIf="passwordId.errors.minlength">La clave debe tener al menos 8 caracteres</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-danger btn-block" [disabled]="loginForm.invalid">LOGIN</button>
+
   </form>
-  <div>
+  <div class="astronauta">
     <img src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
   </div>
 </section>

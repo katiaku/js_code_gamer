@@ -1,10 +1,10 @@
 <section class="main">
     <section class="profileData">
         <div class="datarow">
-            <img src="../../../assets/images/avatar 1.png" alt="" class="imgperf">
+            <img src={{user.photo}} alt="user-login" class="imgperf">
             <div class="data">
-                <h3>Username</h3>
-                <h3>Email</h3>
+                <h3>{{user.username}}</h3>
+                <h3>{{user.email}}</h3>
             </div>
             <button (click)="modify()">MODIFICAR PERFIL</button>
         </div>
