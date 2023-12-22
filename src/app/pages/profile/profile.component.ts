@@ -12,19 +12,43 @@ import { UsersService } from 'src/app/shared/users.service';
 export class ProfileComponent implements OnInit{
 
   public user:User;
+
+
   constructor(public componentApp: AppComponent, 
               public router:Router,
               public usersService: UsersService)
               {
                 this.user=this.usersService.user;
+                this.actualizarPorcentaje()
               }
 
   ngOnInit(): void {
-    this.componentApp.mostrarHeader = true;
+    this.componentApp.mostrarHeader = true;  
   }
 
   modify(){
     this.router.navigate(["/mod-profile"]);
   }
+
+  actualizarPorcentaje(){
+
+      this.usersService.actualizarPorcentaje(
+        this.usersService.iduserTheme,
+        this.usersService.id_levelTheme,
+        this.usersService.iduserChallenges,
+        this.usersService.id_levelChallenges,
+        this.usersService.idlevelsLevels,
+        this.usersService.iduserUserLevel,
+        this.usersService.idlevelUserLevel,
+      )
+      
+      
+      .subscribe((response: Response) => {
+        console.log('Éxito:', response);
+      }, error => {
+        console.error('Error', error);
+      });
+    }
+  
 
 }
