@@ -9,7 +9,5 @@ export class AppComponent {
   title = 'js_code_gamer';
   mostrarHeader:boolean = false;
 
-  ngAfterViewChecked() {
-    this.mostrarHeader = true;
-  }
+  
 }

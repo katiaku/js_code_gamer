@@ -76,16 +76,18 @@ section {
   
   .right {
     width: 50%;
-    height: 100;
+    height: 100%;
     background-color: #343434;
     border-left: 1px solid #FFFF00;
-    padding: 1rem;
     overflow: auto;
+    /* border: 5px solid green; */
   }
   
   pre {
-    overflow: auto;
     font-size: .9rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: fit-content;
   }
   
   button[disabled] {
@@ -95,10 +97,56 @@ section {
   .app-ace-editor{
     border: 2px solid black;
     box-shadow: 0 0.5rem 1rem gray;
-    height: 500px;
+    height: 400px;
     letter-spacing: 0 !important;
     font-size: 14px !important;
     font-weight: 400 !important;
 
   }
+.btn{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 110px;
+  height: 45px;
+  border: 2px solid #7451FF;
+  border-radius: 15px;
+  box-shadow: 0 2px 0#7451FF;
+  transition: 1s linear;
+  align-self: flex-end;
+
+}
+
+.btn:hover {
+  background-color: #FFFF00;
+}
+
+.but{
+  /* border: solid 5px red; */
+  margin-top: -4%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.respuesta{
+  background-color: white;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  margin-top: -5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: solid red 5px; */
+  overflow: auto;
+  border-radius: 5px;
   
+  
+}
+  
+p{
+  max-width: 100%;
+}

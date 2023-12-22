@@ -18,11 +18,19 @@ export class ContentService {
 
   public content: Content[];
 
+  public activate: number;
+
   constructor(private http: HttpClient, public userService: UsersService) {
     this.user = userService.user;
   }
 
-  public getContentPlay( id_level: number): Observable<Object> {
-    return this.http.get(`${this.url}/retos?id_level= ${id_level}` );
+  
+
+  public getContentPlay(iduser:number, id_level: number): Observable<Object> {
+    console.log(iduser);
+    console.log(id_level);
+    
+    
+    return this.http.get(`${this.url}/retos?iduser= ${iduser}&id_level=${id_level}&activate=1` );
   }
 }
