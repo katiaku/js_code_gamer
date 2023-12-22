@@ -9,6 +9,7 @@ import { ContentService } from 'src/app/shared/content.service';
 import { JugarComponent } from '../jugar/jugar.component';
 import { Respuesta } from 'src/app/shared/respuesta';
 import { Content } from 'src/app/models/content';
+import { UsersService } from 'src/app/shared/users.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
 
   @ViewChild("editor") private editor: ElementRef<HTMLElement>;
   
-  constructor(public componentApp: AppComponent, public contentService:ContentService) {
+  constructor(public componentApp: AppComponent, public contentService:ContentService, public userService: UsersService) {
     this.contentService.nivel = 1;
 
   }
@@ -34,11 +35,15 @@ export class RetosComponent implements AfterViewInit, OnInit {
   keywords = learnKeywords;
 
   codigoUsuario:string = "";
+  resultadoEjecucion:string = "";
   ngOnInit(): void {
+    console.log(this.contentService.nivel);
+    console.log(this.userService.user);
+    
     this.componentApp.mostrarHeader = true;
     // this.loadContent();
-    this.contentService.getContentPlay(1).subscribe((respuesta: Respuesta) => {
-      // console.log(this.contentService.nivel);
+    // this.contentService.getContentPlay(this.userService.user.iduser,this.contentService.nivel).subscribe((respuesta: Respuesta) => {
+      this.contentService.getContentPlay(24,1).subscribe((respuesta: Respuesta) => {
       if (respuesta.error) {
         console.log(respuesta.message);
       } else {
@@ -62,6 +67,16 @@ export class RetosComponent implements AfterViewInit, OnInit {
     aceEditor.session.setMode("ace/mode/javascript");
     aceEditor.session.setUseSoftTabs(true);
     aceEditor.session.setUseWrapMode(true);
+
+
+    // Sobrescribe la consola para capturar mensajes
+    const self = this;
+    const originalConsoleLog = console.log;
+    console.log = function (...args: any[]) {
+      originalConsoleLog.apply(console, args);
+      self.resultadoEjecucion += args.join(' ') + '\n';  // Almacena el mensaje
+    };
+    
    
   }
 
@@ -75,6 +90,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
         const currentUnit = this.unitsData[this.currentUnitIndex];
         this.text = currentUnit.content;
         ace.edit(this.editor.nativeElement).session.setValue(this.unitsData[this.currentUnitIndex].code);
+        this.resultadoEjecucion = "";
     
     
     
@@ -102,5 +118,18 @@ export class RetosComponent implements AfterViewInit, OnInit {
     this.updateContent();
   }
 
+  ejecutarCodigo(){
+    this.codigoUsuario = ace.edit(this.editor.nativeElement).session.getValue();
+
+    this.resultadoEjecucion = "";
+    try{
+      eval(this.codigoUsuario);
+    }catch(err){
+      console.error("Error al ejecutar el codigo: ", err.message);
+      this.resultadoEjecucion = "Error: " + err.message;
+      
+    }
+
+  }
   
 }
