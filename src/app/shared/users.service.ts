@@ -42,13 +42,21 @@ export class UsersService {
     .pipe(
       tap((response: any) => {
         console.log('Respuesta del servicio al iniciar sesión:', response);
-        this.iduserTheme = response.themes_id_level; 
-        this.id_levelTheme = response.themes_id_level; 
-        this.iduserChallenges = response.user_challenges_iduser; 
-        this.id_levelChallenges = response.challenges_id_level; 
-        this.idlevelsLevels = response.levels_idlevels; 
-        this.iduserUserLevel = response.user_level_iduser; 
-        this.idlevelUserLevel = response.user_level_idlevel;
+        
+        // this.iduserTheme = response.user_theme_iduser; 
+        // this.id_levelTheme = response.themes_id_level; 
+        // this.iduserChallenges = response.user_challenges_iduser; 
+        // this.id_levelChallenges = response.challenges_id_level; 
+        // this.idlevelsLevels = response.levels_idlevels; 
+        // this.iduserUserLevel = response.user_level_iduser; 
+        // this.idlevelUserLevel = response.user_level_idlevel;
+        this.iduserTheme = 24; 
+        this.id_levelTheme = 1; 
+        this.iduserChallenges =24 ; 
+        this.id_levelChallenges = 1; 
+        this.idlevelsLevels = 1; 
+        this.iduserUserLevel =24 ; 
+        this.idlevelUserLevel = 1;
    
       })
     );
@@ -56,8 +64,15 @@ export class UsersService {
 
   public actualizarPorcentaje(iduserTheme: number, id_levelTheme: number, iduserChallenges: number, id_levelChallenges: number, idlevelsLevels: number, iduserUserLevel: number, idlevelUserLevel: number): Observable<any> {
     console.log('Parámetros:', iduserTheme, id_levelTheme, iduserChallenges, id_levelChallenges, idlevelsLevels, iduserUserLevel, idlevelUserLevel)
-    const url = `${this.url}/actualizarPorcentaje/${iduserTheme}/${id_levelTheme}/${iduserChallenges}/${id_levelChallenges}/${idlevelsLevels}/${iduserUserLevel}/${idlevelUserLevel}`;
-    return this.http.post(url, null);
+    const url = `${this.url}/actualizarPorcentaje`;
+   
+    let body = {iduserTheme,id_levelTheme,iduserChallenges,id_levelChallenges,idlevelsLevels,iduserUserLevel,idlevelUserLevel}
+
+    console.log(url);
+    console.log(body);
+    
+    
+    return this.http.post(url, body);
 }
 }
 

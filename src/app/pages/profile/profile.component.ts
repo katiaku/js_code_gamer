@@ -32,6 +32,9 @@ export class ProfileComponent implements OnInit{
 
   actualizarPorcentaje(){
 
+      console.log(this.usersService.id_levelChallenges,this.usersService.idlevelsLevels,this.usersService.iduserUserLevel,
+      this.usersService.idlevelUserLevel,);
+    
       this.usersService.actualizarPorcentaje(
         this.usersService.iduserTheme,
         this.usersService.id_levelTheme,
@@ -40,10 +43,7 @@ export class ProfileComponent implements OnInit{
         this.usersService.idlevelsLevels,
         this.usersService.iduserUserLevel,
         this.usersService.idlevelUserLevel,
-      )
-      
-      
-      .subscribe((response: Response) => {
+      ).subscribe((response: Response) => {
         console.log('Éxito:', response);
       }, error => {
         console.error('Error', error);
