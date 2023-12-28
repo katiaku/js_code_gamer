@@ -19,4 +19,10 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  logout() {
+    this.apiService.logout().subscribe(() => {
+      this.router.navigate(['/landing']);
+    });
+  }
+
 }

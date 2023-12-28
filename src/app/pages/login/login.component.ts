@@ -21,31 +21,26 @@ export class LoginComponent implements OnInit{
       this.user = new User (0,"","","","","");
     }
 
-onSubmit(form:NgForm){
+  onSubmit(form:NgForm){
 
-  this.usersService.login(this.user).subscribe(
-    (resp: any) => {
-    // this.usersService.logueado = true;
-    this.usersService.setLoggedIn(true);
-    this.usersService.user = resp;
-    console.log(resp);
-    console.log(this.usersService.user);
+    this.usersService.login(this.user).subscribe(
+      (resp: any) => {
+      // this.usersService.logueado = true;
+      this.usersService.setLoggedIn(true);
+      this.usersService.user = resp;
+      console.log(resp);
+      console.log(this.usersService.user);
 
-    this.router.navigate(['/profile']);
-  },
-  (error) => {
-    console.error('Error al iniciar sesion', error)
+      this.router.navigate(['/profile']);
+    },
+    (error) => {
+      console.error('Error al iniciar sesion', error)
+    }
+    );
   }
-  );
-}
-
-
 
   ngOnInit(): void {
-
     this.componenteApp.mostrarHeader = true;
   }
-
-
 
 }
