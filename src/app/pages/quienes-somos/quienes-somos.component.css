@@ -10,7 +10,7 @@ background-repeat: no-repeat;
     height: 15vh;
     letter-spacing: 0.7vw;
     font-size: 3vw;
-    
+
 
     display: flex;
     justify-content: center;
@@ -97,7 +97,6 @@ p {
     gap: 30px;
 }
 ul {
-
     font-size: 2vw;
     list-style: none;
     display: flex;
@@ -105,13 +104,13 @@ ul {
     align-items: center;
 
   }
-  
-  li {
+
+  a {
     cursor: pointer;
     color: white;
   }
-  
-  li:hover {
+
+  a:hover {
     color: #FFFF00;
   }
 
