@@ -61,7 +61,7 @@ button:hover {
     background-image: url(../../../assets/images/fondo_estrellas.jpg);
     background-size: auto;
     background-attachment: fixed;
-    height: 200vh;
+    height: 140vh;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -198,51 +198,3 @@ h2{
   border-color: #82FEE7;
   background-color: #82FEE7;
 }
-
-/* .barra2{
-    border: 3px solid;
-    height: 25px;
-    width: 100%;
-    border-radius: 12px;
-    border-color: #7451FF;
-}
-
-.barra_dentro_2{
-    margin-top: -0.05%;
-    height: 22px;
-    width: 100%;
-    border-radius: 9px;
-    background-color: #7451FF;
-    border-color: #7451FF;
-}
-
-.perc2{
-    font-family: 'Monoton', sans-serif;
-    color: #7451FF;
-    font-weight: 100;
-}
-.barra_dentro_3 {
-    margin-top: -0.05%;
-    height: 22px;
-    width: 50%;
-    border-radius: 9px;
-    background-color: #7451FF;
-    border-color: #7451FF;
-}
-
-.barra_dentro_4 {
-    margin-top: -0.05%;
-    height: 22px;
-    width: 0%;
-    border-radius: 9px;
-    background-color: #7451FF;
-    border-color: #7451FF;
-}
-.barra_dentro_5{
-    margin-top: -0.05%;
-    height: 22px;
-    width: 0%;
-    border-radius: 9px;
-    background-color: #7451FF;
-    border-color: #7451FF;
-} */
