@@ -32,13 +32,15 @@ span {
   padding-left: 0;
 }
 
-a {
+a,
+.logout {
   cursor: pointer;
   text-decoration: none;
   color: white;
 }
 
-a:hover {
+a:hover,
+.logout:hover {
   text-decoration: underline;
 }
 

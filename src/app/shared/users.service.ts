@@ -42,14 +42,22 @@ export class UsersService {
     .pipe(
       tap((response: any) => {
         console.log('Respuesta del servicio al iniciar sesión:', response);
-        this.iduserTheme = response.themes_id_level; 
-        this.id_levelTheme = response.themes_id_level; 
-        this.iduserChallenges = response.user_challenges_iduser; 
-        this.id_levelChallenges = response.challenges_id_level; 
-        this.idlevelsLevels = response.levels_idlevels; 
-        this.iduserUserLevel = response.user_level_iduser; 
+        this.iduserTheme = response.themes_id_level;
+        this.id_levelTheme = response.themes_id_level;
+        this.iduserChallenges = response.user_challenges_iduser;
+        this.id_levelChallenges = response.challenges_id_level;
+        this.idlevelsLevels = response.levels_idlevels;
+        this.iduserUserLevel = response.user_level_iduser;
         this.idlevelUserLevel = response.user_level_idlevel;
-   
+      })
+    );
+  }
+
+  public logout(): Observable<boolean> {
+    return this.http.post<boolean>(`${this.url}/logout`, {}).pipe(
+      tap(() => {
+        this.setLoggedIn(false);
+        this.user = null;
       })
     );
   }
@@ -58,7 +66,8 @@ export class UsersService {
     console.log('Parámetros:', iduserTheme, id_levelTheme, iduserChallenges, id_levelChallenges, idlevelsLevels, iduserUserLevel, idlevelUserLevel)
     const url = `${this.url}/actualizarPorcentaje/${iduserTheme}/${id_levelTheme}/${iduserChallenges}/${id_levelChallenges}/${idlevelsLevels}/${iduserUserLevel}/${idlevelUserLevel}`;
     return this.http.post(url, null);
-}
+  }
+
 }
 
 
@@ -79,4 +88,4 @@ export class UsersService {
 // this.id_levelChallenges = response.challenge_id_level; // id nivel del reto-subreto
 // this.idlevelsLevels = response.idlevel; // banda de % (100*100) segun cantidad de temas y retos
 // this.iduserUserLevel = response.user_level_iduser; //id usuario donde se encuentra segun relacion - niveles
-// this.idlevelUserLevel = response.idlevel;   //define mi nivel donde estoy, donde calculare el %    
+// this.idlevelUserLevel = response.idlevel;   //define mi nivel donde estoy, donde calculare el %
