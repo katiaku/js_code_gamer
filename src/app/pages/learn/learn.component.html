@@ -6,7 +6,8 @@
         <h2>{{ apiService.themes[currentThemeIndex].id_level }}.{{ currentThemeIndex + 1 }}. {{ apiService.themes[currentThemeIndex].theme_title }}</h2>
         <div class="text" [innerHTML]="apiService.themes[currentThemeIndex].content| textFormatter:keywords:'#FFFF00'">{{ apiService.themes[currentThemeIndex].content }}</div>
         <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
-        <button *ngIf="currentThemeIndex == apiService.themes.length - 1; else arrows" class="submit" type="submit"><a routerLink="/jugar">RETOS</a></button>
+        <!-- <button *ngIf="currentThemeIndex == apiService.themes.length - 1; else arrows" class="submit" type="submit"><a routerLink="/jugar">RETOS</a></button> -->
+        <button *ngIf="currentThemeIndex == apiService.themes.length - 1; else arrows" (click)="startGame()" class="submit" type="submit"><a>RETOS</a></button>
           <ng-template #arrows>
           <div class="arrows">
             <button class="arrow" (click)="prevTheme()" [disabled]="currentThemeIndex == 0">

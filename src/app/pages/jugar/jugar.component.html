@@ -13,17 +13,17 @@
         <div class="planeta8"></div>
         <div class="planeta9"></div>
 
-        <button class="btn1">1</button>
-        <button class="btn2">2</button>
-        <button class="btn3">3</button>
-        <button class="btn4">4</button>
-        <button class="btn5">5</button>
-        <button class="btn6">6</button>
-        <button class="btn7">7</button>
-        <button class="btn8">8</button>
-        <button class="btn9">9</button>
+        <button class="btn1" (click)="changeLevel(1)">1</button>
+        <button class="btn2" (click)="changeLevel(2)">2</button>
+        <button class="btn3" (click)="changeLevel(3)">3</button>
+        <button class="btn4" (click)="changeLevel(4)">4</button>
+        <button class="btn5" (click)="changeLevel(5)">5</button>
+        <button class="btn6" (click)="changeLevel(6)">6</button>
+        <button class="btn7" (click)="changeLevel(7)">7</button>
+        <button class="btn8" (click)="changeLevel(8)">8</button>
+        <button class="btn9" (click)="changeLevel(9)">9</button>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 1" style="display: block;">
             <div class="puntero puntero1"></div>
             <div class="etiqueta etiqueta1">
                 <div class="texto">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 2" style="display: block;">
             <div class="puntero puntero2"></div>
             <div class="etiqueta etiqueta2">
                 <div class="texto">
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 3" style="display: block;">
             <div class="puntero puntero3"></div>
             <div class="etiqueta etiqueta3">
                 <div class="texto">
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 4" style="display: block;">
             <div class="puntero puntero4"></div>
             <div class="etiqueta etiqueta4">
                 <div class="texto">
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 5" style="display: block;">
             <div class="puntero puntero5"></div>
             <div class="etiqueta etiqueta5">
                 <div class="texto">
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 6" style="display: block;">
             <div class="puntero puntero6"></div>
             <div class="etiqueta etiqueta6">
                 <div class="texto">
@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 7" style="display: block;">
             <div class="puntero puntero7"></div>
             <div class="etiqueta etiqueta7">
                 <div class="texto">
@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 8" style="display: block;">
             <div class="puntero puntero8"></div>
             <div class="etiqueta etiqueta8">
                 <div class="texto">
@@ -111,7 +111,7 @@
             </div>
         </div>
 
-        <div style="display: block;">
+        <div *ngIf="nivelActual == 9" style="display: block;">
             <div class="puntero puntero9"></div>
             <div class="etiqueta etiqueta9">
                 <div class="texto">

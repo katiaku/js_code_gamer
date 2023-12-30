@@ -1,8 +1,8 @@
 <div class=" landing">
     <button id="backButton" [routerLink]="['/jugar']"><i class="bi bi-arrow-left"></i></button>
-    <div class="animacion">
+    <div class="animacion" *ngIf="apiService.themes.length > 0">
         <div class="titulo">
-            <h1><span style="color: yellow;">NIVEL {{ apiService.themes[0].id_level }}: </span><span> {{ apiService.themes[0].title_level }}</span></h1>
+            <h1><span style="color: #FFFF00;">NIVEL {{ apiService.themes[0].id_level }}: </span><span> {{ apiService.themes[0].title_level }}</span></h1>
         </div>
         <div class="texto">
             <br/>
