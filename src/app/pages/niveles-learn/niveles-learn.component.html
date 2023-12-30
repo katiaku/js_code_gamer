@@ -18,32 +18,32 @@
             </div>
 
             <div class="tema3">
-                <button class="btn3" [routerLink]="['/aprender', 3]">TEMA 3</button>
+                <button class="btn3" [routerLink]="['/aprender', 3]" [disabled]="!isLevelUnlocked(3)">TEMA 3</button>
             </div>
         </div>
     </div>
         <div class="tema2y7">
-            <button class="btn7" [routerLink]="['/aprender', 7]">TEMA 7</button>
-            <button class="btn2" [routerLink]="['/aprender', 2]">TEMA 2</button>
+            <button class="btn7" [routerLink]="['/aprender', 7]" [disabled]="!isLevelUnlocked(7)">TEMA 7</button>
+            <button class="btn2" [routerLink]="['/aprender', 2]" [disabled]="!isLevelUnlocked(2)">TEMA 2</button>
         </div>
     <div class="caja3_4">
         <div class="caja3">
             <div class="tema6">
-                <button class="btn6" [routerLink]="['/aprender', 6]">TEMA 6</button>
+                <button class="btn6" [routerLink]="['/aprender', 6]" [disabled]="!isLevelUnlocked(6)">TEMA 6</button>
             </div>
 
             <div class="tema4">
-                <button class="btn4" [routerLink]="['/aprender', 4]">TEMA 4</button>
+                <button class="btn4" [routerLink]="['/aprender', 4]" [disabled]="!isLevelUnlocked(4)">TEMA 4</button>
             </div>
 
             <div class="tema5">
-                <button class="btn5" [routerLink]="['/aprender', 5]">TEMA 5</button>
+                <button class="btn5" [routerLink]="['/aprender', 5]" [disabled]="!isLevelUnlocked(5)">TEMA 5</button>
             </div>
             <div class="tema8">
-                <button class="btn8" [routerLink]="['/aprender', 8]">TEMA 8</button>
+                <button class="btn8" [routerLink]="['/aprender', 8]" [disabled]="!isLevelUnlocked(8)">TEMA 8</button>
             </div>
             <div class="tema9">
-                <button class="btn9" [routerLink]="['/aprender', 9]">TEMA 9</button>
+                <button class="btn9" [routerLink]="['/aprender', 9]" [disabled]="!isLevelUnlocked(9)">TEMA 9</button>
             </div>
         </div>
         <div class="caja4">
