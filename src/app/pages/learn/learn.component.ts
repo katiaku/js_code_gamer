@@ -7,7 +7,7 @@ import learnKeywords from '../../../assets/content/keywords.js';
 import { LearnService } from 'src/app/shared/learn.service';
 import { UsersService } from 'src/app/shared/users.service';
 import { ToastrService } from 'ngx-toastr';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-learn',
@@ -21,7 +21,8 @@ export class LearnComponent implements AfterViewInit, OnInit {
     public apiService: LearnService,
     public apiServiceUsers: UsersService,
     private toast: ToastrService,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private router: Router) {
       this.apiService.themes = null;
     }
 
@@ -76,6 +77,10 @@ export class LearnComponent implements AfterViewInit, OnInit {
   prevTheme(): void {
     this.currentThemeIndex--;
     this.updateContent();
+  }
+
+  startGame() {
+    this.router.navigate(['/jugar'], { queryParams: { id_level: this.apiService.id_level } });
   }
 
 }
