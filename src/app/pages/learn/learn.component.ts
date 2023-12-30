@@ -31,7 +31,6 @@ export class LearnComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     this.componentApp.mostrarHeader = true;
-    // this.loadContent();
     this.route.params.subscribe(params => {
       const id_level = params['id_level'];
       this.apiService.id_level = id_level;

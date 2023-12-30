@@ -9,17 +9,14 @@ import { ContentService } from 'src/app/shared/content.service';
 })
 export class JugarComponent implements OnInit{
 
-  nivelActual:number;
+  // nivelActual:number;
 
-  constructor(public componenteApp:AppComponent, public contentService:ContentService){}
-  
+  constructor(
+    public componenteApp:AppComponent,
+    public contentService:ContentService){}
+
   ngOnInit(): void {
     this.componenteApp.mostrarHeader = true;
-  }
-
-
-  nivel(){
-    this.contentService.nivel = 1;
   }
 
 }
