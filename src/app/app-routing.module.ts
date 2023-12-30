@@ -59,7 +59,7 @@ const routes: Routes = [
     component: JugarComponent
   },
   {
-    path: 'intro-nivel',
+    path: 'intro-nivel/:id-level',
     component: IntroNivelComponent
   }
 

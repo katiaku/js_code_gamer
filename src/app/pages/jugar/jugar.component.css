@@ -23,6 +23,11 @@
   height: 3rem;
 }
 
+p > span{
+  font-family: 'Monoton', sans-serif;
+  color: #FFFF00;
+}
+
 button{
   background-color: transparent;
   padding: 10px 15px;
@@ -66,8 +71,8 @@ button:hover {
 
 .btn5{
   position: fixed;
-  top: 48%;
-  right: 36%;
+  top: 47%;
+  right: 34%;
 }
 
 .btn6{
@@ -85,7 +90,7 @@ button:hover {
 .btn8{
   position: fixed;
   top: 27%;
-  right: 28%;
+  right: 27%;
 }
 
 .btn9{
@@ -94,127 +99,86 @@ button:hover {
   right: 11%;
 }
 
-.planeta1{
+.planeta1,
+.planeta2,
+.planeta3,
+.planeta4,
+.planeta5,
+.planeta6,
+.planeta7,
+.planeta8,
+.planeta9{
   position: fixed;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.planeta1{
   top: 48%;
   right: 70.2%;
   width: 18.3%;
   height: 28%;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta2{
-  position: fixed;
   top: 52%;
   right: 63.5%;
   width: 2.4%;
   height: 3.9%;
-  border-radius: 50%;
-  color:white;
+  /* color:white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   z-index: 9;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta3{
-  position: fixed;
   top: 49.3%;
   right: 53.2%;
   width: 4.3%;
   height: 6.9%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta4{
-  position: fixed;
   top: 41%;
   right: 50.6%;
   width: 4.4%;
   height: 6.7%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta5{
-  position: fixed;
   top: 43.5%;
   right: 36.3%;
   width: 3.4%;
   height: 5.2%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta6{
-  position: fixed;
   top: 30%;
   right: 36.7%;
   width: 7%;
   height: 11.1%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta7{
-  position: fixed;
   top: 30.1%;
   right: 19.7%;
   width: 6.5%;
   height: 10.1%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta8{
-  position: fixed;
   top: 24%;
   right: 29.3%;
   width: 2.8%;
   height: 4%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta9{
-  position: fixed;
   top: 24.1%;
   right: 13.5%;
   width: 2.4%;
   height: 3.8%;
-  border-radius: 50%;
-  color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .planeta1:hover,
@@ -250,8 +214,59 @@ button:hover {
   background-repeat: no-repeat;
   color: white;
   position: fixed;
+}
+
+.etiqueta1{
   top: 35vh;
   right: 73vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta2{
+  top: 32.2vh;
+  right: 58.5vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta3{
+  top: 30vh;
+  right: 49.4vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta4{
+  top: 22vh;
+  right: 47vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta5{
+  top: 68vh;
+  right: 32vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta6{
+  top: 58.5vh;
+  right: 34.3vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta7{
+  top: 58vh;
+  right: 16.4vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta8{
+  top: 47vh;
+  right: 25vw;
+  transform: translate(50%, -50%);
+}
+
+.etiqueta9{
+  top: 47.6vh;
+  right: 8.5vw;
   transform: translate(50%, -50%);
 }
 
@@ -262,9 +277,57 @@ button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   position: fixed;
+  transform: translate(50%, -50%);
+}
+
+.puntero1{
   top: 50vh;
   right: 72.5vw;
-  transform: translate(50%, -50%);
+}
+
+.puntero2{
+  top: 47vh;
+  right: 58vw;
+}
+
+.puntero3{
+  top: 45vh;
+  right: 48.7vw;
+}
+
+.puntero4{
+  top: 37vh;
+  right: 46.2vw;
+}
+
+.puntero5{
+  top: 47vh;
+  right: 36.5vw;
+  transform: rotate(180deg);
+}
+
+.puntero6{
+  top: 38vh;
+  right: 39vw;
+  transform: rotate(180deg);
+}
+
+.puntero7{
+  top: 37vh;
+  right: 21vw;
+  transform: rotate(180deg);
+}
+
+.puntero8{
+  top: 26vh;
+  right: 29.3vw;
+  transform: rotate(180deg);
+}
+
+.puntero9{
+  top: 26vh;
+  right: 13.3vw;
+  transform: rotate(180deg);
 }
 
 .texto{
@@ -278,60 +341,25 @@ button:hover {
 }
 
 .start{
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    width: 110px;
-    height: 45px;
-    border: 2px solid #d60707;
-    border-radius: 15px;
-    box-shadow: 0 2px 0#d60707;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    align-self: flex-end;
-    text-decoration: none;
-    transition: 1s linear;
-    z-index: 99;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 110px;
+  height: 45px;
+  border: 2px solid #d60707;
+  border-radius: 15px;
+  box-shadow: 0 2px 0#d60707;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  align-self: flex-end;
+  text-decoration: none;
+  transition: 1s linear;
+  z-index: 99;
 }
 
 .start:hover {
   background-color: #FFFF00;
-}
-
-.etiqueta2{
-  height: 150px;
-  width: 400px;
-  background-image: url("../../../assets/images/etiqueta.jugar.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  color: white;
-  position: fixed;
-  top: 49vh;
-  right: 70vw;
-  transform: translate(50%, -50%);
-}
-
-.puntero2{
-  height: 100px;
-  width: 250px;
-  background-image: url("../../../assets/images/puntero.jugar.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 61vh;
-  right: 69.5vw;
-  transform: translate(50%, -50%);
-}
-
-.texto2{
-  height: 150px;
-  width: 210px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
 }

@@ -1,16 +1,13 @@
 <div class=" landing">
+    <button id="backButton" [routerLink]="['/jugar']"><i class="bi bi-arrow-left"></i></button>
     <div class="animacion">
         <div class="titulo">
-            <h1><span style="color: yellow;">NIVEL 1: </span><span> CONCEPTOS BASICOS</span></h1>
+            <h1><span style="color: yellow;">NIVEL {{ apiService.themes[0].id_level }}: </span><span> {{ apiService.themes[0].title_level }}</span></h1>
         </div>
         <div class="texto">
             <br/>
-            <p>En el amanecer de una nueva era espacial, la humanidad emprende una expedición sin
-            <br/>precedentes hacia los confines del cosmos. La nave estelar "Aurora" parte de la Tierra,
-            <br/>impulsada por la curiosidad insaciable de descubrir mundos lejanos. Equipada con
-            <br/>tecnologías revolucionarias, la tripulación se aventura más allá de nuestra galaxia, guiada
-            <br/>por el sueño de hallar un planeta habitable que pueda convertirse en un nuevo hogar para la humanidad.</p>
-        </div>
+            <p>{{ apiService.themes[0].intro }}</p>
+          </div>
         <div class="btn">
             <button id="startButton" [style.display]="buttonDisplay" [disabled]="buttonDisabled" (click)="iniciarJuego()">S T A R T</button>
         </div>
