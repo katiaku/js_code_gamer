@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class UsersService {
   private loggedInSubject = new BehaviorSubject<boolean>(false);
 
   public user: User;
+  public percentage: number;
   iduserTheme: number;
   id_levelTheme: number;
   iduserChallenges: number;
@@ -43,27 +45,22 @@ export class UsersService {
       tap((response: any) => {
         console.log('Respuesta del servicio al iniciar sesión:', response);
         
-        // this.iduserTheme = response.user_theme_iduser; 
-        // this.id_levelTheme = response.themes_id_level; 
-        // this.iduserChallenges = response.user_challenges_iduser; 
-        // this.id_levelChallenges = response.challenges_id_level; 
-        // this.idlevelsLevels = response.levels_idlevels; 
-        // this.iduserUserLevel = response.user_level_iduser; 
-        // this.idlevelUserLevel = response.user_level_idlevel;
-        this.iduserTheme = 24; 
-        this.id_levelTheme = 1; 
-        this.iduserChallenges =24 ; 
-        this.id_levelChallenges = 1; 
-        this.idlevelsLevels = 1; 
-        this.iduserUserLevel =24 ; 
-        this.idlevelUserLevel = 1;
+        this.iduserTheme = response.user_theme_iduser; 
+        this.id_levelTheme = response.theme_id_level; 
+        this.iduserChallenges = response.user_challenges_iduser; 
+        this.id_levelChallenges = response.challenge_id_level; 
+        this.idlevelsLevels = response.idlevels; 
+        this.iduserUserLevel = response.user_level_iduser; 
+        this.idlevelUserLevel = response.user_level_idlevel;
    
       })
     );
   }
 
   public actualizarPorcentaje(iduserTheme: number, id_levelTheme: number, iduserChallenges: number, id_levelChallenges: number, idlevelsLevels: number, iduserUserLevel: number, idlevelUserLevel: number): Observable<any> {
+
     console.log('Parámetros:', iduserTheme, id_levelTheme, iduserChallenges, id_levelChallenges, idlevelsLevels, iduserUserLevel, idlevelUserLevel)
+
     const url = `${this.url}/actualizarPorcentaje`;
    
     let body = {iduserTheme,id_levelTheme,iduserChallenges,id_levelChallenges,idlevelsLevels,iduserUserLevel,idlevelUserLevel}
@@ -72,26 +69,29 @@ export class UsersService {
     console.log(body);
     
     
-    return this.http.post(url, body);
+    return this.http.post(url, body).pipe(
+      map((response: any) => {
+        console.log('Respuesta del servidor:', response);
+        return { ...response, porcentaje: response.porcentaje || 0 };
+      })
+    );
 }
+
+getNivelesData(iduser: number): Observable<any> {
+  const url = `${this.url}/obtenerDatosNiveles/${iduser}`;
+  return this.http.get(url);
+}
+
+updateUser(user:User): Observable<any> {
+  const url = `${this.url}/usuario`; // Usa la misma ruta '/usuario'
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+  return this.http.put(url, user, { headers });
 }
 
 
 
+}
 
 
-
-
-
-
-
-
-
-
-// this.iduserTheme = response.theme_id_level;  //id usuario donde se encuentra segun relacion, nivel - tema
-// this.id_levelTheme = response.theme_id_level; // id nivel del tema-subtema
-// this.iduserChallenges = response.user_challenges_iduser; //id usuario donde se encuentra segun relacion, nivel - retos
-// this.id_levelChallenges = response.challenge_id_level; // id nivel del reto-subreto
-// this.idlevelsLevels = response.idlevel; // banda de % (100*100) segun cantidad de temas y retos
-// this.iduserUserLevel = response.user_level_iduser; //id usuario donde se encuentra segun relacion - niveles
-// this.idlevelUserLevel = response.idlevel;   //define mi nivel donde estoy, donde calculare el %    
+ 

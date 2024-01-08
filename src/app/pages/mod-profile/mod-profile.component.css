@@ -42,6 +42,7 @@ section {
     color: white;
   }
 
+
   input:focus {
     outline: none;
   }
@@ -51,7 +52,8 @@ section {
     font-size: 1rem;
   }
 
-  div {
+
+  .astr {
     position: absolute;
     left: 65%;
     top: 20%;
@@ -78,4 +80,12 @@ section {
 
   button:hover {
     background-color: #FFFF00;
+  }
+
+  div {
+    color: #FFFF00;
+    font-size: .7rem;
+    height: 1rem;
+    text-align: center;
+    padding: .2rem;
   }

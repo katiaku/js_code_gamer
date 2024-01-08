@@ -1,45 +1,23 @@
 <section>
     <!-- <h1><span>Únete </span>A NOSOTROS</h1> -->
-    <form>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Nombre"
-      >
-      <input
-        type="text"
-        name="surname"
-        id="surname"
-        placeholder="Apellido"
-      >
-      <input
-        type="text"
-        name="photo"
-        id="photo"
-        placeholder="Foto de perfil"
-      >
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
-      >
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Contarseña"
-      >
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Confirmar Contarseña"
-      >
-      <button type="submit" (click)="onSubmit()">MODIFICAR</button>
+    <form [formGroup]="profileForm">
+      <input type="text" placeholder="Nombre y Apellido" formControlName="name_surname">
+      <input type="email" placeholder="Email" formControlName="email">
+      <input type="text" placeholder="Nick" formControlName="username">
+      <input type="text" placeholder="Foto de perfil" formControlName="photo">
+    
+      <input type="password" placeholder="Contraseña" formControlName="password">
+      <div *ngIf="profileForm.get('password').hasError('minlength') && profileForm.get('password').touched">
+        La contraseña debe tener al menos 8 caracteres.
+      </div>
+    
+      <input type="password" placeholder="Confirmar Contraseña" formControlName="confirmPassword">
+      <div *ngIf="profileForm.hasError('passwordMismatch') && profileForm.get('confirmPassword').touched">
+        Las contraseñas no coinciden.
+      </div>
+      <button type="button" [disabled]="!profileForm.valid" (click)="actualizarUsuario()">MODIFICAR DATOS</button>
     </form>
-    <div>
+    <div class="astr">
         <img src="../../../assets/images/astronauta_sinfondo.png" alt="astronauta">
     </div>
   </section>

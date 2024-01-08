@@ -80,32 +80,84 @@ h1{
 }
 
 .badges{
+
     margin-top: 2%;
     height: 130px;
     background-color: rgba(255, 255, 255, 0.396);
     width: 80%;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-around;
 }
+.medallas {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 
 h2{
     color: #FFFF00;
     padding-left: 15px;
-    padding-top: 7px;
+    padding-top: 40px;
     font-family: 'Monoton', sans-serif;
     font-weight: 100;
     text-decoration: underline;
 
 }
+.medalGamer{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInAndScale 1s ease-out forwards;
+}
+
+@keyframes fadeInAndScale {
+  0% {
+    opacity: 0;
+    transform: scale(5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.medalGamer:nth-child(1) {
+  animation: fadeInAndScale 0.5s ease-out 0s forwards;
+}
+
+.medalGamer:nth-child(2) {
+  animation: fadeInAndScale 0.5s ease-out 2s forwards;
+}
+
+.medalGamer:nth-child(3) {
+  animation: fadeInAndScale 0.5s ease-out 4s forwards;
+}
+
+
+
+
+
+
 
 .medal{
     height: 30px;
     width: 30px;
     margin-left: 1rem;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
 }
+
 
 .perc{
     font-family: 'Monoton', sans-serif;
@@ -176,10 +228,11 @@ h2{
 .barra_dentro{
     margin-top: -0.05%;
     height: 22px;
-    width: 100%;
+    width: 0%;
     border-radius: 9px;
     background-color: #FFFF00;
     border-color: #FFFF00;
+    max-width: 100%;
 }
 
 .barra_dentro_1 {
@@ -246,3 +299,4 @@ h2{
     background-color: #7451FF;
     border-color: #7451FF;
 } */
+

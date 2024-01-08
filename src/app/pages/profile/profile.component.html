@@ -11,32 +11,75 @@
     </section>
     <section class="logros">
         <h1>Logros y Progresión</h1>
-        <div class="badges">
+        <div class="badges" >
             <h2>MEDALLAS:</h2>
-            <div class="medallas">
-                <img src="../../../assets/images/nivel1_medalla.png" alt="" class="medal">
-                <img src="../../../assets/images/nivel2_medalla.png" alt="" class="medal">
+            <div class="medallas" *ngFor="let nivel of nivelesData; let i = index">
+                <img *ngIf="nivel.percentage == 100" [src] = "nivelColores[nivel.title].medalla" alt="" class="medalGamer" [style.animation-delay]="i * 0.5 + 's'">
             </div>
         </div>
-        <div class="niveles">
-            <div class="nivel">
+
+        <div *ngFor="let nivel of nivelesData; let i = index" class="niveles">
+            <div class="nivel" [style.border]="nivelColores[nivel.title].borde">
                 <div class="unitData">
-                    <h4 class="titulo">Nivel 1: Introducción a JavaScript</h4>
-                    <img src="../../../assets/images/nivel1_medalla.png" class="medal" style="margin-top: -6%;" alt="">
+                    <h4 class="titulo">NIVEL {{ i + 1 }}: {{ nivel.title }}</h4>
+                    <img [src] = "nivelColores[nivel.title].medalla"  class="medal" style="margin-top: -6%;" alt="">
                 </div>
-                <h3 class="perc perc_1">100%</h3>
+                <h3 class="perc perc_1" [style.color]="nivelColores[nivel.title].percentage">{{ nivel.percentage }}%</h3>
             </div>
-            <div class="barra barra_1">
-                <div class="barra_dentro barra_dentro_1"></div>
+            <div class="barra barra_1" [style.border-color]="nivelColores[nivel.title].borde">
+                <div class="barra_dentro barra_dentro_1" [style.width.%]="nivel.percentage"[style.backgroundColor]="nivelColores[nivel.title].percentage"></div>
             </div>
         </div>
+
+    </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <img *ngIf="nivel.percentage === 100" src="../../../assets/images/nivel2_medalla.png" alt="" class="medal">
+                <img *ngIf="nivel.percentage === 100" src="../../../assets/images/nivel3_medalla.png" alt="" class="medal">
+                <img *ngIf="nivel.percentage === 100" src="../../../assets/images/nivel4_medalla.png" alt="" class="medal">
+                <img *ngIf="nivel.percentage === 100" src="../../../assets/images/nivel5_medalla.png" alt="" class="medal"> -->
+<!--
+
+
         <div class="niveles">
             <div class="nivel">
                 <div class="unitData">
                     <h4 class="titulo">Nivel 2: Variables y Tipos de Datos</h4>
                     <img src="../../../assets/images/nivel2_medalla.png" class="medal" style="margin-top: -6%;" alt="">
                 </div>
-                <h3 class="perc perc_2">100%</h3>
+                <h3 class="perc perc_2">10%</h3>
             </div>
             <div class="barra barra_2">
                 <div class="barra_dentro barra_dentro_2"></div>
@@ -125,6 +168,4 @@
         <div class="barra barra_3">
             <div class="barra_dentro barra_dentro_3"></div>
         </div>
-      </div>
-    </section>
-</section>
+      </div> -->

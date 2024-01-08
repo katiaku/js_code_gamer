@@ -67,7 +67,7 @@ outline: none;
 font-family: 'Roboto', sans-serif;
 }
 .btn{
-border: 3px solid yellow;
+border: 3px solid #ffff00;
 border-radius: 50px;
 color: white;
 font-size: 1vw;
@@ -80,7 +80,7 @@ right: 20%;
 transition:background-color 0.3s ease, transform 0.3s ease;
 }
 .btn:hover {
-background-color: yellow; 
+background-color: #ffff00; 
 color:black;
 transform: scale(1.5);
 }
@@ -95,7 +95,7 @@ align-items:center;
 padding-right:480px;
 }
 .btn3{
-border: 3px solid rgb(173, 15, 94);
+border: 3px solid #ad0f5e;
 border-radius: 50px;
 color: white;
 font-size: 1rw;
@@ -122,7 +122,7 @@ transform: scale(1.5);
     
 } */
 .btn7{
-    border: 3px solid rgb(80, 3, 116);
+    border: 3px solid #500374;
     border-radius: 50px;
     color: white;
     font-size: 1vw;
@@ -141,7 +141,7 @@ transform: scale(1.5);
     transform: scale(1.5);
 }
 .btn2 {
-    border: 3px solid rgb(73, 225, 248);
+    border: 3px solid #49e1f8;
     border-radius: 50px;
     color: white;
     font-size: 1vw;
@@ -179,7 +179,7 @@ justify-content: flex-end;
 padding-left: 255px;
 }
 .btn6{
-border: 3px solid rgb(134, 252, 142);
+border: 3px solid #86fc8e;
 border-radius: 50px;
 color: white;
 font-size: 1rw;
@@ -207,7 +207,7 @@ align-items: center;
 padding-left: 500px;
 }
 .btn4{
-border: 3px solid rgb(209, 142, 17);
+border: 3px solid #d18e11;
 border-radius: 50px;
 color: white;
 font-size: 1rw;
@@ -235,7 +235,7 @@ align-items: center;
 padding-left: 10px;
 }
 .btn5{
-border: 3px solid rgb(209, 17, 17);
+border: 3px solid #d11111;
 border-radius: 50px;
 color: white;
 font-size: 1rw;
@@ -252,7 +252,7 @@ background-color:rgb(209, 17, 17);
 transform: scale(1.5);
 }
 .btn8{
-    border: 3px solid rgb(206, 30, 215);
+    border: 3px solid #ce1ed7;
     border-radius: 50px;
     color: white;
     font-size: 1vw; 
@@ -270,7 +270,7 @@ transform: scale(1.5);
     transform: scale(1.5);
 }
 .btn9{
-    border: 3px solid rgb(222, 248, 73);
+    border: 3px solid #def849;
     border-radius: 50px;
     color: white;
     font-size: 1vw;
