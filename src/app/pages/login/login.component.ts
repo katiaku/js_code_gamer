@@ -5,6 +5,7 @@ import { User } from '../../models/user';
 import { UsersService } from '../../shared/users.service';
 import { Router } from '@angular/router';
 import { Response } from 'src/app/models/response';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ import { Response } from 'src/app/models/response';
 export class LoginComponent implements OnInit{
 
   public user: User
+  public loginError: string = '';
 
   constructor(public componenteApp:AppComponent,
     private usersService: UsersService,
@@ -21,26 +23,36 @@ export class LoginComponent implements OnInit{
       this.user = new User (0,"","","","","");
     }
 
-  onSubmit(form:NgForm){
+onSubmit(form:NgForm){
 
-    this.usersService.login(this.user).subscribe(
-      (resp: any) => {
-      // this.usersService.logueado = true;
-      this.usersService.setLoggedIn(true);
-      this.usersService.user = resp;
-      console.log(resp);
-      console.log(this.usersService.user);
+  this.usersService.login(this.user).subscribe(
+    (resp: any) => {
+    // this.usersService.logueado = true;
+    this.usersService.setLoggedIn(true);
+    this.usersService.user = resp;
+    console.log(resp);
+    console.log(this.usersService.user);
 
-      this.router.navigate(['/profile']);
-    },
-    (error) => {
-      console.error('Error al iniciar sesion', error)
+    this.router.navigate(['/profile']);
+  },
+  (error: HttpErrorResponse) => {
+    if (error.status === 401) {
+      this.loginError = 'Correo o contraseña incorrectos.';
+    } else {
+      this.loginError = `Error al iniciar sesión: ${error.statusText}`;
     }
-    );
   }
+);
+}
+
+
+
 
   ngOnInit(): void {
+
     this.componenteApp.mostrarHeader = true;
   }
+
+
 
 }

@@ -2,6 +2,10 @@
   <h1>BIENVENIDO A <span class="text"><span class="js">JS</span>CODEGAMER</span></h1>
   <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
 
+    <div *ngIf="loginError" class="invalid-feedback">
+      {{ loginError }}
+    </div>
+
     <div class="form_group">
       <input
         type="text"
