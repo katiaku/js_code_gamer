@@ -2,6 +2,7 @@
     <div class="heider"></div>
     <div class="mundos">
         <div class="astronauta"></div>
+
         <div class="planeta1"></div>
         <div class="planeta2"></div>
         <div class="planeta3"></div>
@@ -11,36 +12,115 @@
         <div class="planeta7"></div>
         <div class="planeta8"></div>
         <div class="planeta9"></div>
-        <button class="btn1">1</button>
-        <button class="btn2">2</button>
-        <button class="btn3">3</button>
-        <button class="btn4">4</button>
-        <button class="btn5">5</button>
-        <button class="btn6">6</button>
-        <button class="btn7">7</button>
-        <button class="btn8">8</button>
-        <button class="btn9">9</button>
-        <div class="puntero"></div>
-        <div class="etiqueta">
-    <div style="display: block;">
-            <div class="texto">
-                <p><span style="font-family: 'Monoton', sans-serif; color: #FFFF00;">NIVEL 1</span></p>
-                <p>Conceptos Básicos JS</p>
-                <a [routerLink]="['/intro-nivel']" routerLinkActive="router-link-active" (click)="nivel()" class="start">START</a>
-            </div>
-        </div>
-    </div> 
 
-    <div style="display: none;">
-        <div class="puntero2"></div>
-        <div class="etiqueta2">
-            <div class="texto2">
-                <p><span style="font-family: 'Monoton', sans-serif; color: #FFFF00;">NIVEL 2</span></p>
-                <p>Conceptos Básicos JS</p>
-                <a [routerLink]="['/intro-nivel']" routerLinkActive="router-link-active" class="start">START</a>
+        <button class="btn1" (click)="changeLevel(1)">1</button>
+        <button class="btn2" (click)="changeLevel(2)">2</button>
+        <button class="btn3" (click)="changeLevel(3)">3</button>
+        <button class="btn4" (click)="changeLevel(4)">4</button>
+        <button class="btn5" (click)="changeLevel(5)">5</button>
+        <button class="btn6" (click)="changeLevel(6)">6</button>
+        <button class="btn7" (click)="changeLevel(7)">7</button>
+        <button class="btn8" (click)="changeLevel(8)">8</button>
+        <button class="btn9" (click)="changeLevel(9)">9</button>
+
+        <div *ngIf="nivelActual == 1" style="display: block;">
+            <div class="puntero puntero1"></div>
+            <div class="etiqueta etiqueta1">
+                <div class="texto">
+                    <p><span>NIVEL 1</span></p>
+                    <p>Introducción a JavaScript</p>
+                    <a [routerLink]="['/intro-nivel', 1]" class="start">START</a>
+                </div>
             </div>
         </div>
-    </div>       
+
+        <div *ngIf="nivelActual == 2" style="display: block;">
+            <div class="puntero puntero2"></div>
+            <div class="etiqueta etiqueta2">
+                <div class="texto">
+                    <p><span>NIVEL 2</span></p>
+                    <p>Variables y Tipos de Datos</p>
+                    <a [routerLink]="['/intro-nivel', 2]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 3" style="display: block;">
+            <div class="puntero puntero3"></div>
+            <div class="etiqueta etiqueta3">
+                <div class="texto">
+                    <p><span>NIVEL 3</span></p>
+                    <p>Operadores y Expresiones</p>
+                    <a [routerLink]="['/intro-nivel', 3]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 4" style="display: block;">
+            <div class="puntero puntero4"></div>
+            <div class="etiqueta etiqueta4">
+                <div class="texto">
+                    <p><span>NIVEL 4</span></p>
+                    <p>Estructuras de Control</p>
+                    <a [routerLink]="['/intro-nivel', 4]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 5" style="display: block;">
+            <div class="puntero puntero5"></div>
+            <div class="etiqueta etiqueta5">
+                <div class="texto">
+                    <p><span>NIVEL 5</span></p>
+                    <p>Funciones</p>
+                    <a [routerLink]="['/intro-nivel', 5]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 6" style="display: block;">
+            <div class="puntero puntero6"></div>
+            <div class="etiqueta etiqueta6">
+                <div class="texto">
+                    <p><span>NIVEL 6</span></p>
+                    <p>Arreglos y Objetos</p>
+                    <a [routerLink]="['/intro-nivel', 6]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 7" style="display: block;">
+            <div class="puntero puntero7"></div>
+            <div class="etiqueta etiqueta7">
+                <div class="texto">
+                    <p><span>NIVEL 7</span></p>
+                    <p>DOM y Eventos</p>
+                    <a [routerLink]="['/intro-nivel', 7]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 8" style="display: block;">
+            <div class="puntero puntero8"></div>
+            <div class="etiqueta etiqueta8">
+                <div class="texto">
+                    <p><span>NIVEL 8</span></p>
+                    <p>AJAX y Promesas</p>
+                    <a [routerLink]="['/intro-nivel', 8]" class="start">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="nivelActual == 9" style="display: block;">
+            <div class="puntero puntero9"></div>
+            <div class="etiqueta etiqueta9">
+                <div class="texto">
+                    <p><span>NIVEL 9</span></p>
+                    <p>Programación Orientada a Objetos (OOP)</p>
+                    <a [routerLink]="['/intro-nivel', 9]" class="start">START</a>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="footer"></div>

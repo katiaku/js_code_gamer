@@ -19,14 +19,16 @@
 export class Themes {
 
   idthemes: number;
+  intro: string;
   title_level: string;
   id_level: number;
   theme_title: string;
   content: string;
   code: string;
 
-  constructor(idthemes: number, title_level: string, id_level: number, theme_title: string, content: string, code: string) {
+  constructor(idthemes: number, intro: string, title_level: string, id_level: number, theme_title: string, content: string, code: string) {
     this.idthemes = idthemes;
+    this.intro = intro;
     this.title_level = title_level;
     this.id_level = id_level;
     this.theme_title = theme_title;

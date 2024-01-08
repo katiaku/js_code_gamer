@@ -8,11 +8,22 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class NivelesLearnComponent implements OnInit{
 
+  unlockedLevel: number = 4;
 
   constructor(public componenteApp:AppComponent){}
-  
+
   ngOnInit(): void {
     this.componenteApp.mostrarHeader = true;
+  }
+
+  isLevelUnlocked(level: number): boolean {
+    return level <= this.unlockedLevel;
+  }
+
+  completeLevel(idlevel: number): void {
+    if (idlevel == this.unlockedLevel) {
+      this.unlockedLevel++;
+    }
   }
 
 }

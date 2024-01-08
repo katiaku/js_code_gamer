@@ -26,11 +26,11 @@ ul {
   gap: 2rem;
 }
 
-li {
+a {
   cursor: pointer;
   color: white;
 }
 
-li:hover {
+a:hover {
   color: #FFFF00;
 }

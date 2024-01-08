@@ -3,10 +3,11 @@
   <ul class="header-nav">
     <li><a routerLink="/landing" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">HOME</a></li>
     <li><a routerLink="/quienes-somos" routerLinkActive="active-link">¿QUIENES SOMOS?</a></li>
-    <li><a routerLink="/login" routerLinkActive="active-link">LOGIN</a></li>
-    <li><a routerLink="/register" routerLinkActive="active-link">REGISTER</a></li>
-    <li><a routerLink="/niveles-aprender" routerLinkActive="active-link">APRENDER</a></li>
-    <li><a routerLink="/jugar" routerLinkActive="active-link">JUGAR</a></li>
-    <li><a routerLink="/profile" routerLinkActive="active-link">PERFIL</a></li>
+    <li *ngIf = '!isUserLogged'><a routerLink="/login" routerLinkActive="active-link">LOGIN</a></li>
+    <li *ngIf = '!isUserLogged'><a routerLink="/register" routerLinkActive="active-link">REGISTER</a></li>
+    <li *ngIf = 'isUserLogged'><a routerLink="/niveles-aprender" routerLinkActive="active-link">APRENDER</a></li>
+    <li *ngIf = 'isUserLogged'><a routerLink="/jugar" routerLinkActive="active-link">JUGAR</a></li>
+    <li *ngIf = 'isUserLogged'><a routerLink="/profile" routerLinkActive="active-link">PERFIL</a></li>
+    <li *ngIf = 'isUserLogged' (click)="logout()" class="logout">LOGOUT</li>
   </ul>
 </header>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { ContentService } from 'src/app/shared/content.service';
+import { LearnService } from 'src/app/shared/learn.service';
 
 @Component({
   selector: 'app-jugar',
@@ -9,17 +9,22 @@ import { ContentService } from 'src/app/shared/content.service';
 })
 export class JugarComponent implements OnInit{
 
-  nivelActual:number;
+  nivelActual: number;
 
-  constructor(public componenteApp:AppComponent, public contentService:ContentService){}
-  
+  constructor(
+    public componenteApp:AppComponent,
+    public apiService:LearnService){}
+
   ngOnInit(): void {
     this.componenteApp.mostrarHeader = true;
+    this.nivelActual = this.apiService.id_level;
   }
 
-
-  nivel(){
-    this.contentService.nivel = 1;
+  changeLevel(level: number): void {
+    this.nivelActual = this.apiService.id_level;
+    if (level <= this.nivelActual) {
+      this.nivelActual = level;
+    }
   }
 
 }

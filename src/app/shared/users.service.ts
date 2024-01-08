@@ -52,7 +52,15 @@ export class UsersService {
         this.idlevelsLevels = response.idlevels; 
         this.iduserUserLevel = response.user_level_iduser; 
         this.idlevelUserLevel = response.user_level_idlevel;
-   
+      })
+    );
+  }
+
+  public logout(): Observable<boolean> {
+    return this.http.post<boolean>(`${this.url}/logout`, {}).pipe(
+      tap(() => {
+        this.setLoggedIn(false);
+        this.user = null;
       })
     );
   }
