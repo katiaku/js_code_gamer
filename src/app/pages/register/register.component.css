@@ -67,12 +67,21 @@ section {
     position: absolute;
     left:18%;
     top: 20%;
+    z-index: 99;
+    animation: rotateInfinite 4s linear;
   }
 
   img{
     height: 300px;
-    z-index: 9;
-    /* transform: rotateY(3.142rad); */
+  }
+
+  @keyframes rotateInfinite {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   input[type="submit"] {

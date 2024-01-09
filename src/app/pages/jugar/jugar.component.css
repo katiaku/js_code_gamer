@@ -204,6 +204,8 @@ button:hover {
   right: 89vw;
   transform: translate(50%, -50%);
   z-index: 9;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .etiqueta{
@@ -362,4 +364,13 @@ button:hover {
 
 .start:hover {
   background-color: #FFFF00;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

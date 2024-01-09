@@ -10,7 +10,6 @@ height: 100vh;
 background-image: url("../../../assets/images/inicio.landing.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
-
 display: flex;
 justify-content: center;
 
@@ -20,7 +19,6 @@ justify-content: center;
 color: white;
 height: 97vh;
 width: 83vw;
-
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -85,7 +83,6 @@ background-color: rgba(0, 0, 0, 0.3);
 background-image: url("../../../assets/images/fin.landing.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
-
 display: flex;
 flex-wrap: wrap;
 }
@@ -98,7 +95,6 @@ background-size: 100% 90%;
 /* transform: rotate(-2deg); */
 height: 30vh;
 width: 100%;
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -121,7 +117,6 @@ letter-spacing: 25px;
 /* border: 1px solid rgb(255, 242, 0); */
 height: 80vh;
 width: 49vw;
-
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -135,7 +130,6 @@ background-image: url("../../../assets/images/aprender.landing.png");
 background-size: 100% 100%;
 background-repeat: no-repeat;
 border-radius: 500px;
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -144,11 +138,9 @@ align-items: center;
 /* border: 3px solid rgb(0, 221, 255); */
 height: 11vh;
 width: 100%;
-
 display: flex;
 justify-content: center;
 align-items: center;
-
 }
 button {
 background-color: rgb(0, 0, 0);
@@ -164,7 +156,6 @@ font-size: 1vw;
 padding: 0.5vw;
 max-width: 150px;
 width: 100%;
-
 }
 .info1{
 /* border: 3px solid rgb(0, 8, 255); */
@@ -174,7 +165,6 @@ color:white;
 text-align: center;
 line-height: 30px;
 background-color: rgba(0, 0, 0, 0.57);
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -182,10 +172,8 @@ align-items: center;
 
 .jugar{
 /* border: 1px solid rgb(255, 242, 0); */
-
 height: 80vh;
 width: 49vw;
-
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -199,7 +187,6 @@ background-image: url("../../../assets/images/jugar.landing.png");
 background-size: 100% 100%;
 background-repeat: no-repeat;
 border-radius: 500px;
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -208,7 +195,6 @@ align-items: center;
 /* border: 3px solid rgb(0, 221, 255); */
 height: 11vh;
 width: 100%;
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -221,7 +207,6 @@ font-size: 1vw;
 padding: 0.5vw;
 max-width: 150px;
 width: 100%;
-
 }
 .info2{
 /* border: 3px solid rgb(0, 8, 255); */
@@ -230,7 +215,6 @@ color:white;
 text-align: center;
 line-height: 30px;
 background-color: rgba(0, 0, 0, 0.57);
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -239,7 +223,6 @@ align-items: center;
 /* .landing3{
 border: 1px solid rgb(123, 255, 0);
 height: 108vh;
-
 display: flex;
 flex-wrap: wrap;
 } */
@@ -250,7 +233,6 @@ background-repeat: no-repeat;
 background-size: 100% 90%;
 height: 30vh;
 width: 100%;
-
 display: flex;
 justify-content: center;
 align-items: center;
@@ -268,7 +250,6 @@ align-items: center;
 font-family: 'Roboto', sans-serif;
 font-size: 50px;
 letter-spacing: 25px;
-
 }
 .imgEquipo{
 /* border: 1px solid red; */
@@ -278,8 +259,6 @@ background-image: url("../../../assets/images/astronauta.landing.png");
 background-size: 90% 100%;
 background-repeat: no-repeat;
 margin-left: 100px;
-
-
 }
 .equipo{
 /* border: 1px solid red; */
@@ -290,6 +269,71 @@ color: white;
 line-height: 55px;
 /* padding: 100px; */
 /* margin-left: 250px; */
-
 }
 
+.landing1 .titulo, .landing1 .subtitulo, .landing1 .texto p {
+  opacity: 0;
+}
+
+.landing1 .titulo {
+  animation: slideFromLeft 1s ease-out 0.5s forwards;
+}
+
+.landing1 .subtitulo {
+  animation: slideFromRight 1s ease-out 0.5s forwards;
+}
+
+.landing1 .texto p {
+  animation: fadeIn 1s ease-out 1s forwards;
+}
+
+.landing1 .astronauta {
+  opacity: 0;
+  animation: fallAndJump 1s ease-out 1.5s forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fallAndJump {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
