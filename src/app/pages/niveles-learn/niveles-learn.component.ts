@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { UsersService } from 'src/app/shared/users.service';
 
 @Component({
   selector: 'app-niveles-learn',
@@ -8,9 +9,13 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class NivelesLearnComponent implements OnInit{
 
-  unlockedLevel: number = 9;
+  unlockedLevel: number = 1;
+  porcentajeEnComponente = 0;
 
-  constructor(public componenteApp:AppComponent){}
+  constructor(public componenteApp:AppComponent,
+    public usersService: UsersService){
+      this.actualizarPorcentaje();
+    }
 
   ngOnInit(): void {
     this.componenteApp.mostrarHeader = true;
@@ -20,10 +25,39 @@ export class NivelesLearnComponent implements OnInit{
     return level <= this.unlockedLevel;
   }
 
-  completeLevel(idlevel: number): void {
-    if (idlevel == this.unlockedLevel) {
-      this.unlockedLevel++;
-    }
+  actualizarPorcentaje(){
+
+    console.log(this.usersService.id_levelChallenges,this.usersService.idlevelsLevels,this.usersService.iduserUserLevel,
+    this.usersService.idlevelUserLevel,);
+
+    this.usersService.actualizarPorcentaje(
+      this.usersService.iduserTheme,
+      this.usersService.id_levelTheme,
+      this.usersService.iduserChallenges,
+      this.usersService.id_levelChallenges,
+      this.usersService.idlevelsLevels,
+      this.usersService.iduserUserLevel,
+      this.usersService.idlevelUserLevel,
+
+    ).subscribe((response: any) => {
+      console.log('Éxito:', response);
+      console.log('Datos en el servicio:', this.usersService)
+      const percentage = response.porcentaje;
+      if (percentage !== undefined) {
+        this.porcentajeEnComponente = percentage;
+        console.log(this.porcentajeEnComponente);
+        console.log(percentage);
+      } else {
+        console.error('El porcentaje es undefined');
+      }
+
+      if (percentage == 100) {
+        this.unlockedLevel++;
+      }
+
+    }, error => {
+      console.error('Error', error);
+    });
   }
 
 }
