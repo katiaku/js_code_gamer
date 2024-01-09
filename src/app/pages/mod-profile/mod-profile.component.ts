@@ -8,6 +8,8 @@ import { Response } from 'src/app/models/response';
 import { ToastrService } from 'ngx-toastr';
 
 
+
+
 @Component({
   selector: 'app-mod-profile',
   templateUrl: './mod-profile.component.html',
@@ -28,7 +30,8 @@ export class ModProfileComponent implements OnInit{
               private userService: UsersService,
               private router: Router,
               private toastr: ToastrService,
-              private formBuilder: FormBuilder){
+              private formBuilder: FormBuilder,
+              ){
                 this.profileForm = this.formBuilder.group({
                   name_surname: [''],
                   email: [''],
@@ -46,18 +49,16 @@ export class ModProfileComponent implements OnInit{
                 const confirmPassword = formGroup.get('confirmPassword').value;
             
                 if (password === confirmPassword) {
-                  return null; // Contraseñas coinciden
-                } else {
-                  return { passwordMismatch: true }; // Contraseñas no coinciden
+                  return null; 
+                  return { passwordMismatch: true }; 
                 }
               }
 
-  
-  actualizarUsuario(){
-    const iduser = this.userService.user.iduser; // Obtén el iduser del formulario
-    if (iduser) {
-      const formData = { ...this.profileForm.value, iduser }; // Combina los datos del formulario con el iduser
 
+  actualizarUsuario(){
+    const iduser = this.userService.user.iduser; 
+    if (iduser) {
+      const formData = { ...this.profileForm.value, iduser }; 
     
     this.userService.updateUser(formData).subscribe(
       (resp: Response) => {
