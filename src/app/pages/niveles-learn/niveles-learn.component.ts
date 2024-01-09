@@ -8,7 +8,7 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class NivelesLearnComponent implements OnInit{
 
-  unlockedLevel: number = 4;
+  unlockedLevel: number = 9;
 
   constructor(public componenteApp:AppComponent){}
 
