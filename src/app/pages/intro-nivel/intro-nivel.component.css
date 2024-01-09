@@ -73,6 +73,7 @@ button{
   border-radius: 15px;
   box-shadow: 0 2px 0#7451FF;
   align-self: flex-end;
+  transition: 1s linear;
 }
 
 .btn{
