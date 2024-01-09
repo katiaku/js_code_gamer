@@ -98,6 +98,10 @@ updateUser(user:User): Observable<any> {
 }
 
 
+getAll(iduser: number): Observable<any> {
+  const url = `${this.url}/${iduser}`;
+  return this.http.get(url);
+}
 
 }
 

@@ -3,14 +3,15 @@
         <div class="datarow">
             <img src={{user.photo}} alt="user-login" class="imgperf">
             <div class="data">
-                <h3>{{user.username}}</h3>
+                <h1><span>{{user.name_surname}}</span></h1>
+                <h3>@{{user.username}}</h3>
                 <h3>{{user.email}}</h3>
             </div>
             <button (click)="modify()">MODIFICAR PERFIL</button>
         </div>
     </section>
     <section class="logros">
-        <h1>Logros y Progresión</h1>
+        <h1 class="h1">Logros y Progresión</h1>
         <div class="badges" >
             <h2>MEDALLAS:</h2>
             <div class="medallas" *ngFor="let nivel of nivelesData; let i = index">

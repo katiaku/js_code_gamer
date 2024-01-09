@@ -2,10 +2,7 @@
   <h1>BIENVENIDO A <span class="text"><span class="js">JS</span>CODEGAMER</span></h1>
   <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
 
-    <div *ngIf="loginError" class="invalid-feedback">
-      {{ loginError }}
-    </div>
-
+    
     <div class="form_group">
       <input
         type="text"
@@ -38,10 +35,16 @@
         <div *ngIf="passwordId.errors.required">La clave es obligatoria</div>
         <div *ngIf="passwordId.errors.minlength">La clave debe tener al menos 8 caracteres</div>
       </div>
+      <div *ngIf="loginError, else substitute" class="invalid-feedback">{{ loginError }}</div>
+
+      
       <ng-template #substitute>
         <div class="substitute"></div>
       </ng-template>
+      
     </div>
+    
+    
 
     <button type="submit" class="btn btn-danger btn-block" [disabled]="loginForm.invalid">LOGIN</button>
 
