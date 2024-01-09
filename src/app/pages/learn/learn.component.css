@@ -57,6 +57,8 @@ h2 {
   right: 30px;
   bottom: 30px;
   width: 160px;
+  opacity: 0;
+  animation: slideInFromLeft 1s ease-out 0.5s forwards;
 }
 
 .arrows {
@@ -123,4 +125,15 @@ a {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
