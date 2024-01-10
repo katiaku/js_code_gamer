@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/shared/users.service';
+import { ChangeDetectorRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-profile',
@@ -13,6 +15,8 @@ import { UsersService } from 'src/app/shared/users.service';
 export class ProfileComponent implements OnInit{
 
   public user:User = this.usersService.user;
+  iduser: number = this.usersService.user.iduser;
+  userData: any;
   porcentajeEnComponente: number = 0;
   nivelesData: any[] = [];
   nivelColores: { [title: string]: {fondo: string, borde: string, percentage: string, medalla: string } } = {
@@ -30,18 +34,31 @@ export class ProfileComponent implements OnInit{
 
   constructor(public componentApp: AppComponent, 
               public router:Router,
-              public usersService: UsersService)
+              public usersService: UsersService,
+              private cdr: ChangeDetectorRef
+              )
               {
                 this.user = this.usersService.user;
                 this.actualizarPorcentaje();
                 this.porcentajeEnComponente = 0;
-     
+
               }
 
   ngOnInit(): void {
     this.componentApp.mostrarHeader = true;  
      const iduser = this.user.iduser;
      console.log(iduser)
+
+     this.usersService.getAll(iduser).subscribe(
+      (response: any) => {
+        this.user = response.user[0];
+        console.log('Datos del usuario después de la actualización:', this.user);
+      },
+      (error) => {
+        console.error('Error al obtener datos del usuario después de la actualización:', error);
+      }
+    );
+
 
      this.usersService.getNivelesData(iduser).subscribe(
        (response: any) => {
@@ -52,6 +69,11 @@ export class ProfileComponent implements OnInit{
          console.error('Error al obtener datos de niveles:', error);
        }
      );
+
+       
+    
+ 
+    
   }
 
   modify(){
@@ -89,7 +111,6 @@ export class ProfileComponent implements OnInit{
       });
     }
   
-
 
 
 }

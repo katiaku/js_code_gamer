@@ -20,4 +20,9 @@ export class LearnService {
     return this.http.get(`${this.url}?iduser=${iduser}&id_level=${id_level}`);
   }
 
+  public markThemesCompleted(iduser: number, id_level: number): Observable<Object> {
+    const urlWithParams = `${this.url}/mark_themes_completed?iduser=${iduser}&id_level=${id_level}`;
+    return this.http.put(urlWithParams, null);
+  }
+
 }

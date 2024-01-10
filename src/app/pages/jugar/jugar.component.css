@@ -200,10 +200,12 @@ button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   position: fixed;
-  top: 43vh;
-  right: 88vw;
+  top: 46vh;
+  right: 89vw;
   transform: translate(50%, -50%);
   z-index: 9;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .etiqueta{
@@ -217,55 +219,55 @@ button:hover {
 }
 
 .etiqueta1{
-  top: 35vh;
+  top: 40vh;
   right: 73vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta2{
-  top: 32.2vh;
+  top: 37.2vh;
   right: 58.5vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta3{
-  top: 30vh;
+  top: 35vh;
   right: 49.4vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta4{
-  top: 22vh;
+  top: 27vh;
   right: 47vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta5{
-  top: 68vh;
+  top: 63vh;
   right: 32vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta6{
-  top: 58.5vh;
+  top: 53.5vh;
   right: 34.3vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta7{
-  top: 58vh;
+  top: 53vh;
   right: 16.4vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta8{
-  top: 47vh;
+  top: 42vh;
   right: 25vw;
   transform: translate(50%, -50%);
 }
 
 .etiqueta9{
-  top: 47.6vh;
+  top: 42.6vh;
   right: 8.5vw;
   transform: translate(50%, -50%);
 }
@@ -362,4 +364,13 @@ button:hover {
 
 .start:hover {
   background-color: #FFFF00;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

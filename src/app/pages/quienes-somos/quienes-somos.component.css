@@ -53,18 +53,18 @@ p {
     height: 39vh;
     width: 95%;
     border-radius: 50%;
-    background-image: url("../../../assets/images/niño.libro.png");
+    background-image: url("../../../assets/images/Quienes-Somos-Indiana.JPG");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 125%;
 }
 .imagen2{
     /* border: 1px solid red; */
     height: 39vh;
     width: 95%;
     border-radius: 50%;
-    background-image: url("../../../assets/images/niño.libro.png");
+    background-image: url("../../../assets/images/Quienes-Somos-Katia.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .imagen3{
     /* border: 1px solid red; */

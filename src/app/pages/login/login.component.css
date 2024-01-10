@@ -33,7 +33,7 @@ h1 {
 
 form {
   width: 440px;
-  height: 272px;
+  height: 350px;
   border: 2px solid #FFFFFF;
   border-radius: 20px;
   background-color: #2b144aaa;
@@ -49,7 +49,7 @@ input {
   border: 2px solid #FFFFFF;
   border-radius: 15px;
   background-color: #2B144A;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   color: white;
   font-size: 1rem;
 }
@@ -98,4 +98,21 @@ button:hover {
 
 .substitute {
   height: 2rem;
+}
+
+.astronauta {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s ease-out 0.5s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
