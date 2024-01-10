@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class UsersService {
 
-  private url: string = "http://localhost:3000";
+  private url: string = "https://jscodegamer-api.vercel.app";
   private loggedInSubject = new BehaviorSubject<boolean>(false);
 
   public user: User;
@@ -44,13 +44,13 @@ export class UsersService {
     .pipe(
       tap((response: any) => {
         console.log('Respuesta del servicio al iniciar sesión:', response);
-        
-        this.iduserTheme = response.user_theme_iduser; 
-        this.id_levelTheme = response.theme_id_level; 
-        this.iduserChallenges = response.user_challenges_iduser; 
-        this.id_levelChallenges = response.challenge_id_level; 
-        this.idlevelsLevels = response.idlevels; 
-        this.iduserUserLevel = response.user_level_iduser; 
+
+        this.iduserTheme = response.user_theme_iduser;
+        this.id_levelTheme = response.theme_id_level;
+        this.iduserChallenges = response.user_challenges_iduser;
+        this.id_levelChallenges = response.challenge_id_level;
+        this.idlevelsLevels = response.idlevels;
+        this.iduserUserLevel = response.user_level_iduser;
         this.idlevelUserLevel = response.user_level_idlevel;
       })
     );
@@ -70,13 +70,13 @@ export class UsersService {
     console.log('Parámetros:', iduserTheme, id_levelTheme, iduserChallenges, id_levelChallenges, idlevelsLevels, iduserUserLevel, idlevelUserLevel)
 
     const url = `${this.url}/actualizarPorcentaje`;
-   
+
     let body = {iduserTheme,id_levelTheme,iduserChallenges,id_levelChallenges,idlevelsLevels,iduserUserLevel,idlevelUserLevel}
 
     console.log(url);
     console.log(body);
-    
-    
+
+
     return this.http.post(url, body).pipe(
       map((response: any) => {
         console.log('Respuesta del servidor:', response);
@@ -106,4 +106,4 @@ getAll(iduser: number): Observable<any> {
 }
 
 
- 
+
