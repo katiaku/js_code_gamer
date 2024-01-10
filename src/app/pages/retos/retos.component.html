@@ -1,18 +1,18 @@
 <section>
     <div class="left">
       <div class="layer">
-        <h1>{{ this.contentService.nivel}}. {{ unitsData[currentUnitIndex].unit }}</h1>
-        <h2>{{ this.contentService.nivel}}.{{ currentPartIndex + 1 }}. {{ unitsData[currentUnitIndex].title }}</h2>
+        <h1>{{ this.apiService.id_level}}. {{ unitsData[currentUnitIndex].unit }}</h1>
+        <h2>{{ this.apiService.id_level}}.{{ currentPartIndex + 1 }}. {{ unitsData[currentUnitIndex].title }}</h2>
         <div class="text" [innerHTML]="unitsData[currentUnitIndex].content | textFormatter:keywords:'#FFFF00'">{{ unitsData[currentUnitIndex].content }}</div>
         <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
-        <div class="arrows">
+        <!-- <div class="arrows">
           <button (click)="prevPart()" [disabled]="currentPartIndex === 0 && currentUnitIndex === 0">
             <img class="arrow" src="../../../assets/img/Polygon_1.png" alt="flecha derecha">
           </button>
           <button (click)="nextPart()" [disabled]="currentPartIndex == this.unitsData.length-1 && currentUnitIndex == this.unitsData.length-1">
             <img class="arrow" src="../../../assets/img/Polygon_2.png" alt="flecha izquierda">
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="right">
@@ -29,6 +29,7 @@
       </pre>
       <div class="but">
         <button class="btn" (click)="ejecutarCodigo()">Ejecutar</button>
+        <button class="btn" (click)="comprobarCodigo()">Corregir</button>
       </div>
     </div>
   </section>

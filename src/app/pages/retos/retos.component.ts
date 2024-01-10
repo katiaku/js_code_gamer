@@ -10,6 +10,9 @@ import { JugarComponent } from '../jugar/jugar.component';
 import { Respuesta } from 'src/app/shared/respuesta';
 import { Content } from 'src/app/models/content';
 import { UsersService } from 'src/app/shared/users.service';
+import { LearnService } from 'src/app/shared/learn.service';
+import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -22,8 +25,12 @@ export class RetosComponent implements AfterViewInit, OnInit {
 
   @ViewChild("editor") private editor: ElementRef<HTMLElement>;
   
-  constructor(public componentApp: AppComponent, public contentService:ContentService, public userService: UsersService) {
-    this.contentService.nivel = 1;
+  constructor(public componentApp: AppComponent,
+                     public contentService:ContentService,
+                     public apiService: LearnService, 
+                     public userService: UsersService,
+                     private route: ActivatedRoute,
+                     public toastr: ToastrService) {
 
   }
 
@@ -37,13 +44,21 @@ export class RetosComponent implements AfterViewInit, OnInit {
   codigoUsuario:string = "";
   resultadoEjecucion:string = "";
   ngOnInit(): void {
-    console.log(this.contentService.nivel);
-    console.log(this.userService.user);
+    
+    console.log(this.userService.user.iduser);
+
+    this.route.params.subscribe(params => {
+      console.log("Params: ", params);
+      const id_level = params['id-level'];
+      this.apiService.id_level = id_level;
+      console.log(id_level);
+    });
+    
     
     this.componentApp.mostrarHeader = true;
     // this.loadContent();
     // this.contentService.getContentPlay(this.userService.user.iduser,this.contentService.nivel).subscribe((respuesta: Respuesta) => {
-      this.contentService.getContentPlay(24,1).subscribe((respuesta: Respuesta) => {
+      this.contentService.getContentPlay(this.userService.user.iduser,this.apiService.id_level).subscribe((respuesta: Respuesta) => {
       if (respuesta.error) {
         console.log(respuesta.message);
       } else {
@@ -122,11 +137,39 @@ export class RetosComponent implements AfterViewInit, OnInit {
     this.codigoUsuario = ace.edit(this.editor.nativeElement).session.getValue();
 
     this.resultadoEjecucion = "";
+    
     try{
       eval(this.codigoUsuario);
     }catch(err){
       console.error("Error al ejecutar el codigo: ", err.message);
       this.resultadoEjecucion = "Error: " + err.message;
+      
+    }
+
+  }
+
+  comprobarCodigo(){
+    this.codigoUsuario = ace.edit(this.editor.nativeElement).session.getValue();
+
+    this.resultadoEjecucion = "";
+    
+    try{
+      eval(this.codigoUsuario);
+      const resultadoUsuario = this.resultadoEjecucion.trim(); // Elimina espacios en blanco al principio y al final
+      const resultadoCorrecto = this.contentService.content[this.currentPartIndex].resultado.trim();
+      if(resultadoUsuario === resultadoCorrecto){
+        this.toastr.success("Código correcto, ¡Avanzamos en la exploración!");
+        console.log("Resultado usuario: " + this.resultadoEjecucion);
+        console.log("Resultado correcto: " + this.contentService.content[this.currentPartIndex].resultado);
+        this.nextPart();
+      }else{
+        this.toastr.warning("Código incorrecto, Asegurate de que estas siguiendo los pasos adecuadamente.");
+        console.log("Resultado usuario: " + this.resultadoEjecucion);
+        console.log("Resultado correcto: " + this.contentService.content[this.currentPartIndex].resultado);
+      }
+
+    }catch(err){
+      console.error(err);
       
     }
 

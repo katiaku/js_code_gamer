@@ -53,6 +53,7 @@ export class IntroNivelComponent implements OnInit{
 
   loadContent(): void {
     this.showThemes(this.apiServiceUsers.user.iduser, this.apiService.id_level);
+    
   }
 
   showThemes(iduser: number, id_level: number) {
@@ -63,6 +64,6 @@ export class IntroNivelComponent implements OnInit{
   }
 
   iniciarJuego() {
-    this.router.navigate(['/retos']);
+    this.router.navigate(['/retos', this.apiService.id_level]);
   }
 }

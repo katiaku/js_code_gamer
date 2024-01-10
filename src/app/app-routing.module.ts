@@ -47,7 +47,7 @@ const routes: Routes = [
     component: ModProfileComponent
   },
   {
-    path: 'retos',
+    path: 'retos/:id-level',
     component: RetosComponent
   },
   {

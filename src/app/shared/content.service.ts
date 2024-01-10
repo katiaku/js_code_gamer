@@ -31,6 +31,6 @@ export class ContentService {
     console.log(id_level);
     
     
-    return this.http.get(`${this.url}/retos?iduser= ${iduser}&id_level=${id_level}&activate=1` );
+    return this.http.get(`${this.url}/retos?iduser=${iduser}&id_level=${id_level}` );
   }
 }

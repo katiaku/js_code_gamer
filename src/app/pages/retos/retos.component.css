@@ -115,7 +115,8 @@ section {
   border-radius: 15px;
   box-shadow: 0 2px 0#7451FF;
   transition: 1s linear;
-  align-self: flex-end;
+  margin: 5px;
+  
 
 }
 
@@ -128,7 +129,8 @@ section {
   margin-top: -4%;
   height: fit-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: baseline;
   padding: 10px;
 }
 
