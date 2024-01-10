@@ -12,7 +12,7 @@ export class LearnService {
 
   id_level: number;
 
-  private url = "http://localhost:3000/themes";
+  private url = "https://jscodegamer-api.vercel.app/themes";
 
   constructor(private http: HttpClient) { }
 
