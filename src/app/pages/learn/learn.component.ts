@@ -83,4 +83,14 @@ export class LearnComponent implements AfterViewInit, OnInit {
     this.router.navigate(['/jugar'], { queryParams: { id_level: this.apiService.id_level } });
   }
 
+  markThemesAsCompleted(iduser: number, id_level: number) {
+    this.apiService.markThemesCompleted(iduser, id_level).subscribe((resp: any) => {
+      console.log(resp);
+      if (resp.error)
+        this.toast.error('Se ha producido un error', '', { positionClass: 'toastPosition' });
+      else
+        this.apiService.themes = resp;
+    });
+  }
+
 }
