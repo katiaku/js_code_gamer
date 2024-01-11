@@ -51,9 +51,10 @@ export class NivelesLearnComponent implements OnInit{
       } else {
         console.error('El porcentaje es undefined');
       }
-
-      if (percentage == 100) {
-        this.unlockedLevel++;
+      for(let i=0; i<response.result.length; i++){
+        if (response.result[i].percentage === 100) {
+          this.unlockedLevel++;
+        }
       }
 
     }, error => {
