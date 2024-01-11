@@ -56,4 +56,9 @@ export class ContentService {
   public updateTemaRetos(iduser:number, id_level:number):Observable<Object>{
     return this.http.post(`${this.url}/retos/mark_tema_completed?iduser=${iduser}&id_level=${id_level}`, null);
   }
+
+  public activarRetos(iduser:number, id_level:number):Observable<Object>{
+
+    return this.http.post(`${this.url}/retos/activar?iduser=${iduser}&id_level=${id_level}`, null);
+  }
 }

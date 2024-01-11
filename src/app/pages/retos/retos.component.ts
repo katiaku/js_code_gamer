@@ -121,14 +121,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
         console.log("Reto completado y actualizado correctamente");
         
       
-    this.contentService.updateRetoActivate(this.userService.user.iduser,this.contentService.content[0].idchallenges).subscribe((respuesta: Respuesta) => {
-      if (respuesta.error) {
-        console.log(respuesta.message);
-      } else {
-        console.log("Reto activado y actualizado correctamente");
-        
-     
-      console.log();
+   
       
 
 
@@ -154,7 +147,16 @@ export class RetosComponent implements AfterViewInit, OnInit {
       
 
     if(this.apiService.id_level == this.nextLevel){
-      this.loadContent();
+      
+      this.contentService.updateRetoActivate(this.userService.user.iduser,this.contentService.content[0].idchallenges).subscribe((respuesta: Respuesta) => {
+        if (respuesta.error) {
+          console.log(respuesta.message);
+        } else {
+          console.log("Reto activado y actualizado correctamente");
+          
+          this.loadContent();
+      }
+    });
     }else{
       this.contentService.updateTemaRetos(this.userService.user.iduser,this.apiService.id_level).subscribe((respuesta: Respuesta) => {
         if (respuesta.error) {
@@ -171,8 +173,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
       });
     }
   
-  }
-  });
+  
     }
   });
 

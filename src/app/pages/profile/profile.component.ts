@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit{
               )
               {
                 this.user = this.usersService.user;
-                this.actualizarPorcentaje();
+                
                 this.porcentajeEnComponente = 0;
 
               }

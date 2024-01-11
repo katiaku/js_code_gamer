@@ -8,6 +8,7 @@ import { LearnService } from 'src/app/shared/learn.service';
 import { UsersService } from 'src/app/shared/users.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component({
   selector: 'app-learn',
@@ -22,7 +23,8 @@ export class LearnComponent implements AfterViewInit, OnInit {
     public apiServiceUsers: UsersService,
     private toast: ToastrService,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private contentService: ContentService) {
       this.apiService.themes = null;
     }
 
@@ -80,7 +82,17 @@ export class LearnComponent implements AfterViewInit, OnInit {
   }
 
   startGame() {
-    this.router.navigate(['/jugar'], { queryParams: { id_level: this.apiService.id_level } });
+    this.contentService.activarRetos(this.apiServiceUsers.user.iduser, this.apiService.id_level).subscribe((resp: any) =>{
+      if(resp.error){
+        console.log("Error al activar reto del nivel " + this.apiService.id_level);
+        
+      }else{
+        console.log("Retos activados correctamente");
+        
+        this.router.navigate(['/jugar'], { queryParams: { id_level: this.apiService.id_level } });
+      }
+    })
+    
   }
 
   markThemesAsCompleted(iduser: number, id_level: number) {
