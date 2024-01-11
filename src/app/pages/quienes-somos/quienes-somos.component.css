@@ -1,40 +1,43 @@
 .landing{
-/* border: 1px solid red; */
-/* height: 800px; */
-background-image: url("../../../assets/images/pag_Quienes.Somos.2.png");
-background-size: cover;
-background-repeat: no-repeat;
+    background-color: black;
+    /* border: 1px solid red; */
+    /* height: 800px; */
+    background-image: url("../../../assets/images/pag_Quienes.Somos.2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .titulo{
     /* border: 1px solid red; */
     height: 15vh;
     letter-spacing: 0.7vw;
     font-size: 3vw;
-
-
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-img {
+
+.star {
     width: 4vw;
     height: auto;
     margin-right: 2vw;
   }
+
 p {
     font-family: 'Roboto', sans-serif;
     color: white;
   }
+
 .equipos{
     /* border: 1px solid yellowgreen; */
     margin-top: 20px;
     /* height: 80vh; */
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .equipo{
     /* border: 1px solid red; */
     height: 670px;
@@ -48,33 +51,41 @@ p {
     justify-content: space-between;
     margin-bottom: 100px;
 }
-.imagen1{
+
+.imagen1,
+.imagen2,
+.imagen3 {
     /* border: 1px solid red; */
     height: 39vh;
     width: 95%;
     border-radius: 50%;
-    background-image: url("../../../assets/images/Quienes-Somos-Indiana.JPG");
+    overflow: hidden;
+    position: relative;
+    /* background-image: url("../../../assets/images/Quienes-Somos-Indiana.JPG");
     background-repeat: no-repeat;
-    background-size: 100% 125%;
+    background-size: 100% 125%; */
 }
-.imagen2{
-    /* border: 1px solid red; */
-    height: 39vh;
-    width: 95%;
-    border-radius: 50%;
-    background-image: url("../../../assets/images/Quienes-Somos-Katia.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+
+.imagen1 > img,
+.imagen2 > img,
+.imagen3 > img {
+  height: auto;
+  width: 100%;
+  position: absolute;
 }
-.imagen3{
-    /* border: 1px solid red; */
-    height: 39vh;
-    width: 95%;
-    border-radius: 50%;
-    background-image: url("../../../assets/images/niño.libro.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.imagen1 > img {
+  top: -60px;
 }
+
+.imagen2 > img {
+  top: -55px;
+}
+
+.imagen3 > img {
+  top: -70px;
+}
+
 .caja{
     /* border:2px solid red; */
     height: 35vh;
@@ -83,26 +94,27 @@ p {
     border-bottom-left-radius: 190px;
     border-bottom-right-radius: 190px;
 }
+
 .info{
     /* border: 1px solid red; */
     height: 25vh;
     padding: 15px;
     text-align: center;
     line-height: 20px;
-
 }
+
 .rrss{
     /* border: 1px solid red; */
     height: 5vh;
     gap: 30px;
 }
+
 ul {
     font-size: 2vw;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   a {
@@ -113,4 +125,3 @@ ul {
   a:hover {
     color: #FFFF00;
   }
-

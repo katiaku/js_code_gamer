@@ -10,7 +10,7 @@ import { Content } from '../models/content';
 })
 export class ContentService {
 
-  private url: string = "http://localhost:3000";
+  private url: string = "https://jscodegamer-api.vercel.app";
 
   public user: User;
 
@@ -24,7 +24,7 @@ export class ContentService {
     this.user = userService.user;
   }
 
-  
+
 
   public getContentPlay(iduser:number, id_level: number): Observable<Object> {
     console.log(iduser);
