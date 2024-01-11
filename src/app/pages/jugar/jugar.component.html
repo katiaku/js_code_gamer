@@ -23,7 +23,7 @@
         <button class="btn8" (click)="changeLevel(8)">8</button>
         <button class="btn9" (click)="changeLevel(9)">9</button>
 
-        <div *ngIf="nivelActual == 1" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[0] && this.retosActivos[0].activo" style="display: block;">
             <div class="puntero puntero1"></div>
             <div class="etiqueta etiqueta1">
                 <div class="texto">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 2" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[1] && this.retosActivos[1].activo" style="display: block;">
             <div class="puntero puntero2"></div>
             <div class="etiqueta etiqueta2">
                 <div class="texto">
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 3" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[2] && this.retosActivos[2].activo" style="display: block;">
             <div class="puntero puntero3"></div>
             <div class="etiqueta etiqueta3">
                 <div class="texto">
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 4" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[3] && this.retosActivos[3].activo" style="display: block;">
             <div class="puntero puntero4"></div>
             <div class="etiqueta etiqueta4">
                 <div class="texto">
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 5" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[4] && this.retosActivos[4].activo" style="display: block;">
             <div class="puntero puntero5"></div>
             <div class="etiqueta etiqueta5">
                 <div class="texto">
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 6" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[5] && this.retosActivos[5].activo" style="display: block;">
             <div class="puntero puntero6"></div>
             <div class="etiqueta etiqueta6">
                 <div class="texto">
@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 7" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[6] && this.retosActivos[6].activo" style="display: block;">
             <div class="puntero puntero7"></div>
             <div class="etiqueta etiqueta7">
                 <div class="texto">
@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 8" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[7] && this.retosActivos[7].activo" style="display: block;">
             <div class="puntero puntero8"></div>
             <div class="etiqueta etiqueta8">
                 <div class="texto">
@@ -111,7 +111,7 @@
             </div>
         </div>
 
-        <div *ngIf="nivelActual == 9" style="display: block;">
+        <div *ngIf="this.retosActivos && this.retosActivos[8] && this.retosActivos[8].activo" style="display: block;">
             <div class="puntero puntero9"></div>
             <div class="etiqueta etiqueta9">
                 <div class="texto">

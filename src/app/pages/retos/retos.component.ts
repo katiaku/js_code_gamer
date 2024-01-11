@@ -30,7 +30,9 @@ export class RetosComponent implements AfterViewInit, OnInit {
                      public apiService: LearnService, 
                      public userService: UsersService,
                      private route: ActivatedRoute,
-                     public toastr: ToastrService) {
+                     public toastr: ToastrService,
+                     public appComponent: AppComponent) {
+    
 
   }
 
@@ -44,7 +46,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
   codigoUsuario:string = "";
   resultadoEjecucion:string = "";
   ngOnInit(): void {
-    
+    this.appComponent.mostrarHeader = true;
     console.log(this.userService.user.iduser);
 
     this.route.params.subscribe(params => {
@@ -53,23 +55,9 @@ export class RetosComponent implements AfterViewInit, OnInit {
       this.apiService.id_level = id_level;
       console.log(id_level);
     });
+    this.loadContent();
     
     
-    this.componentApp.mostrarHeader = true;
-    // this.loadContent();
-    // this.contentService.getContentPlay(this.userService.user.iduser,this.contentService.nivel).subscribe((respuesta: Respuesta) => {
-      this.contentService.getContentPlay(this.userService.user.iduser,this.apiService.id_level).subscribe((respuesta: Respuesta) => {
-      if (respuesta.error) {
-        console.log(respuesta.message);
-      } else {
-        const dataAsArray: Content[] = Array.isArray(respuesta.data) ? respuesta.data : [respuesta.data];
-        this.contentService.content = dataAsArray;
-        this.unitsData = this.contentService.content;
-        const currentUnit = this.unitsData[this.currentUnitIndex];
-        this.text = currentUnit.content;
-        ace.edit(this.editor.nativeElement).session.setValue(this.unitsData[this.currentUnitIndex].code);
-      }
-    });
   }
 
   ngAfterViewInit(): void {
@@ -96,7 +84,22 @@ export class RetosComponent implements AfterViewInit, OnInit {
   }
 
   loadContent(): void {
-    this.updateContent();
+    
+    this.componentApp.mostrarHeader = true;
+    // this.loadContent();
+    // this.contentService.getContentPlay(this.userService.user.iduser,this.contentService.nivel).subscribe((respuesta: Respuesta) => {
+      this.contentService.getContentPlay(this.userService.user.iduser,this.apiService.id_level).subscribe((respuesta: Respuesta) => {
+      if (respuesta.error) {
+        console.log(respuesta.message);
+      } else {
+        const dataAsArray: Content[] = Array.isArray(respuesta.data) ? respuesta.data : [respuesta.data];
+        this.contentService.content = dataAsArray;
+        this.unitsData = this.contentService.content;
+        const currentUnit = this.unitsData[this.currentUnitIndex];
+        this.text = currentUnit.content;
+        ace.edit(this.editor.nativeElement).session.setValue(this.unitsData[this.currentUnitIndex].code);
+      }
+    });
   }
 
   updateContent(): void {
@@ -121,17 +124,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
     this.updateContent();
   }
 
-  prevPart(): void {
-    if (this.currentPartIndex > 0) {
-      this.currentPartIndex--;
-      this.currentUnitIndex--;
-    } else {
-      console.log("Problemas en el paraiso");
-      
-    }
 
-    this.updateContent();
-  }
 
   ejecutarCodigo(){
     this.codigoUsuario = ace.edit(this.editor.nativeElement).session.getValue();

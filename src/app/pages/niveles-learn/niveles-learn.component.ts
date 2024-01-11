@@ -14,11 +14,12 @@ export class NivelesLearnComponent implements OnInit{
 
   constructor(public componenteApp:AppComponent,
     public usersService: UsersService){
-      this.actualizarPorcentaje();
+      
     }
 
   ngOnInit(): void {
     this.componenteApp.mostrarHeader = true;
+    this.actualizarPorcentaje();
   }
 
   isLevelUnlocked(level: number): boolean {

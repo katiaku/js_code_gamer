@@ -18,7 +18,7 @@ export class ContentService {
 
   public content: Content[];
 
-  public activate: number;
+  // public retosActivos: number[];
 
   constructor(private http: HttpClient, public userService: UsersService) {
     this.user = userService.user;
@@ -31,6 +31,21 @@ export class ContentService {
     console.log(id_level);
     
     
-    return this.http.get(`${this.url}/retos?iduser=${iduser}&id_level=${id_level}` );
+    return this.http.get(`${this.url}/retos?iduser=${iduser}&id_level=${id_level}`);
+  }
+
+  public getActiveRetos(iduser:number):Observable<Object>{
+
+    return this.http.get(`${this.url}/retos/active?iduser=${iduser}`);
+  }
+
+  public updateSingleCompleted(iduser:number, idchallenge: number):Observable<Object>{
+
+    return this.http.post(`${this.url}/retos/mark_retos_completed?iduser=${iduser}&idchallenge=${idchallenge}`, null);
+  }
+
+  public updateRetoActivate(iduser:number, idchallenge: number):Observable<Object>{
+
+    return this.http.post(`${this.url}/retos/mark_reto_tema_completed?iduser=${iduser}&idchallenge=${idchallenge}`, null);
   }
 }
