@@ -11,8 +11,9 @@ import { Respuesta } from 'src/app/shared/respuesta';
 import { Content } from 'src/app/models/content';
 import { UsersService } from 'src/app/shared/users.service';
 import { LearnService } from 'src/app/shared/learn.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { IdLevel } from 'src/app/models/id-level';
 
 
 @Component({
@@ -31,17 +32,21 @@ export class RetosComponent implements AfterViewInit, OnInit {
                      public userService: UsersService,
                      private route: ActivatedRoute,
                      public toastr: ToastrService,
-                     public appComponent: AppComponent) {
+                     public appComponent: AppComponent,
+                     private router: Router) {
     
 
   }
 
+  
   currentUnitIndex = 0;
   currentPartIndex = 0;
   unitsData:  Content[];
 
   text;
   keywords = learnKeywords;
+
+  nextLevel:number;
 
   codigoUsuario:string = "";
   resultadoEjecucion:string = "";
@@ -84,6 +89,8 @@ export class RetosComponent implements AfterViewInit, OnInit {
   }
 
   loadContent(): void {
+
+
     
     this.componentApp.mostrarHeader = true;
     // this.loadContent();
@@ -98,30 +105,83 @@ export class RetosComponent implements AfterViewInit, OnInit {
         const currentUnit = this.unitsData[this.currentUnitIndex];
         this.text = currentUnit.content;
         ace.edit(this.editor.nativeElement).session.setValue(this.unitsData[this.currentUnitIndex].code);
+        this.resultadoEjecucion = "";
       }
     });
   }
 
-  updateContent(): void {
-    console.log(this.unitsData.length);
-    this.unitsData = this.contentService.content;
-        const currentUnit = this.unitsData[this.currentUnitIndex];
-        this.text = currentUnit.content;
-        ace.edit(this.editor.nativeElement).session.setValue(this.unitsData[this.currentUnitIndex].code);
-        this.resultadoEjecucion = "";
-    
-    
-    
-  }
+  
 
   nextPart(): void {
-    if (this.currentPartIndex < this.unitsData.length - 1) {
-      this.currentPartIndex++;
-      this.currentUnitIndex++;
-    } else if (this.currentUnitIndex < this.unitsData.length - 1) {
+    // Actualiza a completado el reto
+    this.contentService.updateSingleCompleted(this.userService.user.iduser,this.contentService.content[0].idchallenges).subscribe((respuesta: Respuesta) => {
+      if (respuesta.error) {
+        console.log(respuesta.message);
+      } else {
+        console.log("Reto completado y actualizado correctamente");
+        
       
+    this.contentService.updateRetoActivate(this.userService.user.iduser,this.contentService.content[0].idchallenges).subscribe((respuesta: Respuesta) => {
+      if (respuesta.error) {
+        console.log(respuesta.message);
+      } else {
+        console.log("Reto activado y actualizado correctamente");
+        
+     
+      console.log();
+      
+
+
+   
+        
+
+    this.contentService.getCompletedRetos(this.userService.user.iduser).subscribe((respuesta: Respuesta) => {
+      if (respuesta.error) {
+        console.log(respuesta.message);
+      } else {
+        const dataAsArray: IdLevel[] = Array.isArray(respuesta.data) ? respuesta.data : [respuesta.data];
+        this.nextLevel = dataAsArray[0].id_level;
+        console.log("Datos del array=" +dataAsArray[0].id_level);
+
+        console.log(this.apiService.id_level);
+        console.log(this.nextLevel);
+        console.log(this.apiService.id_level == this.nextLevel);
+        
+        
+        
+      
+        
+      
+
+    if(this.apiService.id_level == this.nextLevel){
+      this.loadContent();
+    }else{
+      this.contentService.updateTemaRetos(this.userService.user.iduser,this.apiService.id_level).subscribe((respuesta: Respuesta) => {
+        if (respuesta.error) {
+          console.log(respuesta.message);
+        } else {
+          console.log("Retos activados y actualizados correctamente");
+          
+        
+
+          this.apiService.id_level = this.nextLevel;
+
+          this.router.navigate(['/profile']);
+        }
+      });
     }
-    this.updateContent();
+  
+  }
+  });
+    }
+  });
+
+    }
+  });
+
+
+
+    
   }
 
 

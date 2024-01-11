@@ -5,7 +5,7 @@ export class Content {
     content: string;
     code: string;
     resultado: string;
-    idchalllenges: number;
+    idchallenges: number;
     id_level: number;
   
     constructor(unit:string,title: string, content: string, code: string, resultado: string, idchallenges:number, id_level:number) {
@@ -15,7 +15,7 @@ export class Content {
       this.content = content;
       this.code = code;
       this.resultado = resultado;
-      this.idchalllenges = idchallenges;
+      this.idchallenges = idchallenges;
       this.id_level = id_level;
     }
 }

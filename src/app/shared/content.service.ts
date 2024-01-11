@@ -48,4 +48,12 @@ export class ContentService {
 
     return this.http.post(`${this.url}/retos/mark_reto_tema_completed?iduser=${iduser}&idchallenge=${idchallenge}`, null);
   }
+
+  public getCompletedRetos(iduser:number):Observable<Object>{
+    return this.http.get(`${this.url}/retos/completed?iduser=${iduser}`);
+  }
+
+  public updateTemaRetos(iduser:number, id_level:number):Observable<Object>{
+    return this.http.post(`${this.url}/retos/mark_tema_completed?iduser=${iduser}&id_level=${id_level}`, null);
+  }
 }

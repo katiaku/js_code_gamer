@@ -47,12 +47,14 @@ export class ProfileComponent implements OnInit{
   ngOnInit(): void {
     this.componentApp.mostrarHeader = true;  
      const iduser = this.user.iduser;
-     console.log(iduser)
+     console.log(iduser);
+     this.actualizarPorcentaje();
 
      this.usersService.getAll(iduser).subscribe(
       (response: any) => {
         this.user = response.user[0];
         console.log('Datos del usuario después de la actualización:', this.user);
+        
       },
       (error) => {
         console.error('Error al obtener datos del usuario después de la actualización:', error);
