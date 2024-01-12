@@ -118,7 +118,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
       if (respuesta.error) {
         console.log(respuesta.message);
       } else {
-        console.log("Reto completado y actualizado correctamente");
+        // console.log("Reto completado y actualizado correctamente");
         
       
    
@@ -134,11 +134,11 @@ export class RetosComponent implements AfterViewInit, OnInit {
       } else {
         const dataAsArray: IdLevel[] = Array.isArray(respuesta.data) ? respuesta.data : [respuesta.data];
         this.nextLevel = dataAsArray[0].id_level;
-        console.log("Datos del array=" +dataAsArray[0].id_level);
+        // console.log("Datos del array=" +dataAsArray[0].id_level);
 
-        console.log(this.apiService.id_level);
-        console.log(this.nextLevel);
-        console.log(this.apiService.id_level == this.nextLevel);
+        // console.log(this.apiService.id_level);
+        // console.log(this.nextLevel);
+        // console.log(this.apiService.id_level == this.nextLevel);
         
         
         
@@ -152,7 +152,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
         if (respuesta.error) {
           console.log(respuesta.message);
         } else {
-          console.log("Reto activado y actualizado correctamente");
+          // console.log("Reto activado y actualizado correctamente");
           
           this.loadContent();
       }
@@ -162,7 +162,7 @@ export class RetosComponent implements AfterViewInit, OnInit {
         if (respuesta.error) {
           console.log(respuesta.message);
         } else {
-          console.log("Retos activados y actualizados correctamente");
+          // console.log("Retos activados y actualizados correctamente");
           
         
 
