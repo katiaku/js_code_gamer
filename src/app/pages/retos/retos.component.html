@@ -2,7 +2,7 @@
     <div class="left">
       <div class="layer">
         <h1>{{ this.apiService.id_level}}. {{ this.unitsData[0].unit }}</h1>
-        <h2>{{ this.apiService.id_level}}.{{ this.contentService.content[0].idchallenges }}. {{ unitsData[0].title }}</h2>
+        <h2>{{ unitsData[0].title }}</h2>
         <div class="text" [innerHTML]="unitsData[currentUnitIndex].content | textFormatter:keywords:'#FFFF00'">{{ unitsData[0].content }}</div>
         <img class="astronauta" src="../../../assets/img/Astronauta.png" alt="astronauta con bandera">
         <!-- <div class="arrows">
