@@ -45,10 +45,31 @@ export class ProfileComponent implements OnInit{
               }
 
   ngOnInit(): void {
+    this.usersService.actualizarPorcentaje(
+      this.usersService.iduserTheme,
+      this.usersService.id_levelTheme,
+      this.usersService.iduserChallenges,
+      this.usersService.id_levelChallenges,
+      this.usersService.idlevelsLevels,
+      this.usersService.iduserUserLevel,
+      this.usersService.idlevelUserLevel,
+  
+    ).subscribe((response: any) => {
+      console.log('Éxito:', response);
+      console.log('Datos en el servicio:', this.usersService)
+      const percentage = response.porcentaje;
+      if (percentage !== undefined) {
+        this.porcentajeEnComponente = percentage;
+        console.log(this.porcentajeEnComponente);
+        console.log(percentage);
+      } else {
+        console.error('El porcentaje es undefined');
+      }
+  
+    
     this.componentApp.mostrarHeader = true;  
      const iduser = this.user.iduser;
      console.log(iduser);
-     this.actualizarPorcentaje();
 
      this.usersService.getAll(iduser).subscribe(
       (response: any) => {
@@ -72,7 +93,9 @@ export class ProfileComponent implements OnInit{
        }
      );
 
-       
+    }, error => {
+      console.error('Error', error);
+    });
     
  
     
@@ -87,30 +110,7 @@ export class ProfileComponent implements OnInit{
       console.log(this.usersService.id_levelChallenges,this.usersService.idlevelsLevels,this.usersService.iduserUserLevel,
       this.usersService.idlevelUserLevel,);
     
-      this.usersService.actualizarPorcentaje(
-        this.usersService.iduserTheme,
-        this.usersService.id_levelTheme,
-        this.usersService.iduserChallenges,
-        this.usersService.id_levelChallenges,
-        this.usersService.idlevelsLevels,
-        this.usersService.iduserUserLevel,
-        this.usersService.idlevelUserLevel,
-    
-      ).subscribe((response: any) => {
-        console.log('Éxito:', response);
-        console.log('Datos en el servicio:', this.usersService)
-        const percentage = response.porcentaje;
-        if (percentage !== undefined) {
-          this.porcentajeEnComponente = percentage;
-          console.log(this.porcentajeEnComponente);
-          console.log(percentage);
-        } else {
-          console.error('El porcentaje es undefined');
-        }
-    
-      }, error => {
-        console.error('Error', error);
-      });
+      
     }
   
 
