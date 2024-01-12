@@ -33,7 +33,7 @@ export class JugarComponent implements OnInit{
           console.log(respuesta.message);
         } else {
           this.retosActivos = respuesta.data;
-          console.log(respuesta.data);
+          // console.log(respuesta.data);
     
           if (this.retosActivos) {
             // Iterar sobre retosActivos solo si está definido
@@ -62,8 +62,8 @@ export class JugarComponent implements OnInit{
       return;
     }
     for(let i=0; i < this.retosActivos.length; i++){
-      console.log(numReto);
-      console.log(this.retosActivos[i].id_level);
+      // console.log(numReto);
+      // console.log(this.retosActivos[i].id_level);
       
       
       if(this.retosActivos[i].id_level === numReto){
