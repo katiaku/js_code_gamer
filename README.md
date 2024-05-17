@@ -11,7 +11,10 @@ The motivation behind this repository is to facilitate an engaging and education
 Navigate to the project directory: ```cd js-code-gamer```
 - Install dependencies: ```npm install```
 - Start the development server: ```npm start```
-- Open your browser and visit http://localhost:4200 to view the application.
+- Open your browser and visit: http://localhost:4200 to view the application.
+
+## API:
+The JSCODEGAMER Backend repository contains the codebase for the server-side logic of the JSCODEGAMER application. It is built using Express.js and interacts with a MySQL database to manage user data, progress tracking, and authentication. For mo details visit https://github.com/katiaku/js_code_gamer_api
 
 ## Usage:
 Once the application is running, users can navigate through the levels, complete challenges, and use the integrated code editor to practice JavaScript coding. They can track their progress and unlock new levels as they advance.
